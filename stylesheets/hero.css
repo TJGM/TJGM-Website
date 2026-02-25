@@ -2,28 +2,22 @@
    Full-Page Hero Behind Sidebar
    ========================= */
 .hero-container {
-  position: absolute;
+  position: absolute;          
   top: 0;
   left: 0;
-  width: 100vw;
-
-  /* Mobile-safe viewport height */
-  min-height: 100svh;
-  min-height: 100dvh;
-  min-height: 100vh;
-
-  z-index: 0;
+  width: 100vw;                
+  height: 100vh;               
+  z-index: 0;                  
   background-image: url('../assets/hero.webp');
-  background-size: cover;
+  background-size: cover;      
   background-position: center top;
   background-repeat: no-repeat;
-
   display: flex;
   justify-content: center;
   align-items: center;
 
   overflow-x: hidden;
-  overflow-y: visible; /* removed auto scroll */
+  overflow-y: auto;
 }
 
 /* Light mode hero image */
@@ -171,7 +165,7 @@
   box-shadow: none;
 }
 
-/* Dark button */
+/* Dark gray button - keep color on hover/focus/active */
 .hero-buttons-vertical .hero-btn-dark {
   background-color: #2c2c2c;
   color: white;
@@ -181,13 +175,13 @@
 .hero-buttons-vertical .hero-btn-dark:focus,
 .hero-buttons-vertical .hero-btn-dark:focus-visible,
 .hero-buttons-vertical .hero-btn-dark:active {
-  background-color: #2c2c2c;
-  color: white;
+  background-color: #2c2c2c; /* lock dark color */
+  color: white;              /* lock text */
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Accent button */
+/* Patreon button - stay the same colour at all times */
 .hero-buttons-vertical .hero-btn-accent {
   background-color: #f96854;
   color: white;
@@ -198,14 +192,14 @@
 .hero-buttons-vertical .hero-btn-accent:focus,
 .hero-buttons-vertical .hero-btn-accent:focus-visible,
 .hero-buttons-vertical .hero-btn-accent:active {
-  background-color: #f96854;
-  color: white;
+  background-color: #f96854; /* never changes */
+  color: white;              /* never changes */
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(249, 104, 84, 0.5);
 }
 
 /* =========================
-   Mobile Layout
+   Mobile Layout (Controlled Shrinking)
    ========================= */
 @media (max-width: 900px) {
 
@@ -227,6 +221,7 @@
     padding-right: 2rem;
   }
 
+  /* Proper spacing between heading and buttons */
   .hero-content h1 {
     margin-bottom: 3vh;
   }
@@ -240,10 +235,14 @@
 
   .hero-buttons-vertical .hero-btn {
     flex: 1 1 auto;
+
+    /* smooth shrinking but controlled */
     height: clamp(48px, 9vh, 95px);
     min-height: 48px;
+
     font-size: clamp(1rem, 2vh, 1.5rem);
 
+    /* original padding preserved */
     padding: clamp(0.5rem, 0.9vw, 0.75rem)
              clamp(0.75rem, 1.2vw, 1.05rem);
   }
@@ -257,8 +256,6 @@
    Spacer
    ========================= */
 .hero-spacer {
-  height: 100svh;
-  height: 100dvh;
   height: 100vh;
 }
 
@@ -270,7 +267,7 @@ html {
 }
 
 /* =========================
-   Header Fade
+   Header Fade & Transparent Hero
    ========================= */
 .md-header::before {
   content: "";
@@ -293,11 +290,20 @@ html {
 }
 
 /* =========================
-   Fade-In Animation
+   Fade-In Keyframes
    ========================= */
 @keyframes heroFadeIn {
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
+  }
+}
+
+/* =========================
+   Mobile Landscape Scroll Fix (iOS/Android)
+   ========================= */
+@media (max-width: 900px) and (orientation: landscape) {
+  .hero-container {
+    height: 100dvh; /* modern mobile viewport height */
   }
 }
