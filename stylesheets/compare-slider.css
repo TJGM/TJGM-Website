@@ -206,15 +206,11 @@
 }
 
 /* -------------------
-   Enable Native Pinch Zoom
+   Zoom support
 ------------------- */
 
 .compare-container.is-fullscreen {
-  touch-action: pan-x pan-y pinch-zoom;
-  overscroll-behavior: contain;
-}
-
-/* Keep slider working */
-.compare-slider {
   touch-action: none;
+  transition: transform 0.05s ease-out;
+  will-change: transform;
 }
