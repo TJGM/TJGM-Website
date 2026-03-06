@@ -11,101 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('resize', setVh);
   window.addEventListener('orientationchange', setVh);
 
-  // =====================================================
-  // PINCH / PAN / DOUBLE TAP ZOOM (FULLSCREEN ONLY)
-  // =====================================================
-  function enableZoom(container) {
-
-    let scale = 1;
-    let startScale = 1;
-    let translateX = 0;
-    let translateY = 0;
-    let startX = 0;
-    let startY = 0;
-    let isPanning = false;
-    let isPinching = false;
-    let lastTap = 0;
-
-    const zoomTarget = container;
-
-    function updateTransform() {
-      zoomTarget.style.transform =
-        `translate(${translateX}px, ${translateY}px) scale(${scale})`;
-    }
-
-    function resetZoom() {
-      scale = 1;
-      translateX = 0;
-      translateY = 0;
-      updateTransform();
-    }
-
-    function getDistance(touches) {
-      const dx = touches[0].clientX - touches[1].clientX;
-      const dy = touches[0].clientY - touches[1].clientY;
-      return Math.sqrt(dx * dx + dy * dy);
-    }
-
-    let initialDistance = 0;
-
-    container.addEventListener("touchstart", e => {
-
-      if (!container.classList.contains("is-fullscreen")) return;
-
-      if (e.touches.length === 2) {
-        isPinching = true;
-        initialDistance = getDistance(e.touches);
-        startScale = scale;
-      }
-
-      if (e.touches.length === 1 && scale > 1) {
-        isPanning = true;
-        startX = e.touches[0].clientX - translateX;
-        startY = e.touches[0].clientY - translateY;
-      }
-
-      // Double tap
-      const now = Date.now();
-      if (now - lastTap < 300) {
-        if (scale === 1) {
-          scale = 2;
-        } else {
-          resetZoom();
-        }
-        updateTransform();
-      }
-      lastTap = now;
-
-    }, { passive: false });
-
-    container.addEventListener("touchmove", e => {
-
-      if (!container.classList.contains("is-fullscreen")) return;
-
-      if (isPinching && e.touches.length === 2) {
-        e.preventDefault();
-        const newDistance = getDistance(e.touches);
-        scale = Math.min(Math.max(1, startScale * (newDistance / initialDistance)), 4);
-        updateTransform();
-      }
-
-      if (isPanning && e.touches.length === 1) {
-        e.preventDefault();
-        translateX = e.touches[0].clientX - startX;
-        translateY = e.touches[0].clientY - startY;
-        updateTransform();
-      }
-
-    }, { passive: false });
-
-    container.addEventListener("touchend", () => {
-      isPanning = false;
-      isPinching = false;
-    });
-
-    return resetZoom;
-  }
-
   // =========================
   // 1. Comparison sliders
   // =========================
@@ -126,8 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let sliderPercent = 50;
 
     function setClip(offsetX) {
-      if (container.classList.contains("is-fullscreen") && container.style.transform.includes("scale(2")) return;
-
       const rect = container.getBoundingClientRect();
       offsetX = offsetX - rect.left;
       offsetX = Math.max(0, Math.min(offsetX, rect.width));
@@ -170,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let overlay = null;
     let placeholder = null;
-    let resetZoom = null;
+    function preventScroll(e) { e.preventDefault(); }
 
     function enter() {
       overlay = document.createElement("div");
@@ -186,16 +89,14 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.textContent = "✖";
 
       document.body.style.overflow = "hidden";
-
-      resetZoom = enableZoom(container);
+      document.addEventListener("touchmove", preventScroll, { passive: false });
+      document.addEventListener("wheel", preventScroll, { passive: false });
 
       window.dispatchEvent(new Event('resize'));
     }
 
     function exit() {
       if (!overlay) return;
-
-      if (resetZoom) resetZoom();
 
       placeholder.parentNode.insertBefore(container, placeholder);
       placeholder.remove();
@@ -205,6 +106,8 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.textContent = "⛶";
 
       document.body.style.overflow = "";
+      document.removeEventListener("touchmove", preventScroll);
+      document.removeEventListener("wheel", preventScroll);
 
       overlay = null;
       placeholder = null;
@@ -217,5 +120,93 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("keydown", e => { if (e.key === "Escape") exit(); });
 
   });
+
+  // =========================
+  // 2. Fullscreen ONLY for markdown images
+  // =========================
+
+  const path = window.location.pathname;
+
+  if (
+    path !== '/' &&
+    path !== '/news/' &&
+    !path.startsWith('/news/archive/') &&
+    !path.startsWith('/news/category/')
+  ) {
+
+    document.querySelectorAll(".md-content .md-typeset img").forEach(img => {
+
+      if (
+        img.closest(".compare-container") ||
+        img.closest(".md-logo") ||
+        img.closest(".md-header") ||
+        img.closest(".md-nav") ||
+        img.closest(".md-footer")
+      ) return;
+
+      const container = document.createElement("div");
+      container.className = "compare-container fullscreen-only";
+
+      img.parentNode.insertBefore(container, img);
+      container.appendChild(img);
+
+      container.style.cursor = 'default';
+
+      const btn = document.createElement("button");
+      btn.className = "compare-fullscreen-btn";
+      btn.textContent = "⛶";
+      container.appendChild(btn);
+
+      let overlay = null;
+      let placeholder = null;
+      function preventScroll(e) { e.preventDefault(); }
+
+      function enter() {
+        overlay = document.createElement("div");
+        overlay.className = "compare-overlay";
+
+        placeholder = document.createElement("div");
+        container.parentNode.insertBefore(placeholder, container);
+
+        overlay.appendChild(container);
+        document.body.appendChild(overlay);
+
+        container.classList.add("is-fullscreen");
+        btn.textContent = "✖";
+
+        document.body.style.overflow = "hidden";
+        document.addEventListener("touchmove", preventScroll, { passive: false });
+        document.addEventListener("wheel", preventScroll, { passive: false });
+
+        window.dispatchEvent(new Event('resize'));
+      }
+
+      function exit() {
+        if (!overlay) return;
+
+        placeholder.parentNode.insertBefore(container, placeholder);
+        placeholder.remove();
+        overlay.remove();
+
+        container.classList.remove("is-fullscreen");
+        btn.textContent = "⛶";
+
+        document.body.style.overflow = "";
+        document.removeEventListener("touchmove", preventScroll);
+        document.removeEventListener("wheel", preventScroll);
+
+        overlay = null;
+        placeholder = null;
+
+        window.dispatchEvent(new Event('resize'));
+      }
+
+      btn.addEventListener("click", e => { e.stopPropagation(); overlay ? exit() : enter(); });
+      document.addEventListener("click", e => { if (!overlay) return; if (e.target === overlay) exit(); });
+      document.addEventListener("keydown", e => { if (e.key === "Escape") exit(); });
+
+    });
+
+  }
 
 });
