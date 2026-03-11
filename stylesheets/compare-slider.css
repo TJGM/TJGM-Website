@@ -1,30 +1,22 @@
-/* -------------------
-   Container (Normal Mode)
-------------------- */
 .compare-container {
   position: relative;
   z-index: 0;
   isolation: isolate;
-
   display: inline-block;
   overflow: hidden;
   cursor: ew-resize;
   user-select: none;
-
   max-width: 100%;
   transition: transform 0.2s ease;
 }
 
-/* Base images */
-.compare-container > img {
+.compare-container > img,
+.compare-top img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* -------------------
-   Top image (clipped)
-------------------- */
 .compare-top {
   position: absolute;
   inset: 0;
@@ -32,15 +24,6 @@
   clip-path: inset(0 0 0 50%);
 }
 
-.compare-top img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* -------------------
-   Slider line
-------------------- */
 .compare-line {
   position: absolute;
   top: 0;
@@ -51,9 +34,6 @@
   box-shadow: 0 0 6px rgba(0,0,0,0.5);
 }
 
-/* -------------------
-   Slider handle
-------------------- */
 .compare-slider {
   position: absolute;
   width: 20px;
@@ -67,42 +47,27 @@
   transform: translate(-50%, -50%);
 }
 
-/* -------------------
-   Captions (Normal Mode)
-------------------- */
 .compare-caption {
   position: absolute;
   bottom: 10px;
   padding: 4px 8px;
   background: rgba(0,0,0,0.6);
   color: white;
-
   font-size: clamp(0.45rem, 1.8vw, 1rem);
-
   border-radius: 4px;
   pointer-events: none;
   user-select: none;
   transition: opacity 0.25s ease, font-size 0.2s ease;
-
   max-width: 45%;
-  white-space: normal;
   word-break: break-word;
 }
-
 .compare-caption.before { left: 10px; }
-.compare-caption.after  { right: 10px; }
+.compare-caption.after { right: 10px; }
 
-/* Extra small phone tuning */
 @media (max-width: 600px) {
-  .compare-caption {
-    font-size: clamp(0.4rem, 3vw, 0.75rem);
-    max-width: 60%;
-  }
+  .compare-caption { font-size: clamp(0.4rem, 3vw, 0.75rem); max-width: 60%; }
 }
 
-/* -------------------
-   Fullscreen overlay
-------------------- */
 .compare-overlay {
   position: fixed;
   inset: 0;
@@ -113,40 +78,18 @@
   z-index: 9999;
 }
 
-/* -------------------
-   FULLSCREEN MODE
-------------------- */
 .compare-container.is-fullscreen {
   display: block;
   position: relative;
-
   max-width: 95vw;
-  max-height: calc(var(--vh, 1vh) * 95); /* <-- dynamic vh fix */
+  max-height: calc(var(--vh, 1vh) * 95);
   overflow: hidden;
-
   --fs-ui-size: clamp(0.8rem, 1.2vw, 1.4rem);
-
-  /* Safe-area padding for iOS devices */
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
 }
 
-/* Bottom image */
-.compare-container.is-fullscreen > img {
-  display: block;
-  max-width: 95vw;
-  max-height: calc(var(--vh, 1vh) * 95);
-  width: auto;
-  height: auto;
-}
-
-/* Top wrapper */
-.compare-container.is-fullscreen .compare-top {
-  position: absolute;
-  inset: 0;
-}
-
-/* Top image */
+.compare-container.is-fullscreen > img,
 .compare-container.is-fullscreen .compare-top img {
   max-width: 95vw;
   max-height: calc(var(--vh, 1vh) * 95);
@@ -154,17 +97,14 @@
   height: auto;
 }
 
-/* Fullscreen captions */
+.compare-container.is-fullscreen .compare-top { inset: 0; position: absolute; }
+
 .compare-container.is-fullscreen .compare-caption {
   font-size: var(--fs-ui-size);
-  padding: calc(var(--fs-ui-size) * 0.35)
-           calc(var(--fs-ui-size) * 0.7);
+  padding: calc(var(--fs-ui-size) * 0.35) calc(var(--fs-ui-size) * 0.7);
   max-width: 40%;
 }
 
-/* -------------------
-   Fullscreen button
-------------------- */
 .compare-fullscreen-btn {
   position: absolute;
   top: 0.5em;
@@ -176,25 +116,24 @@
   border: none;
   border-radius: 0.3em;
   cursor: pointer;
-
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.2s ease,
-              font-size 0.2s ease,
-              padding 0.2s ease;
+  transition: opacity 0.2s ease, font-size 0.2s ease, padding 0.2s ease;
 }
 
-/* Show button on hover */
+/* Show button on hover for non-touch devices */
 .compare-container:hover .compare-fullscreen-btn {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* Fullscreen button scaling matches caption */
+/* Fullscreen button scaling in fullscreen mode */
 .compare-container.is-fullscreen .compare-fullscreen-btn {
   font-size: var(--fs-ui-size);
   padding: calc(var(--fs-ui-size) * 0.35)
            calc(var(--fs-ui-size) * 0.6);
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* Always show fullscreen button on touch devices */
