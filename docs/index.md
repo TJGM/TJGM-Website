@@ -31,7 +31,7 @@ hide:
   <!-- Twitch Stream -->
   <div class="stream-video">
       <iframe
-          src="https://player.twitch.tv/?channel=tjgm&parent=https://tjgm.dev/"
+          src="https://player.twitch.tv/?channel=tjgm&parent=tjgm.dev/"
           allowfullscreen>
       </iframe>
       </div>
