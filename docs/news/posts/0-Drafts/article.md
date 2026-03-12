@@ -1,5 +1,6 @@
 ---
 title: ARTICLE TITLE HERE
+description: ARTICLE DESCRIPTION HERE
 date: 1998-04-12
 categories:
         - Announcements
@@ -36,11 +37,17 @@ links:
 
 ARTICLE HERE
 
------
+<div class="share-container">
+  <button class="share-button" id="share-btn">
+    <span class="share-icon">🔗</span> Share this post
+  </button>
+</div>
+
+---
 
 <div class="md-typeset" style="text-align:center; padding:1.5rem; border:1px solid var(--md-default-fg-color--lightest); border-radius:6px;">
-  <h3>Found this useful?</h3>
-  <p>Gain benefits such as shout-outs at the end of TJGM videos, early access to TJGM videos, early access to TJGM mods, VIP Discord access and much more by supporting me and my work on Patreon, it's very much appreciated! ❤️</p>
+  <h3>Enjoy my work?</h3>
+  <p>Gain benefits such as shout-outs at the end of videos, early access to TJGM videos, early access to TJGM mods, VIP Discord access and much more by supporting me and my work on Patreon, it's very much appreciated! ❤️</p>
   <a
     class="md-button"
     href="https://patreon.com/tjgm"

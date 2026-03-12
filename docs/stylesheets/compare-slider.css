@@ -1,48 +1,29 @@
-/* -------------------
-   Container
-------------------- */
 .compare-container {
   position: relative;
-  z-index: 0;          /* create stacking context */
-  isolation: isolate;  /* prevents children from escaping */
-  display: inline-block;  /* shrink-wrap to image natural width */
-  overflow: hidden;       /* hide overflow */
+  z-index: 0;
+  isolation: isolate;
+  display: inline-block;
+  overflow: hidden;
   cursor: ew-resize;
   user-select: none;
-  max-width: 100vw;       /* never wider than viewport */
-  transition: transform 0.2s ease; /* smooth fullscreen scaling */
+  max-width: 100%;
+  transition: transform 0.2s ease;
 }
 
-/* Base images */
-.compare-container img {
-  display: block;
-  width: 100%;   /* scale down to fit container */
-  height: auto;  /* maintain aspect ratio */
-  max-width: none;
-}
-
-/* -------------------
-   Top image (clipped)
-------------------- */
-.compare-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  clip-path: inset(0 0 0 50%); /* start half visible (right side hidden) */
-  width: 100%;
-  height: 100%;
-}
-
+.compare-container > img,
 .compare-top img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* -------------------
-   Slider vertical line
-------------------- */
+.compare-top {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  clip-path: inset(0 0 0 50%);
+}
+
 .compare-line {
   position: absolute;
   top: 0;
@@ -53,9 +34,6 @@
   box-shadow: 0 0 6px rgba(0,0,0,0.5);
 }
 
-/* -------------------
-   Slider handle
-------------------- */
 .compare-slider {
   position: absolute;
   width: 20px;
@@ -69,33 +47,27 @@
   transform: translate(-50%, -50%);
 }
 
-/* -------------------
-   Captions
-------------------- */
 .compare-caption {
   position: absolute;
   bottom: 10px;
   padding: 4px 8px;
   background: rgba(0,0,0,0.6);
   color: white;
-  font-size: 0.9em;
+  font-size: clamp(0.45rem, 1.8vw, 1rem);
   border-radius: 4px;
   pointer-events: none;
   user-select: none;
   transition: opacity 0.25s ease, font-size 0.2s ease;
+  max-width: 45%;
+  word-break: break-word;
+}
+.compare-caption.before { left: 10px; }
+.compare-caption.after { right: 10px; }
+
+@media (max-width: 600px) {
+  .compare-caption { font-size: clamp(0.4rem, 3vw, 0.75rem); max-width: 60%; }
 }
 
-.compare-caption.before {
-  left: 10px;
-}
-
-.compare-caption.after {
-  right: 10px;
-}
-
-/* -------------------
-   Fullscreen overlay
-------------------- */
 .compare-overlay {
   position: fixed;
   inset: 0;
@@ -106,47 +78,68 @@
   z-index: 9999;
 }
 
-/* container in fullscreen */
 .compare-container.is-fullscreen {
+  display: block;
+  position: relative;
   max-width: 95vw;
-  max-height: 95vh;
-  transition: transform 0.2s ease;
+  max-height: calc(var(--vh, 1vh) * 95);
+  overflow: hidden;
+  --fs-ui-size: clamp(0.8rem, 1.2vw, 1.4rem);
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
-/* bigger captions in fullscreen */
+.compare-container.is-fullscreen > img,
+.compare-container.is-fullscreen .compare-top img {
+  max-width: 95vw;
+  max-height: calc(var(--vh, 1vh) * 95);
+  width: auto;
+  height: auto;
+}
+
+.compare-container.is-fullscreen .compare-top { inset: 0; position: absolute; }
+
 .compare-container.is-fullscreen .compare-caption {
-  font-size: 2.6em;   /* bigger text */
-  padding: 6px 10px;  /* more padding */
+  font-size: var(--fs-ui-size);
+  padding: calc(var(--fs-ui-size) * 0.35) calc(var(--fs-ui-size) * 0.7);
+  max-width: 40%;
 }
 
-/* -------------------
-   Fullscreen button
-------------------- */
 .compare-fullscreen-btn {
   position: absolute;
   top: 0.5em;
   right: 0.5em;
-  font-size: 1.2em;   /* normal size matches captions */
+  font-size: 1em;
   padding: 0.3em 0.5em;
   background: rgba(0,0,0,0.6);
   color: white;
   border: none;
   border-radius: 0.3em;
   cursor: pointer;
-
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s ease, font-size 0.2s ease, padding 0.2s ease;
 }
 
-/* show button on hover */
+/* Show button on hover for non-touch devices */
 .compare-container:hover .compare-fullscreen-btn {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* bigger button in fullscreen */
+/* Fullscreen button scaling in fullscreen mode */
 .compare-container.is-fullscreen .compare-fullscreen-btn {
-  font-size: 1.6em;
-  padding: 0.5em 0.8em;
+  font-size: var(--fs-ui-size);
+  padding: calc(var(--fs-ui-size) * 0.35)
+           calc(var(--fs-ui-size) * 0.6);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Always show fullscreen button on touch devices */
+@media (hover: none) {
+  .compare-fullscreen-btn {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
 }

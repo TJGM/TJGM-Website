@@ -1,4 +1,10 @@
-# No Extra Air Resistance
+---
+title: No Extra Air Resistance
+description: Removes the extra air resistance flag which reduces vehicle speed in certain areas around the map.
+subtitle:
+status:
+icon:
+---
 
 ## What is it?
 
@@ -28,29 +34,29 @@ I've also made a YouTube video covering this topic if you're interested in learn
 
 ??? note "Click to view the full changelog"
     !!! info
-        Exact files edited for each change will be in brackets () at the end of the change when possible.
+        Exact files edited for each change will be in brackets () at the end of the change when needed/possible.
 
-    **v1.0**
+    **v1.0.0**
 
     - Initial release.
     - Removed all cullzones that contain the "ExtraAirResistance" flag. (cull.ipl)
 
-    **v2.0**
+    **v2.0.0**
 
-    - The mod has been updated to be an ASI plugin made by iFarbod, which disables the extra air resistance flag in general.
+    - The mod has been updated to be an ASI plugin made by iFarbod, which disables the extra air resistance flag entirely without having to edit "cull.ipl".
       
         My solution was to just remove the flag from the zones in "cull.ipl", but this could potentially create incompatibility with other mods if they also altered "cull.ipl" (rare, but still possible), so his solution is much cleaner and better for compatibility.
 
 ## Download and Installation
 
-- Step 1: Download the mod from your preferred source.
+- Step 1: Download the latest version of the mod from your preferred source.
 
-    - GTA SA: [GitHub](https://www.gtagarage.com/mods/show.php?id=25639), [Mega](https://www.gtagarage.com/mods/show.php?id=25639), [GTAInside](https://www.gtagarage.com/mods/show.php?id=25639) or [Nexus](https://www.gtagarage.com/mods/show.php?id=25639).
+    - GTA SA: [GitHub](https://github.com/TJGM/SA.NoExtraAirResistance/releases){:target="_blank"} or [Mega](https://mega.nz/folder/smwnQLxD#JbdgMBfpHDGVReUfU2TZ3g){:target="_blank"}.
 
-- Step 2: Open the mod archive you downloaded and move the **"No Extra Air Resistance 2.0"** folder from the archive into your **"modloader"** folder.
+- Step 2: Open the mod archive you downloaded and move the **"No Extra Air Resistance vX.Y.Z"** folder from the archive into your **"modloader"** folder.
 
 <span style="font-size: 0.85em;">
-[Click here for older mod versions (if available)](https://www.gtagarage.com/mods/show.php?id=25639)
+[Click here for older mod versions (if available)](https://github.com/TJGM/SA.NoExtraAirResistance/releases){:target="_blank"}
 </span>
 
 ## Credits
@@ -58,11 +64,13 @@ I've also made a YouTube video covering this topic if you're interested in learn
 - iFarbod
 - TJGM
 
-All my mods are free to use, share and reuse in other mods. All I ask is that you give credit, thanks!
+All of my mods are free to use, share and reuse in other mods. All I ask is that you give credit, thanks!
+
+---
 
 <div class="md-typeset" style="text-align:center; padding:1.5rem; border:1px solid var(--md-default-fg-color--lightest); border-radius:6px;">
   <h3>Enjoy my work?</h3>
-  <p>If you've ever found my work helpful or useful in any way, please consider supporting me on Patreon, it's very much appreciated! ❤️</p>
+  <p>Gain benefits such as shout-outs at the end of videos, early access to TJGM videos, early access to TJGM mods, VIP Discord access and much more by supporting me and my work on Patreon, it's very much appreciated! ❤️</p>
   <a
     class="md-button"
     href="https://patreon.com/tjgm"
@@ -72,3 +80,4 @@ All my mods are free to use, share and reuse in other mods. All I ask is that yo
   >
     ⭐ Support on Patreon
   </a>
+</div>

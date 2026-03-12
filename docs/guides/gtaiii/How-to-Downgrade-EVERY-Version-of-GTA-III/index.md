@@ -1,12 +1,18 @@
-# How to Downgrade EVERY Version of GTA III
+---
+title: How to Downgrade EVERY Version of GTA III
+description: A full downgrading guide for EVERY version of GTA III
+subtitle:
+status:
+icon:
+---
 
-## Introduction
-
-!!! info
+!!! warning
 
     This guide **IS NOT** for *Grand Theft Auto: III - The Definitive Edition* which released in 2021. This guide is **ONLY** for the original *Grand Theft Auto: III* released in 2002.
     
     The only reason you should downgrade GTA III is if you want to mod the game. If you're not going to mod, you should stick with the latest version of GTA III.
+
+## Introduction
 
 Depending on the copy of GTA III you have, downgrading may be different, so this guide will be split into different sections for the Steam, Rockstar Games Launcher and DVD copies of the game. Press one of the buttons below to be taken to the section of the guide for whichever copy you have.
 
@@ -115,11 +121,11 @@ Some downgraders come as actual installers, however these often have issues on c
 
 Lastly, a lot of downgraders simply come with the wrong .exe, as there's several 1.0 exe's from different regions. My downgrader comes with the most mod compatible .exe.
 
------
+---
 
 <div class="md-typeset" style="text-align:center; padding:1.5rem; border:1px solid var(--md-default-fg-color--lightest); border-radius:6px;">
-  <h3>Did this help?</h3>
-  <p>If you found this guide helpful, please consider supporting me and my work on Patreon, it's very much appreciated! ❤️</p>
+  <h3>Found this guide useful?</h3>
+  <p>Gain benefits such as shout-outs at the end of videos, early access to TJGM videos, early access to TJGM mods, VIP Discord access and much more by supporting me and my work on Patreon, it's very much appreciated! ❤️</p>
   <a
     class="md-button"
     href="https://patreon.com/tjgm"

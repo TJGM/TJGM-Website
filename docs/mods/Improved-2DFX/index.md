@@ -1,4 +1,10 @@
-# Improved 2DFX
+---
+title: Improved 2DFX
+description: News, guides, mods and more. What else can a GTA fan ask for?
+subtitle:
+status:
+icon:
+---
 
 ## What is it?
 
@@ -10,18 +16,24 @@ Improved 2DFX adds new lights to Vice City and San Andreas where they would be e
     !!! info
         Exact files edited for each change will be in brackets () at the end of the change when possible.
 
-    **v1.0 (Originally "Improved Hyman Memorial 2DFX", Vice City only)**
+    **v1.0**
     
     - Initial release.
-    - Added coronas to the Hyman Memorial Stadium.
 
-    **v2.0**
+    **San Andreas Changes**
 
-    - Changed mod name to "Improved 2DFX"
-    - Mod is now available for GTA III and San Andreas.
+    - Integrated [Jizzy's Pleasure Dome Remastered 2DFX](../Jizzy's-Pleasure-Dome-Remastered-2DFX/index.md){:target="_blank"}.
+        - Restored PS2 models so the walls at Jizzy's booth animate correctly and the lights above in the booth now have visible light rays as they should.
+        - Fixed several coronas that only appeared at certain camera angles so they're always visible.
+        - Added more fog to the club and fog now illuminates the player.
+        - Added coronas to lights that were missing.
 
     **Vice City Changes**
 
+    - Integrated [Improved Hyman Memorial 2DFX](../Jizzy's-Pleasure-Dome-Remastered-2DFX/index.md){:target="_blank"}.
+        - test 
+        - test
+        - test
     - Added coronas to light models on the Vice City News rooftop.
     - Enabled "dust" effects and corona reflections to the coronas at the Downtown safehouse.
     - Changed red lights on the Downtown safehouse roof to pure red.
@@ -33,13 +45,13 @@ Improved 2DFX adds new lights to Vice City and San Andreas where they would be e
 
 ## Download and Installation
 
-- Step 1: Download the mod below for the game you want from your preferred source.
+- Step 1: Pick the game you want and then download the latest version of the mod from your preferred source.
 
-    - GTA III: [GitHub](https://www.gtagarage.com/mods/show.php?id=25639), [Mega](https://www.gtagarage.com/mods/show.php?id=25639), [GTAInside](https://www.gtagarage.com/mods/show.php?id=25639) or [Nexus](https://www.gtagarage.com/mods/show.php?id=25639).
+    - GTA III: [GitHub](https://www.gtagarage.com/mods/show.php?id=25639) or [Mega](https://www.gtagarage.com/mods/show.php?id=25639).
 
-    - GTA VC: [GitHub](https://www.gtagarage.com/mods/show.php?id=25639), [Mega](https://www.gtagarage.com/mods/show.php?id=25639), [GTAInside](https://www.gtagarage.com/mods/show.php?id=25639) or [Nexus](https://www.gtagarage.com/mods/show.php?id=25639).
+    - GTA VC: [GitHub](https://www.gtagarage.com/mods/show.php?id=25639) or [Mega](https://www.gtagarage.com/mods/show.php?id=25639).
 
-    - GTA SA: [GitHub](https://www.gtagarage.com/mods/show.php?id=25639), [Mega](https://www.gtagarage.com/mods/show.php?id=25639), [GTAInside](https://www.gtagarage.com/mods/show.php?id=25639) or [Nexus](https://www.gtagarage.com/mods/show.php?id=25639).
+    - GTA SA: [GitHub](https://www.gtagarage.com/mods/show.php?id=25639) or [Mega](https://www.gtagarage.com/mods/show.php?id=25639).
 
 - Step 2: Open the mod archive you downloaded and move the **"Improved 2DFX v2.0"** folder from the archive into your **"modloader"** folder.
 
@@ -199,9 +211,11 @@ Improved 2DFX adds new lights to Vice City and San Andreas where they would be e
 
 All my mods are free to use, share and reuse in other mods. All I ask is that you give credit, thanks!
 
+---
+
 <div class="md-typeset" style="text-align:center; padding:1.5rem; border:1px solid var(--md-default-fg-color--lightest); border-radius:6px;">
   <h3>Enjoy my work?</h3>
-  <p>If you've ever found my work helpful or useful in any way, please consider supporting me on Patreon, it's very much appreciated! ❤️</p>
+  <p>Gain benefits such as shout-outs at the end of videos, early access to TJGM videos, early access to TJGM mods, VIP Discord access and much more by supporting me and my work on Patreon, it's very much appreciated! ❤️</p>
   <a
     class="md-button"
     href="https://patreon.com/tjgm"

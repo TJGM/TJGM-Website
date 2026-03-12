@@ -1,8 +1,12 @@
-# Restoring Music Cut from GTA Vice City without Downgrading
+---
+title: Restoring Music Cut from Grand Theft Auto Vice City WITHOUT Downgrading
+description: A full radio restoration guide for GTA Vice City WITHOUT Downgrading
+subtitle:
+status:
+icon:
+---
 
-## Introduction
-
-!!! info
+!!! warning
 
     This guide **IS NOT** for *Grand Theft Auto: Vice City - The Definitive Edition* which released in 2021. This guide is **ONLY** for the original *Grand Theft Auto: Vice City* released in 2002.
     
@@ -11,6 +15,8 @@
     If you do want to downgrade, which you only really need to do if you're modding Vice City, I have a [seperate guide](../How-to-Downgrade-EVERY-Version-of-GTA-Vice-City/index.md) for that. If you've already downgraded, you don't need to follow this guide as downgrading already restores the cut music.
 
     You only need to follow this guide if you have the Steam or Rockstar Games Launcher version of the game. The DVD versions have all of the original music.
+
+## Introduction
 
 Depending on the copy of Vice City you have, restoring the music may be different, so this guide will be split into different sections for the Steam and Rockstar Games Launcher copies of the game. Press one of the buttons below to be taken to the section of the guide for whichever copy you have.
 
@@ -71,11 +77,11 @@ And that's it, you've restored the music cut from Vice City. To test, start a ne
 
 If you did everything correctly, the game should automatically turn on Flash FM when you enter the car and [Billie Jean by Michael Jackson](https://youtu.be/Zi_XLOBDo_Y?si=lJyF3hLBMXk4wnHd) should be playing. If another song is playing on Flash FM, the restoration didn't work and you should repeat the steps listed above.
 
------
+---
 
 <div class="md-typeset" style="text-align:center; padding:1.5rem; border:1px solid var(--md-default-fg-color--lightest); border-radius:6px;">
-  <h3>Did this help?</h3>
-  <p>If you found this guide helpful, please consider supporting me and my work on Patreon, it's very much appreciated! ❤️</p>
+  <h3>Found this guide useful?</h3>
+  <p>Gain benefits such as shout-outs at the end of videos, early access to TJGM videos, early access to TJGM mods, VIP Discord access and much more by supporting me and my work on Patreon, it's very much appreciated! ❤️</p>
   <a
     class="md-button"
     href="https://patreon.com/tjgm"

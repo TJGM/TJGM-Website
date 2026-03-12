@@ -1,14 +1,20 @@
-# How to Downgrade EVERY Version of GTA Vice City
+---
+title: How to Downgrade EVERY Version of GTA Vice City
+description: A full downgrading guide for EVERY version of GTA Vice City
+subtitle:
+status:
+icon:
+---
 
-## Introduction
-
-!!! info
+!!! warning
 
     This guide **IS NOT** for *Grand Theft Auto: Vice City - The Definitive Edition* which released in 2021. This guide is **ONLY** for the original *Grand Theft Auto: Vice City* released in 2002.
     
     The only reason you should downgrade GTA Vice City is if you want to mod the game, as the 1.0 version is most compatible with mods. If you're not going to mod, you should stick with the latest version of Vice City.
 
-    If you just want to restore the music that has been cut from the game, you can do this without downgrading and I have [seperate guide](../Restoring-the-Vice-City-Radio-without-Downgrading/index.md) which will help you with that.
+    If you just want to restore the music that has been cut from the game, you can do this without downgrading and I have [seperate guide](../Restoring-Music-Cut-from-GTA-Vice-City-WITHOUT-Downgrading/index.md) which will help you with that.
+
+## Introduction
 
 Depending on the copy of Vice City you have, downgrading may be different, so this guide will be split into different sections for the Steam, Rockstar Games Launcher and DVD copies of the game. Press one of the buttons below to be taken to the section of the guide for whichever copy you have.
 
@@ -114,11 +120,11 @@ Most downgraders compress their files using 7zip or WinRAR, which shrinks the ar
 
 The downgrader IS safe. The .zip archive simply contains 1.0 game files that have been changed in later versions. The biggest files are the audio files.
 
------
+---
 
 <div class="md-typeset" style="text-align:center; padding:1.5rem; border:1px solid var(--md-default-fg-color--lightest); border-radius:6px;">
-  <h3>Did this help?</h3>
-  <p>If you found this guide helpful, please consider supporting me and my work on Patreon, it's very much appreciated! ❤️</p>
+  <h3>Found this guide useful?</h3>
+  <p>Gain benefits such as shout-outs at the end of videos, early access to TJGM videos, early access to TJGM mods, VIP Discord access and much more by supporting me and my work on Patreon, it's very much appreciated! ❤️</p>
   <a
     class="md-button"
     href="https://patreon.com/tjgm"

@@ -1,3 +1,11 @@
+---
+title: Weapon Coronas
+description: Adds a corona effect to the weapons of San Andreas, similar to GTA III and Vice City.
+subtitle:
+status:
+icon:
+---
+
 # Weapon Coronas
 
 !!! warning
@@ -11,27 +19,29 @@ Rockstar decided to remove the coronas from dropped weapons when San Andreas cam
 
 ??? note "Click to view the full changelog"
     !!! info
-        Exact files edited for each change will be in brackets () at the end of the change when possible.
+        Exact files edited for each change will be in brackets ( ) at the end of the change when needed/possible.
 
-    **v1.0**
+    **v1.0.0** (18/02/2014)
 
     - Initial release.
-    - Added coronas to the weapon models.
+    - Added coronas to all weapon models.
 
-    **v1.1**
+    **v1.1.0** (04/05/2014)
 
-    - N/A
+    - Removed unnecessary 2DFX flags from all weapon models.
+    - Updated the corona effect so it flashes instead of flickers.
+    - Updated the corona shadow on all weapon models so it's now more intense.
 
 ## Download and Installation
 
-- Step 1: Download the mod from your preferred source.
+- Step 1: Download the latest version of the mod from your preferred source.
 
-    - GTA SA: [GitHub](https://www.gtagarage.com/mods/show.php?id=25639), [Mega](https://www.gtagarage.com/mods/show.php?id=25639), [GTAInside](https://www.gtagarage.com/mods/show.php?id=25639) or [Nexus](https://www.gtagarage.com/mods/show.php?id=25639).
+    - GTA SA: [GitHub](https://github.com/TJGM/SA.WeaponCoronas/releases){:target="_blank"} or [Mega](https://mega.nz/folder/lnpGELrR#iQbAXvIhlIeserdkbSzOFQ){:target="_blank"}.
 
-- Step 2: Open the mod archive you downloaded and move the **"Weapon Coronas v1.1"** folder from the archive into your **"modloader"** folder.
+- Step 2: Open the mod archive you downloaded and move the **"Weapon Coronas vX.Y.Z"** folder from the archive into your **"modloader"** folder.
 
 <span style="font-size: 0.85em;">
-[Click here for older mod versions (if available)](https://www.gtagarage.com/mods/show.php?id=25639)
+[Click here for older mod versions (if available)](https://github.com/TJGM/SA.WeaponCoronas/releases){:target="_blank"}
 </span>
 
 ## Screenshots
@@ -40,17 +50,19 @@ Rockstar decided to remove the coronas from dropped weapons when San Andreas cam
 
 ## Known Issues
 
-- Sun flares may be replaced by the weapon coronas. Installing [SilentPatch](https://github.com/CookiePLMonster/SilentPatch) fixes this.
+- Sun flares may be replaced by the weapon coronas. Installing [SilentPatch](https://github.com/CookiePLMonster/SilentPatch){:target="_blank"} fixes this.
 
 ## Credits
 
 - TJGM
 
-All my mods are free to use, share and reuse in other mods. All I ask is that you give credit, thanks!
+All of my mods are free to use, share and reuse in other mods. All I ask is that you give credit, thanks!
+
+---
 
 <div class="md-typeset" style="text-align:center; padding:1.5rem; border:1px solid var(--md-default-fg-color--lightest); border-radius:6px;">
   <h3>Enjoy my work?</h3>
-  <p>If you've ever found my work helpful or useful in any way, please consider supporting me on Patreon, it's very much appreciated! ❤️</p>
+  <p>Gain benefits such as shout-outs at the end of videos, early access to TJGM videos, early access to TJGM mods, VIP Discord access and much more by supporting me and my work on Patreon, it's very much appreciated! ❤️</p>
   <a
     class="md-button"
     href="https://patreon.com/tjgm"
@@ -60,3 +72,4 @@ All my mods are free to use, share and reuse in other mods. All I ask is that yo
   >
     ⭐ Support on Patreon
   </a>
+</div>

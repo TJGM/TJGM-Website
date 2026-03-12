@@ -1,4 +1,10 @@
-# Orange Bulb Lampposts
+---
+title: Orange Bulb Lampposts
+description: Makes the bulb part of the lamppost models actually orange instead of white at night time.
+subtitle:
+status:
+icon:
+---
 
 ## What is it?
 
@@ -7,23 +13,25 @@ The bulbs on lampposts are white instead of orange at night, this fixes that.
 ## Changelog
 
 ??? note "Click to view the full changelog"
+    !!! info
+        Exact files edited for each change will be in brackets ( ) at the end of the change when needed/possible.
 
-    **v1.0**
+    **v1.0.0**
 
     - Initial release.
-    - Changed night vertex colours on several lamppost models so that the bulb part of the model is orange at night when the corona is active instead of white.
+    - Changed night vertex colours on several lamppost models so that the bulb part of the model is orange at night when the corona is active instead of white. (lamppost1.dff, lamppost2.dff, lamppost3.dff)
 
 
 ## Download and Installation
 
-- Step 1: Download the mod from your preferred source.
+- Step 1: Download the latest version of the mod from your preferred source.
 
-    - GTA SA: [GitHub](https://www.gtagarage.com/mods/show.php?id=25639), [Mega](https://www.gtagarage.com/mods/show.php?id=25639), [GTAInside](https://www.gtagarage.com/mods/show.php?id=25639) or [Nexus](https://www.gtagarage.com/mods/show.php?id=25639).
+    - GTA SA: [GitHub](https://github.com/TJGM/SA.OrangeBulbLampposts/releases){:target="_blank"} or [Mega](https://mega.nz/folder/ZuAiFRTZ#OLJsQcPyIU3Q7t7xFGqY3w){:target="_blank"}.
 
-- Step 2: Open the mod archive you downloaded and move the **"Weapon Coronas v1.1"** folder from the archive into your **"modloader"** folder.
+- Step 2: Open the mod archive you downloaded and move the **"Orange Bulb Lampposts vX.Y.Z"** folder from the archive into your **"modloader"** folder.
 
 <span style="font-size: 0.85em;">
-[Click here for older mod versions (if available)](https://www.gtagarage.com/mods/show.php?id=25639)
+[Click here for older mod versions (if available)](https://github.com/TJGM/SA.OrangeBulbLampposts/releases){:target="_blank"}
 </span>
 
 ## Screenshots
@@ -76,11 +84,13 @@ The bulbs on lampposts are white instead of orange at night, this fixes that.
 
 - TJGM
 
-All my mods are free to use, share and reuse in other mods. All I ask is that you give credit, thanks!
+All of my mods are free to use, share and reuse in other mods. All I ask is that you give credit, thanks!
+
+---
 
 <div class="md-typeset" style="text-align:center; padding:1.5rem; border:1px solid var(--md-default-fg-color--lightest); border-radius:6px;">
   <h3>Enjoy my work?</h3>
-  <p>If you've ever found my work helpful or useful in any way, please consider supporting me on Patreon, it's very much appreciated! ❤️</p>
+  <p>Gain benefits such as shout-outs at the end of videos, early access to TJGM videos, early access to TJGM mods, VIP Discord access and much more by supporting me and my work on Patreon, it's very much appreciated! ❤️</p>
   <a
     class="md-button"
     href="https://patreon.com/tjgm"
@@ -90,3 +100,4 @@ All my mods are free to use, share and reuse in other mods. All I ask is that yo
   >
     ⭐ Support on Patreon
   </a>
+</div>

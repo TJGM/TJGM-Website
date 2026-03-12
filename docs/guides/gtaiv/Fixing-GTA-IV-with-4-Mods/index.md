@@ -1,4 +1,10 @@
-# Fixing GTA IV with 4 Mods
+---
+title: Fixing GTA IV with 4 Mods
+description: A quick guide to fix GTA IV's PC port with just 4 Mods
+subtitle:
+status:
+icon:
+---
 
 !!! warning
     This guide is only for The Complete Edition of Grand Theft Auto: IV. If you're playing on an older version, this guide won't work.
@@ -25,11 +31,11 @@ If you don't know, Fusion Fix is basically *the* mod which fixes most of GTA IV'
 
 But Fusion Fix does more than just fixing problems, it also adds a few beautiful faithful graphical effects as well as a TON of quality-of-life features which brings the game up to a more modern standard and improves the overall experience.
 
+### Highlights
+
 I won't cover all of things Fusion Fix does in this guide, but I will go over some of the highlights of the mod so you'll know what you're in for.
 
 If you just want to skip to installing the mod, you can [click here](#download-installation), otherwise keep scrolling.
-
-### Highlights
 
 #### Rain
 
@@ -217,7 +223,7 @@ The PC port of Grand Theft Auto IV was plagued with z-fighting not seen on other
 
 Fusion Fix fixes this so z-fighting is basically nonexistent.
 
-<video width="2560" controls>
+<video width="2560" autoplay muted loop>
   <source src="assets/fusionfix/zfight.mp4" type="video/mp4">
 </video>
 
@@ -227,11 +233,11 @@ The 1.0.6.0 update for PC broke several graphical effects, one of them being scr
 
 Fusion Fix restores this functionality from previous versions so fading now works again, and it also restores terrain fading from the console versions of the game.
 
-<video width="2560" controls>
+<video width="2560" autoplay muted loop>
   <source src="assets/fusionfix/screendoorfade.mp4" type="video/mp4">
 </video>
 
-<video width="2560" controls>
+<video width="2560" autoplay muted loop>
   <source src="assets/fusionfix/terrainfade.mp4" type="video/mp4">
 </video>
 
@@ -487,7 +493,7 @@ GTA IV on PC has an unskippable intro and it takes you to a main menu first inst
 
 Fusion Fix adds a skip intro and skip menu option in the GAME menu, as well as improving overall load times. This significantly reduces how long it takes to get in-game.
 
-<video width="2560" controls>
+<video width="2560" autoplay muted loop>
   <source src="assets/fusionfix/improvedloadtimes.mp4" type="video/mp4">
 </video>
 
@@ -693,7 +699,7 @@ If you want to install the other console assets from Console Visuals, have a loo
 
       - **Rockstar Games Launcher**: You can find it by clicking on **"Settings"** in the Rockstar Games Launcher, click **"Grand Theft Auto IV: The Complete Edition"** in your installed games list, find **"View installation folder"** and then click **"Open"** next to it. The **"GTAIV"** folder is where **"GTAIV.exe"** is located.
 
-And that’s it, the vegetation from Console Visuals is installed! Like I said, if you do want to install the rest of Console Visuals, check out my full [Console Visuals Guide](#console-visuals) so you can pick and choose what you prefer.
+And that’s it, the vegetation from Console Visuals is installed! If you do want to install other parts of Console Visuals, the installation will be the exact same as the vegetation installation, so just download the parts you want and then follow step 2.
 
 ## Various Fixes
 
@@ -796,17 +802,13 @@ You've now restored the music cut from GTA IV!
 
 And that's it! You now have the BEST version of GTA IV on ANY platform.
 
-Some of the stuff I covered throughout this guide you might want to follow up on.
-
 If you'd like to learn more about Fusion Overloader, the modloader that comes with Fusion Fix, check out my Fusion Overloader guide.
 
-If you'd like to install the other components of Console Visuals, check out my Console Visuals guide which will show you what each component does and how to install them.
-
------
+---
 
 <div class="md-typeset" style="text-align:center; padding:1.5rem; border:1px solid var(--md-default-fg-color--lightest); border-radius:6px;">
-  <h3>Did this help?</h3>
-  <p>If you found this guide helpful, please consider supporting me and my work on Patreon, it's very much appreciated! ❤️</p>
+  <h3>Found this guide useful?</h3>
+  <p>Gain benefits such as shout-outs at the end of videos, early access to TJGM videos, early access to TJGM mods, VIP Discord access and much more by supporting me and my work on Patreon, it's very much appreciated! ❤️</p>
   <a
     class="md-button"
     href="https://patreon.com/tjgm"

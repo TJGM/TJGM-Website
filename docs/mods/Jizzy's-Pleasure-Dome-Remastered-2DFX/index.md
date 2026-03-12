@@ -1,7 +1,13 @@
-# Jizzy's Pleasure Dome Remastered 2DFX
+---
+title: Jizzy's Pleasure Dome Remastered 2DFX
+description: Remastering the 2DFX in Jizzy's Pleasure Dome.
+subtitle:
+status:
+icon:
+---
 
 !!! info
-    This mod has been integrated into [Improved 2DFX](../Improved-2DFX/index.md). If you use that mod, you don't need to download this mod seperately.
+    This mod has been integrated into [Improved 2DFX](../Improved-2DFX/index.md){:target="_blank"}. If you use that mod, you don't need to download this mod seperately.
 
 ## What is it?
 
@@ -13,7 +19,7 @@ All of the 2DFX in Jizzy's club has been redone, fixing several issues in the cl
     !!! info
         Exact files edited for each change will be in brackets () at the end of the change when possible.
 
-    **v1.0**
+    **v1.0.0**
     
     - Initial release.
     - Restored PS2 models so the walls at Jizzy's booth animate correctly and the lights above in the booth now have visible light rays as they should.
@@ -24,14 +30,14 @@ All of the 2DFX in Jizzy's club has been redone, fixing several issues in the cl
 
 ## Download and Installation
 
-- Step 1: Download the mod from your preferred source.
+- Step 1: Download the latest version of the mod from your preferred source.
 
-    - GTA SA: [GitHub](https://www.gtagarage.com/mods/show.php?id=25639), [Mega](https://www.gtagarage.com/mods/show.php?id=25639), [GTAInside](https://www.gtagarage.com/mods/show.php?id=25639) or [Nexus](https://www.gtagarage.com/mods/show.php?id=25639).
+    - GTA SA: [GitHub](https://github.com/TJGM/SA.JizzysPleasureDomeRemastered2DFX/releases){:target="_blank"} or [Mega](https://mega.nz/folder/k7IyVSIY#iJvJHf9I3T_N8iWR1EoL3w){:target="_blank"}.
 
-- Step 2: Open the mod archive you downloaded and move the **"Jizzy's Pleasure Dome Remastered 2DFX v1.0"** folder from the archive into your **"modloader"** folder.
+- Step 2: Open the mod archive you downloaded and move the **"Jizzy's Pleasure Dome Remastered 2DFX vX.Y.Z"** folder from the archive into your **"modloader"** folder.
 
 <span style="font-size: 0.85em;">
-[Click here for older mod versions (if available)](https://www.gtagarage.com/mods/show.php?id=25639)
+[Click here for older mod versions (if available)](https://github.com/TJGM/SA.JizzysPleasureDomeRemastered2DFX/releases){:target="_blank"}
 </span>
 
 ## Screenshots
@@ -180,11 +186,13 @@ All of the 2DFX in Jizzy's club has been redone, fixing several issues in the cl
 
 - TJGM
 
-All my mods are free to use, share and reuse in other mods. All I ask is that you give credit, thanks!
+All of my mods are free to use, share and reuse in other mods. All I ask is that you give credit, thanks!
+
+---
 
 <div class="md-typeset" style="text-align:center; padding:1.5rem; border:1px solid var(--md-default-fg-color--lightest); border-radius:6px;">
   <h3>Enjoy my work?</h3>
-  <p>If you've ever found my work helpful or useful in any way, please consider supporting me on Patreon, it's very much appreciated! ❤️</p>
+  <p>Gain benefits such as shout-outs at the end of videos, early access to TJGM videos, early access to TJGM mods, VIP Discord access and much more by supporting me and my work on Patreon, it's very much appreciated! ❤️</p>
   <a
     class="md-button"
     href="https://patreon.com/tjgm"
@@ -194,3 +202,4 @@ All my mods are free to use, share and reuse in other mods. All I ask is that yo
   >
     ⭐ Support on Patreon
   </a>
+</div>

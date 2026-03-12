@@ -30,11 +30,11 @@ nav:
         - Chapter 3 - Modloader Tutorial & Learning file Types: guides/gtasa/Ultimate-Modding-Guide-for-GTA-San-Andreas/chapter3.md
         - Chapter 4 - Installing More Mods: guides/gtasa/Ultimate-Modding-Guide-for-GTA-San-Andreas/chapter4.md
         - Chapter 5 - Diagnosing and Solving Crashes: guides/gtasa/Ultimate-Modding-Guide-for-GTA-San-Andreas/chapter5.md
-        - Chapter 6 - where to Find Mods and Pro Tips: guides/gtasa/Ultimate-Modding-Guide-for-GTA-San-Andreas/chapter6.md
+        - Chapter 6 - Where to Find Mods and Pro Tips: guides/gtasa/Ultimate-Modding-Guide-for-GTA-San-Andreas/chapter6.md
 
     - Grand Theft Auto Vice City:
       - How to Downgrade EVERY Version of GTA Vice City: guides/gtavc/How-to-Downgrade-EVERY-Version-of-GTA-Vice-City/index.md
-      - Restoring the Vice City Radio without Downgrading: guides/gtavc/Restoring-the-Vice-City-Radio-without-Downgrading/index.md
+      - Restoring Music Cut from GTA Vice City WITHOUT Downgrading: guides/gtavc/Restoring-Music-Cut-from-GTA-Vice-City-WITHOUT-Downgrading/index.md
 
     - Grand Theft Auto III:
         - How to Downgrade EVERY Version of GTA III: guides/gtaiii/How-to-Downgrade-EVERY-Version-of-GTA-III/index.md
@@ -75,6 +75,10 @@ theme:
 plugins:
   - search
   - meta
+  - social:
+      cards_layout: default
+      cards_layout_options:
+        background_color: "#2c2c2c"
   - blog:
       blog_dir: news
       archive_date_format: yyyy
@@ -134,14 +138,16 @@ extra:
       name: YouTube
 
 extra_css:
-  - stylesheets/maincolours.css
-  - stylesheets/hero.css
-  - stylesheets/cards.css
   - stylesheets/compare-slider.css
+  - stylesheets/maincolours.css
+  - stylesheets/share.css
+  - stylesheets/home.css
+  - stylesheets/hero.css
 
   
 extra_javascript:
-  - js/parallax.js
   - js/compare-slider.js
+  - js/parallax.js
+  - js/share.js
 
 copyright: "Copyright © 2026 TJGM."
