@@ -1920,6 +1920,44 @@ Again, these are really old mods that you’ll likely never even see. If for som
 
 
 
+<hr>
+
+<script src="https://giscus.app/client.js"
+        data-repo="TJGM/TJGM-Website"
+        data-repo-id="R_kgDORkz8hQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORkz8hc4C4RqS"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+<script>
+const giscusFrame = () => document.querySelector("iframe.giscus-frame");
+
+document.addEventListener("DOMContentLoaded", function () {
+  const observer = new MutationObserver(() => {
+    const theme = document.body.getAttribute("data-md-color-scheme");
+    const iframe = giscusFrame();
+    if (!iframe) return;
+
+    iframe.contentWindow.postMessage(
+      { giscus: { setConfig: { theme: theme === "slate" ? "dark" : "light" } } },
+      "https://giscus.app"
+    );
+  });
+
+  observer.observe(document.body, { attributes: true, attributeFilter: ["data-md-color-scheme"] });
+});
+</script>
                 
               </article>
             </div>

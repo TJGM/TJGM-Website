@@ -1824,6 +1824,25 @@
 
 
 
+
+<script>
+const giscusFrame = () => document.querySelector("iframe.giscus-frame");
+
+document.addEventListener("DOMContentLoaded", function () {
+  const observer = new MutationObserver(() => {
+    const theme = document.body.getAttribute("data-md-color-scheme");
+    const iframe = giscusFrame();
+    if (!iframe) return;
+
+    iframe.contentWindow.postMessage(
+      { giscus: { setConfig: { theme: theme === "slate" ? "dark" : "light" } } },
+      "https://giscus.app"
+    );
+  });
+
+  observer.observe(document.body, { attributes: true, attributeFilter: ["data-md-color-scheme"] });
+});
+</script>
                 
               </article>
             </div>
