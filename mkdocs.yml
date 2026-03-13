@@ -41,6 +41,7 @@ nav:
 
 theme:
   name: material
+  custom_dir: overrides
   font:
     text: Roboto
     code: Roboto Mono

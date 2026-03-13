@@ -4,6 +4,8 @@ title: Home
 hide:
   - navigation
   - toc
+
+hide_comments: "true"
 ---
 
 <!-- =========================
