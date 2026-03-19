@@ -216,6 +216,23 @@ div#guides ~ p img {
   margin-top: 0;
   margin-bottom: 0.75rem;
   font-size: 1.8rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+/* Email link */
+.email-link {
+  font-size: 1rem;
+  text-decoration: none;
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+.email-link:hover {
+  opacity: 1;
+  text-decoration: underline;
 }
 
 .about-text p {
