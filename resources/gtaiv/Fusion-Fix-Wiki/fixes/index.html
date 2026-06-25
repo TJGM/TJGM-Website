@@ -1909,6 +1909,89 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blur-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blur Filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depth-of-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Depth-of-Field
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motion-blur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motion Blur
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distant-light-timings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distant Light Timings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#z-fighting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z-Fighting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soft-particles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soft Particles
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2060,6 +2143,89 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blur-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blur Filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depth-of-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Depth-of-Field
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motion-blur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motion Blur
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distant-light-timings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distant Light Timings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#z-fighting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z-Fighting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#soft-particles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soft Particles
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2080,7 +2246,312 @@
   <h1>Fixes & Improvements</h1>
 
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h2>
-<p>TODO</p>
+<p>Fusion Fix fixes and improves so many things that it can be hard to know what does what.</p>
+<p>This section of the Wiki tries to keep track of and explain as many of these fixes and improvements as possible.</p>
+<p>This section is still a work-in-progress.</p>
+<hr />
+<p>Other sections of the Fusion Fix Wiki.</p>
+<ul>
+<li><a href="../config/">Configuration File</a></li>
+<li><a href="../download/">Download &amp; Installation</a></li>
+<li><a href="../options/">In-Game Options</a></li>
+<li><a href="../cheats/">New Cheats</a></li>
+</ul>
+<h2 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">#</a></h2>
+<p>There's an option in GTA IV called "Definition" that does multiple things, mostly broken things.</p>
+<p>When Definition is OFF, it enables effects, when Definition is ON, it disables effects. Here's exactly what it's doing when the option is OFF...</p>
+<p><strong>Definition Off</strong></p>
+<ul>
+<li>Enables a blur filter which hides a pixel pattern effect/dithering (but is also broken on PC and blurs the screen too much, warping the the image)</li>
+<li>Enables depth-of-field (doesn't scale to resolution, so weaker at higher resolutions)</li>
+<li>Enables motion blur (weaker at higher frame rates, which is arguably correct)</li>
+</ul>
+<p>So, let's break down what these effects do, how they're broken on PC and what Fusion Fix does to fix them.</p>
+<h3 id="blur-filter">Blur Filter<a class="headerlink" href="#blur-filter" title="Permanent link">#</a></h3>
+<p>GTA IV on Xbox 360 and PC (with Definition off) uses a blur filter on the entire screen to hide a pixel pattern effect/dithering commonly seen on objects fading and the games low resolution shadows.</p>
+<p>As objects fade in GTA IV, this pixel pattern effect becomes obvious. This is a side effect of screen-door transparency, the method Rockstar used to fade objects in GTA IV.</p>
+<p>The blur filter is supposed to hide this effect without distorting the image, giving the game a much less noisy look.</p>
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/rainbefore1.webp" alt="Before">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/rainafter1.webp" alt="After">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">Before</div>
+  <div class="compare-caption after">After</div>
+</div>
+
+<p>However, on PC this blur effect is broken, with the blur being much more intense than on Xbox 360 and basically warping the entire image.</p>
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/rainbefore1.webp" alt="Before">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/rainafter1.webp" alt="After">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">Before</div>
+  <div class="compare-caption after">After</div>
+</div>
+
+<p>The reason for this is that GTA IV uses 2x MSAA on Xbox 360 and it reads a texture with object edge information and uses it to only blur edges.</p>
+<p>The PC version hasn't got MSAA, but that MSAA code remains on the PC version and is active when "Definition" is set to off. The texture which MSAA uses that contains object edge information is basically completely white on PC, which results in the entire screen becoming blurred.</p>
+<p>So on Xbox 360 you have this effect stack...</p>
+<p><strong>Slight screen blur to hide pixel pattern effects</strong> -&gt; <strong>Working 2x MSAA which only blurs object edges.</strong></p>
+<p>But on PC you have this effect stack...</p>
+<p><strong>Slight screen blur to hide pixel pattern effects</strong> -&gt; <strong>Broken 2x MSAA which blurs the entire screen on top of the slight screen blur.</strong></p>
+<p>And this is what leads to the PC version appearing much blurrier than any other version.</p>
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/rainbefore1.webp" alt="Before">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/rainafter1.webp" alt="After">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">Before</div>
+  <div class="compare-caption after">After</div>
+</div>
+
+<p>How does Fusion Fix fix this?</p>
+<p>Fusion Fix completely reworks the "Definition" option when it comes to the blur filter.</p>
+<p><strong>Fusion Fix Definition On (recommended)</strong></p>
+<p>Definition On with Fusion Fix provides the cleanest and clearest image for GTA IV out of ALL platforms. This brings the game in-line with the likes of GTA V.</p>
+<ul>
+<li>Removes broken MSAA code.</li>
+<li>Improves the pixel pattern effect itself so it's easier to filter.</li>
+<li>Further improves the original slight screen blur by making it so it no longer applies to the whole screen, but instead only to objects/effects where pixel pattern effects may apply (similar to GTA V).</li>
+<li>Changes several objects that previously used screen-door transparency to use an alpha test for transparency instead (vegetation, fences, various other objects), further reducing the presence of the pixel pattern effect.</li>
+</ul>
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/rainbefore1.webp" alt="Before">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/rainafter1.webp" alt="After">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">Before</div>
+  <div class="compare-caption after">After</div>
+</div>
+
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/rainbefore1.webp" alt="Before">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/rainafter1.webp" alt="After">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">Before</div>
+  <div class="compare-caption after">After</div>
+</div>
+
+<p><strong>Fusion Fix Definition Off</strong></p>
+<p>Definition Off with Fusion Fix is basically an Xbox 360 "nostalgia" option. Here's what it does.</p>
+<ul>
+<li>Removes broken MSAA code.</li>
+<li>Continues to use the slight screen blur from the Xbox 360 version of the game.</li>
+<li>Changes the high quality Fusion Fix shadow filter to the original low quality console/early PC (before patch 6) shadow filter. You can overwrite this shadow filter change by changing the <a href="../config/#forceshadowfilter" target="_blank">ForceShadowFilter</a> setting in the Fusion Fix config file.</li>
+</ul>
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/rainbefore1.webp" alt="Before">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/rainafter1.webp" alt="After">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">Before</div>
+  <div class="compare-caption after">After</div>
+</div>
+
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/rainbefore1.webp" alt="Before">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/rainafter1.webp" alt="After">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">Before</div>
+  <div class="compare-caption after">After</div>
+</div>
+
+<h3 id="depth-of-field">Depth-of-Field<a class="headerlink" href="#depth-of-field" title="Permanent link">#</a></h3>
+<p>Depth-of-field in the vanilla game is tied to the Definition option. It also doesn't scale with resolution, this results in the effect becoming weaker at resolutions higher than 720p.</p>
+<p>Fusion Fix seperates depth-of-field from Definition, giving it its <a href="../options/#depth-of-field-new" target="_blank">own option</a> and allowing users to select its strenght or disable it completely.</p>
+<p>The effect has also been rewritten so it looks better with bokeh blur and it now scales correctly up to 4K.</p>
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/rainbefore1.webp" alt="Before">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/rainafter1.webp" alt="After">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">Before</div>
+  <div class="compare-caption after">After</div>
+</div>
+
+<h3 id="motion-blur">Motion Blur<a class="headerlink" href="#motion-blur" title="Permanent link">#</a></h3>
+<p>Motion blur in the vanilla game is tied to the Definition option. The effect gets weaker at higher frame rates, which is arguably correct but users might want it stronger while playing at higher frame rates.</p>
+<p>Fusion Fix seperates motion blur from Definition, giving it its <a href="../options/#motion-blur-new" target="_blank">own option</a> and allowing users to select its strenght or disable it completely.</p>
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/rainbefore1.webp" alt="Before">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/rainafter1.webp" alt="After">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">Before</div>
+  <div class="compare-caption after">After</div>
+</div>
+
+<h2 id="distant-light-timings">Distant Light Timings<a class="headerlink" href="#distant-light-timings" title="Permanent link">#</a></h2>
+<p>Most lights in GTA IV turn on at 16 minutes past 7 (19:16). On console, distant lights were all visible by 8PM (20:00), but on PC lights didn't become visible until after 10PM (22:00) when it was already dark.</p>
+<p>Fusion Fix fixes this so all distant lights are visible by 8PM (20:00) just like console.</p>
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/rainbefore1.webp" alt="Before">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/rainafter1.webp" alt="After">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">Before</div>
+  <div class="compare-caption after">After</div>
+</div>
+
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/rainbefore1.webp" alt="Before">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/rainafter1.webp" alt="After">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">Before</div>
+  <div class="compare-caption after">After</div>
+</div>
+
+<h2 id="z-fighting">Z-Fighting<a class="headerlink" href="#z-fighting" title="Permanent link">#</a></h2>
+<p>Z-fighting was a major problem on the PC version of GTA IV, with constant flickering all around the map as soon as you gained any height.</p>
+<p>The PlayStation 3 version partially dealt with it by using a very high near clip value, while the Xbox 360 solved it by using a reversed floating point depth buffer. Fusion Fix provides a solution that yields results similar to the better approach from the Xbox 360, and effectively eliminates all z-fighting.</p>
+<p>VIDEO HERE</p>
+<h2 id="soft-particles">Soft Particles<a class="headerlink" href="#soft-particles" title="Permanent link">#</a></h2>
+<p>GTA IV had soft particles on the console version, but they were missing on PC.</p>
+<p>FusionFix adds soft particles back to the game on PC, making particle effects look much nicer. Soft particles basically make the edges of particle effects smoother so they don’t harshly clip into models.</p>
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/rainbefore1.webp" alt="Before">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/rainafter1.webp" alt="After">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">Before</div>
+  <div class="compare-caption after">After</div>
+</div>
 
 
 
