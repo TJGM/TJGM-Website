@@ -2646,10 +2646,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ambientocclusionintensity_1" class="md-nav__link">
+  <a href="#ambientocclusionblurradius" class="md-nav__link">
     <span class="md-ellipsis">
       
-        AmbientOcclusionIntensity
+        AmbientOcclusionBlurRadius
       
     </span>
   </a>
@@ -3928,10 +3928,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ambientocclusionintensity_1" class="md-nav__link">
+  <a href="#ambientocclusionblurradius" class="md-nav__link">
     <span class="md-ellipsis">
       
-        AmbientOcclusionIntensity
+        AmbientOcclusionBlurRadius
       
     </span>
   </a>
@@ -4245,16 +4245,44 @@
 <h3 id="recoilfix">RecoilFix<a class="headerlink" href="#recoilfix" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
 <p>On console, guns would increasingly become less accurate the longer you held the trigger, which made burst firing/single firing necessary to gun fights and made each weapon unique to certain situations. But on PC, guns will always shoot exactly where your crosshair is no matter what gun you're using and no matter how long you hold the trigger, simplyfying gameplay and allowing you to use weapons like an SMG at long distances with no downsides.</p>
+<p>This setting enables a fix which makes guns behave the way Rockstar always intended.</p>
 <p><em>Comparisons:</em></p>
-<p>TODO</p>
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/config/RecoilFix0.webp" alt="RecoilFix = 0">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/config/RecoilFix1.webp" alt="RecoilFix = 1">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">RecoilFix = 0</div>
+  <div class="compare-caption after">RecoilFix = 1</div>
+</div>
+
 <p><em>Values:</em></p>
 <ul>
 <li><code>RecoilFix = 0</code> - Use PC behaviour</li>
 <li><code>RecoilFix = 1</code> - Use console behaviour (Fusion Fix default)</li>
 </ul>
 <h3 id="aimingzoomfix">AimingZoomFix<a class="headerlink" href="#aimingzoomfix" title="Permanent link">#</a></h3>
-<p>TODO</p>
+<p><em>Description:</em></p>
+<p>In The Ballad of Gay Tony on PC, everytime you aimed a weapon it would be in the second zoomed state (usually triggered by scrolling up and down in the base game and The Lost and Damned).</p>
+<p>This setting enables a fix which makes weapon zooming in The Ballad of Gay Tony behave like it did on the Xbox 360. It starts in the first zoomed state and then it remembers your last zoomed state when you stop aiming and even when you switch weapons. So if you zoom in with a pistol while aiming and then swap to an SMG, the SMG will still be zoomed in when you first aim unless you zoom out intentionally.</p>
 <p>Values:</p>
+<ul>
+<li><code>AimingZoomFix = -1</code> - The Ballad of Gay Tony aiming zoom behaves like the base game and The Lost and Damned. Starts in the first zoomed state, but will reset everytime you unaim or switch weapons</li>
+<li><code>AimingZoomFix = 0</code> - Completely disables the fix</li>
+<li><code>AimingZoomFix = 1</code> - The Ballad of Gay Tony aiming zoom behaves like it did on the Xbox 360. Starts in first zoomed state, but will remember your choice everytime you unaim or switch weapons (Fusion Fix default)</li>
+<li><code>AimingZoomFix = 2</code> - Enables The Ballad of Gay Tony aiming zoom behaviour from the Xbox 360 on the base game and both episodes. Starts in first zoomed state, but will remember your choice everytime you unaim or switch weapons</li>
+</ul>
 <h2 id="camerasensitivity">[CAMERASENSITIVITY]<a class="headerlink" href="#camerasensitivity" title="Permanent link">#</a></h2>
 <p>This section contains settings which change the behaviour of the improved camera sensitivity sliders added by Fusion Fix.</p>
 <h3 id="mouselooksensitivityrange">MouseLookSensitivityRange<a class="headerlink" href="#mouselooksensitivityrange" title="Permanent link">#</a></h3>
@@ -4263,7 +4291,7 @@
 <p><em>Values:</em></p>
 <p>Values for this setting can be whatever you like. Left value is the minimum, right is the maximum.</p>
 <ul>
-<li><code>MouseLookSensitivityRange = 0.1, 2.0</code> - (Fusion Fix Default)</li>
+<li><code>MouseLookSensitivityRange = 0.1, 2.0</code> (Fusion Fix Default)</li>
 </ul>
 <h3 id="gamepadlooksensitivityrange">GamepadLookSensitivityRange<a class="headerlink" href="#gamepadlooksensitivityrange" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
@@ -4271,7 +4299,7 @@
 <p><em>Values:</em></p>
 <p>Values for this setting can be whatever you like. Left value is the minimum, right is the maximum.</p>
 <ul>
-<li><code>GamepadLookSensitivityRange = 0.1, 2.0</code> - (Fusion Fix Default)</li>
+<li><code>GamepadLookSensitivityRange = 0.1, 2.0</code> (Fusion Fix Default)</li>
 </ul>
 <h3 id="mouseaimsensitivityrange">MouseAimSensitivityRange<a class="headerlink" href="#mouseaimsensitivityrange" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
@@ -4279,7 +4307,7 @@
 <p><em>Values:</em></p>
 <p>Values for this setting can be whatever you like. Left value is the minimum, right is the maximum.</p>
 <ul>
-<li><code>MouseAimSensitivityRange = 0.1, 2.0</code> - (Fusion Fix Default)</li>
+<li><code>MouseAimSensitivityRange = 0.1, 2.0</code> (Fusion Fix Default)</li>
 </ul>
 <h3 id="gamepadaimsensitivityrange">GamepadAimSensitivityRange<a class="headerlink" href="#gamepadaimsensitivityrange" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
@@ -4287,7 +4315,7 @@
 <p><em>Values:</em></p>
 <p>Values for this setting can be whatever you like. Left value is the minimum, right is the maximum.</p>
 <ul>
-<li><code>GamepadAimSensitivityRange = 0.1, 2.0</code> - (Fusion Fix Default)</li>
+<li><code>GamepadAimSensitivityRange = 0.1, 2.0</code> (Fusion Fix Default)</li>
 </ul>
 <h2 id="shadows">[SHADOWS]<a class="headerlink" href="#shadows" title="Permanent link">#</a></h2>
 <p>This section contains settings related to the games shadows.</p>
@@ -4295,39 +4323,196 @@
 <p><em>Description:</em></p>
 <p>Several objects don't cast shadows in GTA IV. This setting enables a flag which allows them to cast shadows.</p>
 <p><em>Comparisons:</em></p>
-<p>TODO</p>
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/config/ExtraDynamicShadows0.webp" alt="ExtraDynamicShadows = 0">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/config/ExtraDynamicShadows1.webp" alt="ExtraDynamicShadows = 1">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">ExtraDynamicShadows = 0</div>
+  <div class="compare-caption after">ExtraDynamicShadows = 1</div>
+</div>
+
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/config/ExtraDynamicShadows0-0.webp" alt="ExtraDynamicShadows = 0">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/config/ExtraDynamicShadows2-0.webp" alt="ExtraDynamicShadows = 2">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">ExtraDynamicShadows = 0</div>
+  <div class="compare-caption after">ExtraDynamicShadows = 2</div>
+</div>
+
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/config/ExtraDynamicShadows0-1.webp" alt="ExtraDynamicShadows = 0">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/config/ExtraDynamicShadows2-1.webp" alt="ExtraDynamicShadows = 2">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">ExtraDynamicShadows = 0</div>
+  <div class="compare-caption after">ExtraDynamicShadows = 2</div>
+</div>
+
 <p><em>Values:</em></p>
 <ul>
 <li><code>ExtraDynamicShadows = 0</code> - Disabled</li>
 <li><code>ExtraDynamicShadows = 1</code> - More vegetation models cast shadows</li>
-<li><code>ExtraDynamicShadows = 2</code> - Certain fences, walls, roads, grates and even more vegetation models cast shadows (Fusion Fix default)</li>
+<li><code>ExtraDynamicShadows = 2</code> - Certain fences, walls, roads, grates and more vegetation models cast shadows (Fusion Fix default)</li>
 </ul>
 <h3 id="cascadeblendsize">CascadeBlendSize<a class="headerlink" href="#cascadeblendsize" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
 <p>Cascaded shadows use higher-resolution shadow maps close to the player and lower-resolution shadow maps further away. This setting controls the size of the transition area where these shadow cascades blend together.</p>
 <p><em>Comparisons:</em></p>
-<p>TODO</p>
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/config/CascadeBlendSize0.1.webp" alt="CascadeBlendSize = 0.1">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/config/CascadeBlendSize1.0.webp" alt="CascadeBlendSize = 1.0">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">CascadeBlendSize = 0.1</div>
+  <div class="compare-caption after">CascadeBlendSize = 1.0</div>
+</div>
+
 <p><em>Values:</em></p>
-<p>This option can range from 0.0 to 1.0.</p>
+<p>This setting works both ways, so a higher value here will increase the transition area further away from the player as well as closer to the player. This option can range from 0.0 to 1.0.</p>
 <ul>
-<li><code>CascadeBlendSize = 0.1</code> - (Fusion Fix default)</li>
+<li><code>CascadeBlendSize = 0.1</code> (Fusion Fix default)</li>
 </ul>
 <h3 id="highresolutionshadows">HighResolutionShadows<a class="headerlink" href="#highresolutionshadows" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
 <p>Doubles the cascaded shadow map resolution. So if the shadow resolution near the player was 1024x1024, it now becomes 2048x2048. This doubling of shadow resolution also applies to lower-resolution shadow maps further away.</p>
 <p><em>Comparisons:</em></p>
-<p>TODO</p>
+<p>These comparisons were made using the Sharp shadow filter.</p>
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/config/HighResolutionShadows0-0.webp" alt="HighResolutionShadows = 0">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/config/HighResolutionShadows1-0.webp" alt="HighResolutionShadows = 1">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">HighResolutionShadows = 0</div>
+  <div class="compare-caption after">HighResolutionShadows = 1</div>
+</div>
+
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/config/HighResolutionShadows0-2.webp" alt="HighResolutionShadows = 0">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/config/HighResolutionShadows1-2.webp" alt="HighResolutionShadows = 1">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">HighResolutionShadows = 0</div>
+  <div class="compare-caption after">HighResolutionShadows = 1</div>
+</div>
+
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/config/HighResolutionShadows0-3.webp" alt="HighResolutionShadows = 0">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/config/HighResolutionShadows1-3.webp" alt="HighResolutionShadows = 1">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">HighResolutionShadows = 0</div>
+  <div class="compare-caption after">HighResolutionShadows = 1</div>
+</div>
+
 <p><em>Values:</em></p>
 <ul>
 <li><code>HighResolutionShadows = 0</code> - Disabled (Fusion Fix default)</li>
-<li><code>HighResolutionShadows = 1</code> - Doubles shadow resolution, almost no benefit and very performance heavy.</li>
+<li><code>HighResolutionShadows = 1</code> - Doubles shadow resolution, very performance heavy.</li>
 </ul>
 <h3 id="forceshadowfilter">ForceShadowFilter<a class="headerlink" href="#forceshadowfilter" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
 <p>Forces a specific shadow filter instead of it being tied to <a href="../" target="_blank">Fusion Fix's reworked definition option</a>, I'd recommend reading about that if you want to understand what this really does.</p>
 <p>This setting is not related to the <a href="../options/#shadow-filter-new" target="_blank">shadow filter option added by Fusion Fix</a>, which are seperate effects.</p>
 <p><em>Comparisons:</em></p>
-<p>TODO</p>
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/config/ForceShadowFilter1.webp" alt="ForceShadowFilter = 1">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/config/ForceShadowFilter2.webp" alt="ForceShadowFilter = 2">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">ForceShadowFilter = 1 (Definition Off)</div>
+  <div class="compare-caption after">ForceShadowFilter = 2 (Definition On)</div>
+</div>
+
 <p><em>Values:</em></p>
 <ul>
 <li><code>ForceShadowFilter = 0</code> - Filter quality tied to the definition option</li>
@@ -4339,8 +4524,6 @@
 <h3 id="framelimittype">FrameLimitType<a class="headerlink" href="#framelimittype" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
 <p>Changes how Fusion Fix's frame rate limiter limits your frame rate.</p>
-<p><em>Comparisons:</em></p>
-<p>PERFORMANCE IMAGE HERE</p>
 <p><em>Values:</em></p>
 <ul>
 <li><code>FrameLimitType = 1</code> - Thread-lock. This can technically provide more stable frame pacing and lower input latency, but it uses more CPU resources</li>
@@ -4411,9 +4594,7 @@
 </ul>
 <h3 id="peddeathanimfixfromtbogt">PedDeathAnimFixFromTBoGT<a class="headerlink" href="#peddeathanimfixfromtbogt" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
-<p>There's an additional death animation that NPCs do after you use a counter attack in hand-to-hand combat in the base game and The Lost and Damned, this looks quite strange and could be considered a bug. The Ballad of Gay Tony fixes this issue and thie setting enables that fix in the base game and The Lost and Damned.</p>
-<p><em>Comparisons:</em></p>
-<p>TODO</p>
+<p>There's an additional death animation that NPCs do after you use a counter attack in hand-to-hand combat in the base game and The Lost and Damned, this looks quite strange and could be considered a bug. The Ballad of Gay Tony fixes this issue and this setting enables that fix in the base game and The Lost and Damned.</p>
 <p><em>Values:</em></p>
 <ul>
 <li><code>PedDeathAnimFixFromTBoGT = 1</code> - Enabled (Fusion Fix default)</li>
@@ -4423,7 +4604,10 @@
 <p><em>Description:</em></p>
 <p>The vanilla game will automatically center and temporarily lock the camera when you get to the edge of cover. This setting stops that behaviour.</p>
 <p><em>Comparisons:</em></p>
-<p>TODO</p>
+<video width="100%" controls>
+  <source src="../../../../assets/shared/fusionfix/config/DisableCameraCenteringInCover.mp4" type="video/mp4">
+</video>
+
 <p><em>Values:</em></p>
 <ul>
 <li><code>DisableCameraCenteringInCover = 1</code> - Enabled (Fusion Fix default)</li>
@@ -4500,17 +4684,55 @@
 <p><em>Description:</em></p>
 <p>Car reflections were stronger on console and any car could be dirty when it spawned on console, which wasn't the case on PC. This setting enables and disables those improvements.</p>
 <p><em>Comparisons:</em></p>
-<p>TODO</p>
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/config/ConsoleCarReflectionsAndDirt0.webp" alt="ConsoleCarReflectionsAndDirt = 0">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/config/ConsoleCarReflectionsAndDirt1.webp" alt="ConsoleCarReflectionsAndDirt = 1">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">ConsoleCarReflectionsAndDirt = 0</div>
+  <div class="compare-caption after">ConsoleCarReflectionsAndDirt = 1</div>
+</div>
+
 <p><em>Values:</em></p>
 <ul>
 <li><code>ConsoleCarReflectionsAndDirt = 1</code> - Enabled (Fusion Fix default)</li>
-<li><code>ConsoleCarReflectionsAndDirt = 0</code> - Disabled</li>
+<li><code>ConsoleCarReflectionsAndDirt = 0</code> - Disabled (Doesn't seem to work right now)</li>
 </ul>
 <h3 id="alwaysdisplayhealthonreticle">AlwaysDisplayHealthOnReticle<a class="headerlink" href="#alwaysdisplayhealthonreticle" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
-<p>When playing with mouse and keyboard, the health of NPCs didn't always show when you aimed at them like it did with a controller. This setting enables and disables that feature.</p>
+<p>When playing with mouse and keyboard, the health of NPCs doesn't show when you aimed at them like it did with a controller. This setting enables and disables that feature.</p>
 <p><em>Comparisons:</em></p>
-<p>TODO</p>
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/config/AlwaysDisplayHealthOnReticle0.webp" alt="AlwaysDisplayHealthOnReticle = 0">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/config/AlwaysDisplayHealthOnReticle1.webp" alt="AlwaysDisplayHealthOnReticle = 1">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">AlwaysDisplayHealthOnReticle = 0</div>
+  <div class="compare-caption after">AlwaysDisplayHealthOnReticle = 1</div>
+</div>
+
 <p><em>Values:</em></p>
 <ul>
 <li><code>AlwaysDisplayHealthOnReticle = 1</code> - Enabled (Fusion Fix default)</li>
@@ -4646,7 +4868,6 @@
   <source src="../../../../assets/shared/fusionfix/config/DeathMusic1.mp4" type="video/mp4">
 </video>
 
-<p>TODO</p>
 <p><em>Values:</em></p>
 <ul>
 <li><code>DeathMusic = 1</code> - Enabled</li>
@@ -4701,7 +4922,7 @@
 <p>This section contains settings related to the games memory budgets and limitations.</p>
 <h3 id="vehiclebudget">VehicleBudget<a class="headerlink" href="#vehiclebudget" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
-<p><a href="https://gtaforums.com/topic/744584-reliv-rilbudgeted-population-budget-adjustertaxi-bug-fix/" target="_blank">RIL.Budgeted</a> is integrated into Fusion Fix and this setting allows you to adjust the vehicle budget, which is the amount of memory the game is allowed to use for vehicle streaming.}{rel="noopener noreferrer"</p>
+<p><a href="https://gtaforums.com/topic/744584-reliv-rilbudgeted-population-budget-adjustertaxi-bug-fix/" rel="noopener noreferrer" target="_blank">RIL.Budgeted</a> is integrated into Fusion Fix and this setting allows you to adjust the vehicle budget, which is the amount of memory the game is allowed to use for vehicle streaming.</p>
 <p>You should read my guide regarding the vehicle budget before adjusting this value.</p>
 <p><em>Values:</em></p>
 <p>This setting is read in bytes. So to change the vehicle budget to 100 megabytes, you’d put one hundred million 100000000 here.</p>
@@ -4712,7 +4933,7 @@
 </ul>
 <h3 id="pedbudget">PedBudget<a class="headerlink" href="#pedbudget" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
-<p><a href="https://gtaforums.com/topic/744584-reliv-rilbudgeted-population-budget-adjustertaxi-bug-fix/" target="_blank">RIL.Budgeted</a> is integrated into Fusion Fix and this setting allows you to adjust the pedestrian (NPC) budget, which is the amount of memory the game is allowed to use for pedestrian streaming.}{rel="noopener noreferrer"</p>
+<p><a href="https://gtaforums.com/topic/744584-reliv-rilbudgeted-population-budget-adjustertaxi-bug-fix/" rel="noopener noreferrer" target="_blank">RIL.Budgeted</a> is integrated into Fusion Fix and this setting allows you to adjust the pedestrian (NPC) budget, which is the amount of memory the game is allowed to use for pedestrian streaming.</p>
 <p>You should read my guide regarding the pedestrian budget before adjusting this value.</p>
 <p><em>Values:</em></p>
 <p>This setting is read in bytes. So to change the vehicle budget to 100 megabytes, you’d put one hundred million 100000000 here.</p>
@@ -4734,7 +4955,7 @@
 <h3 id="episodicvehicles">EpisodicVehicles<a class="headerlink" href="#episodicvehicles" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
 <p>Adds support for The Ballad of Gay Tony vehicles (APC, Buzzard, Smuggler, Floater and Blade.) and their abilities to the base game and The Lost and Damned.</p>
-<p>You still need a mod which adds this content to the other episodes, such as <a href="https://www.nexusmods.com/gta4/mods/774" target="_blank">TACE.lite</a>.}{rel="noopener noreferrer"</p>
+<p>You still need a mod which adds this content to the other episodes, such as <a href="https://www.nexusmods.com/gta4/mods/774" rel="noopener noreferrer" target="_blank">TACE.lite</a>.</p>
 <p><em>Values:</em></p>
 <ul>
 <li><code>EpisodicVehicles = 1</code> - Enabled</li>
@@ -4743,7 +4964,7 @@
 <h3 id="episodicweapons">EpisodicWeapons<a class="headerlink" href="#episodicweapons" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
 <p>Adds support for the DLC weapons (DSR1, Grenade Launcher, Pipe Bomb, Sticky Bomb, AA12 Explosive Shells, P90, Parachute) and their abilities to the base game and both episodes.</p>
-<p>You still need a mod which adds this content to the other episodes, such as <a href="https://www.nexusmods.com/gta4/mods/774" target="_blank">TACE.lite</a>.}{rel="noopener noreferrer"</p>
+<p>You still need a mod which adds this content to the other episodes, such as <a href="https://www.nexusmods.com/gta4/mods/774" rel="noopener noreferrer" target="_blank">TACE.lite</a>.</p>
 <p><em>Values:</em></p>
 <ul>
 <li><code>EpisodicWeapons = 1</code> - Enabled</li>
@@ -4752,7 +4973,7 @@
 <h3 id="explosiveannihilator">ExplosiveAnnihilator<a class="headerlink" href="#explosiveannihilator" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
 <p>Adds support for the explosive rounds used by the Annihilator from The Ballad of Gay Tony to the base game.</p>
-<p>You still need a mod which adds this content to the other episodes, such as <a href="https://www.nexusmods.com/gta4/mods/774" target="_blank">TACE.lite</a>.}{rel="noopener noreferrer"</p>
+<p>You still need a mod which adds this content to the other episodes, such as <a href="https://www.nexusmods.com/gta4/mods/774" rel="noopener noreferrer" target="_blank">TACE.lite</a>.</p>
 <p><em>Values:</em></p>
 <ul>
 <li><code>ExplosiveAnnihilator = 1</code> - Enabled (EpisodicWeapons must be enabled too)</li>
@@ -4761,7 +4982,7 @@
 <h3 id="otherepisodicchecks">OtherEpisodicChecks<a class="headerlink" href="#otherepisodicchecks" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
 <p>Adds support for the new additions in The Ballad of Gay Tony (Disco camera bobbing, cell phone switching, altimeter in helicopters and when using the parachute, explosive sniper rifle cheat and explosive fist cheat) to the base game and The Lost and Damned.</p>
-<p>You still need a mod which adds this content to the other episodes, such as <a href="https://www.nexusmods.com/gta4/mods/774" target="_blank">TACE.lite</a>.}{rel="noopener noreferrer"</p>
+<p>You still need a mod which adds this content to the other episodes, such as <a href="https://www.nexusmods.com/gta4/mods/774" rel="noopener noreferrer" target="_blank">TACE.lite</a>.</p>
 <p><em>Values:</em></p>
 <ul>
 <li><code>OtherEpisodicChecks = 1</code> - Enabled</li>
@@ -4776,7 +4997,7 @@
 </ul>
 <h3 id="tbogtpoliceweapons">TBoGTPoliceWeapons<a class="headerlink" href="#tbogtpoliceweapons" title="Permanent link">#</a></h3>
 <p>Gives the P90 and AA12 to SWAT teams and FIB members and it gives the M249 to police members in helicopters. This behaviour is how it works in The Ballad of Gay Tony, this adds that behaviour to the base GTA IV game and The Lost and Damned.</p>
-<p>You still need a mod which adds this content to the other episodes, such as <a href="https://www.nexusmods.com/gta4/mods/774" target="_blank">TACE.lite</a>.}{rel="noopener noreferrer"</p>
+<p>You still need a mod which adds this content to the other episodes, such as <a href="https://www.nexusmods.com/gta4/mods/774" rel="noopener noreferrer" target="_blank">TACE.lite</a>.</p>
 <p><em>Values:</em></p>
 <ul>
 <li><code>TBoGTPoliceWeapons = 1</code> - Enabled (EpisodicWeapons must be enabled too)</li>
@@ -4862,26 +5083,21 @@
 </ul>
 <h3 id="ambientocclusionblurpasses">AmbientOcclusionBlurPasses<a class="headerlink" href="#ambientocclusionblurpasses" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
-<p>This setting is complicated and is set to a specific value based on shader code and other setting values. Unless you know what you're doing, you shouldn't change this.</p>
+<p>This setting is set to a specific value based on shader code and other setting values. Unless you know what you're doing, you shouldn't change this.</p>
 <p>Values</p>
 <ul>
-<li><code>AmbientOcclusionBlurPasses = 1</code> - (Fusion Fix default)</li>
+<li><code>AmbientOcclusionBlurPasses = 1</code> (Fusion Fix default)</li>
 </ul>
 <h3 id="ambientocclusionsamples">AmbientOcclusionSamples<a class="headerlink" href="#ambientocclusionsamples" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
-<p>This setting changes how accurate ambient occlusion is in terms of occluding light.</p>
-<p><em>Comparisons:</em></p>
-<p>TODO</p>
+<p>This setting is set to a specific value based on shader code and other setting values. Unless you know what you're doing, you shouldn't change this.</p>
 <p><em>Values:</em></p>
-<p>The minimum value for this setting is 0. A lower value means lower a less accurate ambient occlusion effect, a higher value means a more accurate ambient offlcuion effect. Higher values effect performance.</p>
 <ul>
-<li><code>AmbientOcclusionSamples = 9</code> - Pixels are sampled 9 times before ambient occlusion is applied (Fusion Fix default)</li>
+<li><code>AmbientOcclusionSamples = 9</code> (Fusion Fix default)</li>
 </ul>
 <h3 id="ambientocclusionlogmaxoffset">AmbientOcclusionLogMaxOffset<a class="headerlink" href="#ambientocclusionlogmaxoffset" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
-<p>This setting controls how far ambient occlusion can spread from objects.</p>
-<p><em>Comparisons:</em></p>
-<p>TODO</p>
+<p>This setting is set to a specific value based on shader code and other setting values. Unless you know what you're doing, you shouldn't change this.</p>
 <p><em>Values:</em></p>
 <p>The minimum value for this setting is 0.</p>
 <ul>
@@ -4889,19 +5105,35 @@
 </ul>
 <h3 id="ambientocclusionmaxmiplevel">AmbientOcclusionMaxMipLevel<a class="headerlink" href="#ambientocclusionmaxmiplevel" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
-<p>TODO</p>
-<p><em>Comparisons:</em></p>
-<p>TODO</p>
+<p>This setting is set to a specific value based on shader code and other setting values. Unless you know what you're doing, you shouldn't change this.</p>
 <p><em>Values:</em></p>
-<p>TODO</p>
 <ul>
-<li><code>AmbientOcclusionMaxMipLevel = 5</code> - TODO (Fusion Fix default)</li>
+<li><code>AmbientOcclusionMaxMipLevel = 5</code> (Fusion Fix default)</li>
 </ul>
 <h3 id="ambientocclusionfarclip">AmbientOcclusionFarClip<a class="headerlink" href="#ambientocclusionfarclip" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
 <p>This setting changes how far ambient occlusion is calculated and rendered.</p>
 <p><em>Comparisons:</em></p>
-<p>TODO</p>
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/config/AmbientOcclusionFarClip150.webp" alt="AmbientOcclusionFarClip = 150">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/config/AmbientOcclusionFarClip600.webp" alt="AmbientOcclusionFarClip = 600">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">AmbientOcclusionFarClip = 150</div>
+  <div class="compare-caption after">AmbientOcclusionFarClip = 600</div>
+</div>
+
 <p><em>Values:</em></p>
 <p>This setting uses a distance based value. 1 is meter, 1000 is 1000 meters.</p>
 <ul>
@@ -4909,16 +5141,14 @@
 </ul>
 <h3 id="ambientocclusionradius">AmbientOcclusionRadius<a class="headerlink" href="#ambientocclusionradius" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
-<p>TODO</p>
-<p><em>Comparisons:</em></p>
-<p>TODO</p>
+<p>This setting is set to a specific value based on shader code and other setting values. Unless you know what you're doing, you shouldn't change this.</p>
 <p><em>Values:</em></p>
 <ul>
 <li><code>AmbientOcclusionRadius = 1.125</code> (Fusion Fix default)</li>
 </ul>
 <h3 id="ambientocclusionbias">AmbientOcclusionBias<a class="headerlink" href="#ambientocclusionbias" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
-<p>This setting controls the bias used to prevent artifacts in the ambient occlusion. You generally shouldn't need to change it.</p>
+<p>This setting is set to a specific value based on shader code and other setting values. Unless you know what you're doing, you shouldn't change this.</p>
 <p><em>Values:</em></p>
 <ul>
 <li><code>AmbientOcclusionBias = 0.03</code> (Fusion Fix default)</li>
@@ -4927,16 +5157,33 @@
 <p><em>Description:</em></p>
 <p>This setting changes how intense ambient occlusion is.</p>
 <p><em>Comparisons:</em></p>
-<p>TODO</p>
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/config/AmbientOcclusionIntensity0.4.webp" alt="AmbientOcclusionIntensity = 0.4">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/config/AmbientOcclusionIntensity1.4.webp" alt="AmbientOcclusionIntensity = 1.4">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">AmbientOcclusionIntensity = 0.4</div>
+  <div class="compare-caption after">AmbientOcclusionIntensity = 1.4</div>
+</div>
+
 <p><em>Values:</em></p>
 <ul>
 <li><code>AmbientOcclusionIntensity = 0.4</code> (Fusion Fix default)</li>
 </ul>
-<h3 id="ambientocclusionintensity_1">AmbientOcclusionIntensity<a class="headerlink" href="#ambientocclusionintensity_1" title="Permanent link">#</a></h3>
+<h3 id="ambientocclusionblurradius">AmbientOcclusionBlurRadius<a class="headerlink" href="#ambientocclusionblurradius" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
-<p>This setting changes how the size of the blur applied via <a href="#ambientocclusionblurpasses">ambientocclusionblurpasses</a>.</p>
-<p><em>Comparisons:</em></p>
-<p>TODO</p>
+<p>This setting is set to a specific value based on shader code and other setting values. Unless you know what you're doing, you shouldn't change this.</p>
 <p><em>Values:</em></p>
 <ul>
 <li><code>AmbientOcclusionBlurRadius = 2.0</code> (Fusion Fix default)</li>
@@ -5221,7 +5468,7 @@
 <p><em>Description:</em></p>
 <p>This setting allows you to change the key used for the left indicator in vehicles when <a href="#manualturnindicators">ManualTurnIndicators</a> is enabled.</p>
 <p><em>Values:</em></p>
-<p>This setting uses virtual key codes. You can find a list of them <a href="https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes" target="_blank">here</a>, copy the value of the key you want and use it for this setting.}{rel="noopener noreferrer"</p>
+<p>This setting uses virtual key codes. You can find a list of them <a href="https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes" rel="noopener noreferrer" target="_blank">here</a>, copy the value of the key you want and use it for this setting.</p>
 <ul>
 <li><code>LeftIndicatorKey = 0xDB</code> - Left brace key <code>[</code> turns on the left indicator (Fusion Fix default)</li>
 <li><code>LeftIndicatorKey = 0x51</code> - <code>Q</code> turns on the left indicator</li>
@@ -5230,7 +5477,7 @@
 <p><em>Description:</em></p>
 <p>This setting allows you to change the key used for the right indicator in vehicles when <a href="#manualturnindicators">ManualTurnIndicators</a> is enabled.</p>
 <p><em>Values:</em></p>
-<p>This setting uses virtual key codes. You can find a list of them <a href="https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes" target="_blank">here</a>, copy the value of the key you want and use it for this setting.}{rel="noopener noreferrer"</p>
+<p>This setting uses virtual key codes. You can find a list of them <a href="https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes" rel="noopener noreferrer" target="_blank">here</a>, copy the value of the key you want and use it for this setting.</p>
 <ul>
 <li><code>RightIndicatorKey = 0xDD</code> - Right brace key <code>]</code> turns on the right indicator (Fusion Fix default)</li>
 <li><code>RightIndicatorKey = 0x45</code> - <code>E</code> turns on the right indicator</li>
@@ -5241,7 +5488,46 @@
 <p><em>Description:</em></p>
 <p>This setting enables MSAA on reflections seen on things like cars, water and mirrors. </p>
 <p><em>Comparisons:</em></p>
-<p>TODO</p>
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/config/ReflectionMSAAQuality0-1.webp" alt="ReflectionMSAAQuality = 0">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/config/ReflectionMSAAQuality8-1.webp" alt="ReflectionMSAAQuality = 8">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">ReflectionMSAAQuality = 0</div>
+  <div class="compare-caption after">ReflectionMSAAQuality = 8</div>
+</div>
+
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/config/ReflectionMSAAQuality0-0.webp" alt="ReflectionMSAAQuality = 0">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/config/ReflectionMSAAQuality8-0.webp" alt="ReflectionMSAAQuality = 8">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">ReflectionMSAAQuality = 0</div>
+  <div class="compare-caption after">ReflectionMSAAQuality = 8</div>
+</div>
+
 <p><em>Values:</em></p>
 <p>Any values other than 2, 4 and 8 will disable this setting. Higher values impact performance.</p>
 <ul>
