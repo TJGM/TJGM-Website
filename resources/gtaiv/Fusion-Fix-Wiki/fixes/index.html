@@ -1910,6 +1910,56 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#camera-shake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Camera Shake
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cutscenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cutscenes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cutscenes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#field-of-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field of View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stutters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stutters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#definition" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1960,21 +2010,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#distant-light-timings" class="md-nav__link">
+  <a href="#shadows" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Distant Light Timings
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#z-fighting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Z-Fighting
+        Shadows
       
     </span>
   </a>
@@ -1986,6 +2025,17 @@
     <span class="md-ellipsis">
       
         Soft Particles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#z-fighting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z-Fighting
       
     </span>
   </a>
@@ -2144,6 +2194,56 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#camera-shake" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Camera Shake
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cutscenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cutscenes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cutscenes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#field-of-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field of View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stutters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stutters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#definition" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2194,21 +2294,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#distant-light-timings" class="md-nav__link">
+  <a href="#shadows" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Distant Light Timings
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#z-fighting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Z-Fighting
+        Shadows
       
     </span>
   </a>
@@ -2220,6 +2309,17 @@
     <span class="md-ellipsis">
       
         Soft Particles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#z-fighting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z-Fighting
       
     </span>
   </a>
@@ -2257,6 +2357,49 @@
 <li><a href="../options/">In-Game Options</a></li>
 <li><a href="../cheats/">New Cheats</a></li>
 </ul>
+<h2 id="camera-shake">Camera Shake<a class="headerlink" href="#camera-shake" title="Permanent link">#</a></h2>
+<p>The camera shake effect was broken above 30FPS, becoming weaker and almost invisible at higher frame rates.</p>
+<p>Fusion Fix fixes this so the camera shake effect works correctly at all frame rates and it also adds <a href="../options/#camera-shake-new" target="_blank">an option</a> to enable and disable the camera shake effect completely.</p>
+<video width="100%" autoplay loop>
+  <source src="../../../../assets/shared/fusionfix/fixes/CameraShakeBefore.mp4" type="video/mp4">
+</video>
+
+<video width="100%" autoplay loop>
+  <source src="../../../../assets/shared/fusionfix/fixes/CameraShakeAfter.mp4" type="video/mp4">
+</video>
+
+<h2 id="cutscenes">Cutscenes<a class="headerlink" href="#cutscenes" title="Permanent link">#</a></h2>
+<p>Cutscenes had major issues on PC at frame rates above 30.</p>
+<h3 id="field-of-view">Field of View<a class="headerlink" href="#field-of-view" title="Permanent link">#</a></h3>
+<p>The field of view could increase massively at higher frame rates, ruining scenes and how they were meant to be presented.</p>
+<p>Fusion Fix fixes this so the field of view is always correct even at higher resolutions.</p>
+<div class="compare-container">
+  <!-- Bottom image -->
+  <img src="../../../../assets/shared/fusionfix/fixes/CutSceneFOVBefore.webp" alt="Vanilla">
+
+  <!-- Top image -->
+  <div class="compare-top">
+    <img src="../../../../assets/shared/fusionfix/fixes/CutSceneFOVAfter.webp" alt="Fusion Fix">
+  </div>
+
+  <!-- Vertical line -->
+  <div class="compare-line"></div>
+
+  <!-- Circular handle -->
+  <div class="compare-slider"></div>
+
+  <!-- Captions -->
+  <div class="compare-caption before">Vanilla</div>
+  <div class="compare-caption after">Fusion Fix</div>
+</div>
+
+<h3 id="stutters">Stutters<a class="headerlink" href="#stutters" title="Permanent link">#</a></h3>
+<p>Higher frame rates also caused massive camera and character stuttering in cutscenes.</p>
+<p>Fusion Fix fixes this, but some users have reported that this fix can cause audio desync in cutscenes. You can press the up arrow on your keyboard to deactivate this fix during a cutscene if you experience audio desync, or use the <a href="../options/#cutscene-audio-sync">Cutscene Audio Sync</a> option to disable this fix entirely.</p>
+<video width="100%" controls muted>
+  <source src="../../../../assets/shared/fusionfix/fixes/CutSceneStutterComparison.mp4" type="video/mp4">
+</video>
+
 <h2 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">#</a></h2>
 <p>There's an option in GTA IV called "Definition" that does multiple things, mostly broken things.</p>
 <p>When Definition is OFF, it enables effects, when Definition is ON, it disables effects. Here's exactly what it's doing when the option is OFF...</p>
@@ -2442,11 +2585,11 @@
 <p>The effect has also been rewritten so it looks better with bokeh blur and it now scales correctly up to 4K.</p>
 <div class="compare-container">
   <!-- Bottom image -->
-  <img src="../../../../assets/shared/fusionfix/rainbefore1.webp" alt="Before">
+  <img src="../../../../assets/shared/fusionfix/options/DepthofFieldOff.webp" alt="Depth of Field Off">
 
   <!-- Top image -->
   <div class="compare-top">
-    <img src="../../../../assets/shared/fusionfix/rainafter1.webp" alt="After">
+    <img src="../../../../assets/shared/fusionfix/options/DepthofFieldOn.webp" alt="Depth of Field Very High">
   </div>
 
   <!-- Vertical line -->
@@ -2456,43 +2599,29 @@
   <div class="compare-slider"></div>
 
   <!-- Captions -->
-  <div class="compare-caption before">Before</div>
-  <div class="compare-caption after">After</div>
+  <div class="compare-caption before">Depth of Field Off</div>
+  <div class="compare-caption after">Depth of Field Very High</div>
 </div>
 
 <h3 id="motion-blur">Motion Blur<a class="headerlink" href="#motion-blur" title="Permanent link">#</a></h3>
 <p>Motion blur in the vanilla game is tied to the Definition option. The effect gets weaker at higher frame rates, which is arguably correct but users might want it stronger while playing at higher frame rates.</p>
 <p>Fusion Fix seperates motion blur from Definition, giving it its <a href="../options/#motion-blur-new" target="_blank">own option</a> and allowing users to select its strenght or disable it completely.</p>
+<video width="100%" autoplay loop>
+  <source src="../../../../assets/shared/fusionfix/options/MotionBlur.mp4" type="video/mp4">
+</video>
+
+<h2 id="shadows">Shadows<a class="headerlink" href="#shadows" title="Permanent link">#</a></h2>
+<p>TODO</p>
+<h2 id="soft-particles">Soft Particles<a class="headerlink" href="#soft-particles" title="Permanent link">#</a></h2>
+<p>GTA IV had soft particles on the console version, but they were missing on PC.</p>
+<p>FusionFix adds soft particles back to the game on PC, making particle effects look much nicer. Soft particles basically make the edges of particle effects smoother so they don’t harshly clip into models.</p>
 <div class="compare-container">
   <!-- Bottom image -->
-  <img src="../../../../assets/shared/fusionfix/rainbefore1.webp" alt="Before">
+  <img src="../../../../assets/shared/fusionfix/fixes/SoftParticlesBefore1.webp" alt="Before">
 
   <!-- Top image -->
   <div class="compare-top">
-    <img src="../../../../assets/shared/fusionfix/rainafter1.webp" alt="After">
-  </div>
-
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Before</div>
-  <div class="compare-caption after">After</div>
-</div>
-
-<h2 id="distant-light-timings">Distant Light Timings<a class="headerlink" href="#distant-light-timings" title="Permanent link">#</a></h2>
-<p>Most lights in GTA IV turn on at 16 minutes past 7PM (19:16). On console, distant lights were all visible by 8PM (20:00), but on PC lights didn't become visible until after 10PM (22:00) when it was already dark.</p>
-<p>Fusion Fix fixes this so all distant lights are visible by 8PM (20:00) just like console.</p>
-<div class="compare-container">
-  <!-- Bottom image -->
-  <img src="../../../../assets/shared/fusionfix/rainbefore1.webp" alt="Before">
-
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="../../../../assets/shared/fusionfix/rainafter1.webp" alt="After">
+    <img src="../../../../assets/shared/fusionfix/fixes/SoftParticlesAfter1.webp" alt="After">
   </div>
 
   <!-- Vertical line -->
@@ -2508,11 +2637,11 @@
 
 <div class="compare-container">
   <!-- Bottom image -->
-  <img src="../../../../assets/shared/fusionfix/rainbefore1.webp" alt="Before">
+  <img src="../../../../assets/shared/fusionfix/fixes/SoftParticlesBefore2.webp" alt="Before">
 
   <!-- Top image -->
   <div class="compare-top">
-    <img src="../../../../assets/shared/fusionfix/rainafter1.webp" alt="After">
+    <img src="../../../../assets/shared/fusionfix/fixes/SoftParticlesAfter2.webp" alt="After">
   </div>
 
   <!-- Vertical line -->
@@ -2529,29 +2658,9 @@
 <h2 id="z-fighting">Z-Fighting<a class="headerlink" href="#z-fighting" title="Permanent link">#</a></h2>
 <p>Z-fighting was a major problem on the PC version of GTA IV, with constant flickering all around the map as soon as you gained any height.</p>
 <p>The PlayStation 3 version partially dealt with it by using a very high near clip value, while the Xbox 360 solved it by using a reversed floating point depth buffer. Fusion Fix provides a solution that yields results similar to the better approach from the Xbox 360, and effectively eliminates all z-fighting.</p>
-<p>VIDEO HERE</p>
-<h2 id="soft-particles">Soft Particles<a class="headerlink" href="#soft-particles" title="Permanent link">#</a></h2>
-<p>GTA IV had soft particles on the console version, but they were missing on PC.</p>
-<p>FusionFix adds soft particles back to the game on PC, making particle effects look much nicer. Soft particles basically make the edges of particle effects smoother so they don’t harshly clip into models.</p>
-<div class="compare-container">
-  <!-- Bottom image -->
-  <img src="../../../../assets/shared/fusionfix/rainbefore1.webp" alt="Before">
-
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="../../../../assets/shared/fusionfix/rainafter1.webp" alt="After">
-  </div>
-
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Before</div>
-  <div class="compare-caption after">After</div>
-</div>
+<video width="100%" autoplay loop>
+  <source src="../../../../assets/shared/fusionfix/fixes/Z-Fighting.mp4" type="video/mp4">
+</video>
 
 
 
