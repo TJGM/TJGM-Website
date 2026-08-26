@@ -74,11 +74,17 @@
 
 <script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-KD191PFY0H"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-KD191PFY0H",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-KD191PFY0H",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
   
-    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
   
 
     
     
+  
+
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3449832020644111"
+    crossorigin="anonymous"></script>
+
   
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Fusion Overloader Tutorial - TJGM" />
@@ -1177,67 +1183,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#installing-asi-scriptsplugins" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Installing .asi Scripts/Plugins
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#profiles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Profiles
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Profiles">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#enabling-profile-functionality" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Enabling Profile Functionality
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-an-addtional-profile" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creating an Addtional Profile
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#loading-multiple-profiles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Loading Multiple Profiles
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2250,67 +2195,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#installing-asi-scriptsplugins" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Installing .asi Scripts/Plugins
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#profiles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Profiles
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Profiles">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#enabling-profile-functionality" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Enabling Profile Functionality
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-an-addtional-profile" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Creating an Addtional Profile
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#loading-multiple-profiles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Loading Multiple Profiles
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2406,108 +2290,6 @@ following my <a href="../Fixing-GTA-IV-with-4-Mods/" target="_blank">Fixing GTA 
 <p>The modded <code>WeaponInfo.xml</code> mirrored in the <code>update</code> folder will now be used instead of the original <code>WeaponInfo.xml</code>.</p>
 </li>
 </ol>
-<h2 id="installing-asi-scriptsplugins">Installing .asi Scripts/Plugins<a class="headerlink" href="#installing-asi-scriptsplugins" title="Permanent link">#</a></h2>
-<p>TODO</p>
-<h2 id="profiles">Profiles<a class="headerlink" href="#profiles" title="Permanent link">#</a></h2>
-<p>Fusion Overloader also allows you to create profiles that contain whatever mods you want. So when you launch the game, you can choose exactly what profile and mods you want to load.</p>
-<h3 id="enabling-profile-functionality">Enabling Profile Functionality<a class="headerlink" href="#enabling-profile-functionality" title="Permanent link">#</a></h3>
-<p>To use this functionality, create a file called <code>dinput8.ini</code> (make sure file extensions are enabled in your file explorer), you can then open this file with any text editor including Notepad on Windows.</p>
-<p>Inside this .ini file, add the following to the .ini file and then save it.</p>
-<div class="highlight"><pre><span></span><code>[FileLoader]
-OverloadFromFolder=update
-</code></pre></div>
-<p>This specifies that the folder Fusion Overloader is loading your files from is called <code>update</code>. While you can change the name from <code>update</code> to whatever you want, I'd recommend leaving it as <code>update</code> as it's the default name and many mods made with Fusion Overloader in mind will assume that's going to be the name of the folder.</p>
-<h3 id="creating-an-addtional-profile">Creating an Addtional Profile<a class="headerlink" href="#creating-an-addtional-profile" title="Permanent link">#</a></h3>
-<p>With profile functionality enabled, you can now create additional profiles that can load mods from folders other than the <code>update</code> folder.</p>
-<p>Here's an example...</p>
-<p>You have two mods, one is <code>TJGM's HQ Vehicle Pack</code> and another is <code>Ash_735's HQ Vehicle Pack</code>. If you want a profile you can use to load only one or the other, this is how you'd do it.</p>
-<ol>
-<li>Install <code>TJGM's HQ Vehicle Pack</code> as you normally would inside the <code>update</code> folder.</li>
-</ol>
-<p>Then to create another profile which only loads <code>Ash_735's HQ Vehicle Pack</code>, you do the following...</p>
-<ol>
-<li>
-<p>Create a folder called <code>ashvehicles</code> (can be named whatever you want). This folder will act like another <code>update</code> folder and mods should be installed here the same way they're installed in the <code>update</code> folder (see the rest of this guide for information on how to install different file types)</p>
-</li>
-<li>
-<p>Install <code>Ash_735's HQ Vehicle Pack</code> into the <code>ashvehicles</code> folder.</p>
-</li>
-<li>
-<p>Open <code>dinput8.dll</code> and after <code>OverloadFromFolder=update</code> add <code>| ashvehicles</code>. Your .ini file should now look like this.</p>
-<div class="highlight"><pre><span></span><code>[FileLoader]
-OverloadFromFolder=update | ashvehicles
-</code></pre></div>
-<p>This now means that Fusion Overloader has the option to either load files from the <code>update</code> folder (which contains the files for <code>TJGM's HQ Vehicle Pack</code>) or the <code>ashvehicles</code> folder (which contains the files for <code>Ash_735's HQ Vehicle Pack</code>).</p>
-</li>
-<li>
-<p>Launch the game, you should now see a dialogue box which asks you which folder you want Fusion Overloader to use. Option 1 will use the mods in the <code>update</code> folder, option 2 will use the mods in the <code>ashvehicles</code> folder.</p>
-<p>TODO</p>
-</li>
-</ol>
-<p>You don't necessarily need to install <code>TJGM's HQ Vehicle Pack</code> into the <code>update</code> folder. You can add multiple folders to Fusion Overloader, put your mods in them and then just use them without using the <code>update</code> folder.</p>
-<p>Example...</p>
-<div class="highlight"><pre><span></span><code>[FileLoader]
-OverloadFromFolder=update | ashvehicles | tjgmvehicles
-</code></pre></div>
-<p>And when we launch the game, we can choose to use the mods in either...</p>
-<ul>
-<li>The <code>update</code> folder</li>
-<li>The <code>ashvehicles</code> folder</li>
-<li>The <code>tjgmvehicles</code> folder</li>
-</ul>
-<p>TODO</p>
-<h3 id="loading-multiple-profiles">Loading Multiple Profiles<a class="headerlink" href="#loading-multiple-profiles" title="Permanent link">#</a></h3>
-<p>As well as creating additional profiles that can load their own set of mods, you can also load multiple profiles together and mix and match profiles in different scenarios.</p>
-<p>Here's an example...</p>
-<p>You have all your essential mods installed in the <code>update</code> folder (Fusion Fix, Console Visuals, Various Fixes, etc...), you want to install some weapon mods but you want them to be kept seperate and you still want them to load alongside your essential mods in the <code>update</code> folder.</p>
-<ol>
-<li>
-<p>Create a folder called <code>weaponmods</code> (can be named whatever you want) and install your weapon mods there. This folder will act like another <code>update</code> folder and mods should be installed here the same way they're installed in the <code>update</code> folder (see the rest of this guide for information on how to install different file types)</p>
-</li>
-<li>
-<p>Open <code>dinput8.ini</code> and after <code>OverloadFromFolder=update</code> add <code>&lt; weaponmods</code>. Your .ini file should now look like this.</p>
-<div class="highlight"><pre><span></span><code>[FileLoader]
-OverloadFromFolder=update &lt; weaponmods
-</code></pre></div>
-</li>
-<li>
-<p>Launch the game, you should now see a dialogue box which asks you if you want to load the <code>update</code> folder on its own or the <code>update</code> folder + the <code>weaponmods</code> folder.</p>
-<p>TODO</p>
-</li>
-</ol>
-<p>You can do this for multiple folders, so you could have something like this...</p>
-<div class="highlight"><pre><span></span><code>[FileLoader]
-OverloadFromFolder=update &lt; weaponmods &lt; vehiclemods
-</code></pre></div>
-<p>And when we launch the game, we can choose to use the mods in either...</p>
-<ul>
-<li>The <code>update</code> folder</li>
-<li>The <code>weaponmods</code> folder + the <code>update</code> folder</li>
-<li>The <code>vehiclemods</code> folder + the <code>weaponmods</code> folder + the <code>update</code> folder</li>
-</ul>
-<p>TODO</p>
-<p>You can mix this up with using using <code>|</code> to start a new chain.</p>
-<div class="highlight"><pre><span></span><code>[FileLoader]
-OverloadFromFolder=update &lt; weaponmods | vehiclemods
-</code></pre></div>
-<p>With our .ini like this, we can choose to use the mods in either...</p>
-<ul>
-<li>The <code>update</code> folder</li>
-<li>The <code>weaponmods</code> folder + the <code>update</code> folder</li>
-<li>The <code>vehiclemods</code> folder</li>
-</ul>
-<p>TODO</p>
-<p>Or we could do it like this...</p>
-<div class="highlight"><pre><span></span><code>[FileLoader]
-OverloadFromFolder=update &lt; weaponmods | update &lt; vehiclemods
-</code></pre></div>
-<p>And then we can choose to use the mods in either...</p>
-<ul>
-<li>The <code>update</code> folder</li>
-<li>The <code>weaponmods</code> folder + the <code>update</code> folder</li>
-<li>The <code>vehiclemods</code> folder + the <code>update</code> folder</li>
-</ul>
-<p>TODO</p>
 
 
 
@@ -2673,66 +2455,6 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    
-      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
-        <div class="md-consent__overlay"></div>
-        <aside class="md-consent__inner">
-          <form class="md-consent__form md-grid md-typeset" name="consent">
-            
-
-
-  
-
-
-<h4>Cookie consent</h4>
-<p>We use cookies for Google Analytics, this allows us to track site usage and visits. You can disable cookies if you wish.</p>
-<input class="md-toggle" type="checkbox" id="__settings" >
-<div class="md-consent__settings">
-  <ul class="task-list">
-    
-    
-      
-        
-  
-  
-    
-    
-  
-  <li class="task-list-item">
-    <label class="task-list-control">
-      <input type="checkbox" name="analytics" checked>
-      <span class="task-list-indicator"></span>
-      Google Analytics
-    </label>
-  </li>
-
-      
-    
-    
-      
-    
-    
-  </ul>
-</div>
-<div class="md-consent__controls">
-  
-    
-      <button class="md-button md-button--primary">Accept</button>
-    
-    
-    
-  
-    
-    
-    
-      <label class="md-button" for="__settings">Manage settings</label>
-    
-  
-</div>
-          </form>
-        </aside>
-      </div>
-      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
     
     
       
