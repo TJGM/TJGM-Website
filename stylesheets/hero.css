@@ -325,11 +325,6 @@ html {
   scroll-behavior: smooth;
 }
 
-html,
-body {
-  overflow-x: hidden;
-}
-
 #news {
   scroll-margin-top: 4.8rem;
 }
