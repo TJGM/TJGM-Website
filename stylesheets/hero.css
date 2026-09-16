@@ -219,6 +219,13 @@
    ========================= */
 @media (max-width: 900px) {
 
+  .hero-container {
+    box-sizing: border-box;
+    min-height: 100svh;
+    min-height: 100dvh;
+    padding-top: var(--md-header-height, 2.4rem);
+  }
+
   .stream-wrapper {
     flex-direction: column;
     gap: 0.9rem;
@@ -282,10 +289,10 @@
 
   .hero-container .hero-buttons-vertical .hero-btn,
   .md-typeset .hero-container .hero-buttons-vertical .hero-btn {
-    flex: 1 1 calc(20% - 0.45rem);
-    width: auto;
-    min-width: 4.6rem;
-    max-width: 7.5rem;
+    flex: 0 1 calc(33.333% - 0.45rem);
+    width: calc(33.333% - 0.45rem);
+    min-width: 0;
+    max-width: calc(33.333% - 0.45rem);
     height: auto;
     min-height: 2.5rem;
     padding: 0.4rem 0.35rem;
@@ -299,16 +306,6 @@
 @media (max-width: 900px) and (max-height: 620px) {
   .hero-subtitle {
     display: none;
-  }
-}
-
-/* Very narrow phones: allow a 3+2 wrap instead of crushing labels */
-@media (max-width: 400px) {
-  .hero-container .hero-buttons-vertical .hero-btn,
-  .md-typeset .hero-container .hero-buttons-vertical .hero-btn {
-    flex: 1 1 calc(33.333% - 0.45rem);
-    max-width: none;
-    white-space: nowrap;
   }
 }
 
