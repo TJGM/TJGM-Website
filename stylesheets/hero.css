@@ -14,21 +14,30 @@
   min-height: 100svh;
 
   z-index: 0;
-  background-image: url('../assets/hero.webp');
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
+  overflow: hidden;
 
   display: flex;
   justify-content: center;
   align-items: center;
-
-  overflow-x: hidden;
-  overflow-y: visible;
 }
 
-/* Light mode hero image */
-[data-md-color-scheme="default"] .hero-container {
+/* Parallax layer — transformed instead of background-position */
+.hero-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -15%;
+  height: 130%;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url('../assets/hero.webp');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+[data-md-color-scheme="default"] .hero-bg {
   background-image: url('../assets/herolight.webp');
 }
 
@@ -171,6 +180,7 @@
   border: none;
   box-shadow: none;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 /* Dark button */
@@ -288,14 +298,14 @@
 
   .hero-container .hero-buttons-vertical .hero-btn,
   .md-typeset .hero-container .hero-buttons-vertical .hero-btn {
-    flex: 0 1 calc(33.333% - 0.45rem);
-    width: calc(33.333% - 0.45rem);
+    flex: 0 1 calc(50% - 0.45rem);
+    width: calc(50% - 0.45rem);
     min-width: 0;
-    max-width: calc(33.333% - 0.45rem);
+    max-width: calc(50% - 0.45rem);
     height: auto;
     min-height: 2.5rem;
     padding: 0.4rem 0.35rem;
-    font-size: clamp(0.68rem, 2.6vw, 0.82rem);
+    font-size: clamp(0.85rem, 4.2vw, 1.05rem);
     line-height: 1.15;
     white-space: nowrap;
   }
