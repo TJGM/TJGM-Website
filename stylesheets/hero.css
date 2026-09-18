@@ -14,30 +14,21 @@
   min-height: 100svh;
 
   z-index: 0;
-  overflow: hidden;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Parallax layer — transformed instead of background-position */
-.hero-bg {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -15%;
-  height: 130%;
-  z-index: 0;
-  pointer-events: none;
   background-image: url('../assets/hero.webp');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  will-change: transform;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
-[data-md-color-scheme="default"] .hero-bg {
+/* Light mode hero image */
+[data-md-color-scheme="default"] .hero-container {
   background-image: url('../assets/herolight.webp');
 }
 
