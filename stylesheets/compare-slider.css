@@ -70,17 +70,13 @@
 }
 
 @media (hover: none) {
-  .compare-container {
-    touch-action: none;
-  }
-
   .compare-slider {
-    width: 28px;
-    height: 28px;
+    width: 16px;
+    height: 16px;
   }
 
   .compare-slider::after {
-    inset: -18px;
+    inset: -16px;
   }
 }
 
