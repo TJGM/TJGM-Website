@@ -3,17 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector(".md-header");
   if (!hero) return;
 
-  const desktopParallax = window.matchMedia("(min-width: 901px)");
   let parallaxRaf = 0;
   let headerRaf = 0;
 
   function applyParallax() {
     parallaxRaf = 0;
-    if (!desktopParallax.matches) {
-      hero.style.backgroundPosition = "center top";
-      return;
-    }
-    hero.style.backgroundPosition = "center " + (window.pageYOffset * 0.5) + "px";
+    const y = window.pageYOffset;
+    const factor = window.innerWidth <= 768 ? 0.25 : 0.5;
+    hero.style.backgroundPosition = "center " + (y * factor) + "px";
   }
 
   function updateHeader() {
@@ -33,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   window.addEventListener("scroll", onScroll, { passive: true });
-  desktopParallax.addEventListener("change", applyParallax);
   applyParallax();
   updateHeader();
 });
