@@ -239,6 +239,8 @@ document.addEventListener("DOMContentLoaded", () => {
     setupFullscreen(container, btn);
   }
 
+  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+
   document.querySelectorAll(".compare-container").forEach(container => {
     hydrateCompare(container);
 
@@ -252,7 +254,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const beforeEl = container.querySelector(":scope > img, :scope > video");
     const afterEl = container.querySelector(".compare-top img, .compare-top video");
 
-    container.style.cursor = "ew-resize";
+    function applyCursor() {
+      container.style.cursor = finePointer.matches ? "ew-resize" : "default";
+      slider.style.cursor = "ew-resize";
+      line.style.cursor = "ew-resize";
+    }
+    applyCursor();
+    finePointer.addEventListener("change", applyCursor);
 
     const instance = {
       container,
@@ -279,22 +287,22 @@ document.addEventListener("DOMContentLoaded", () => {
       dragging = true;
       wasDragging = false;
       active = instance;
-      if (slider.setPointerCapture && e.pointerId != null) {
-        try { slider.setPointerCapture(e.pointerId); } catch (_) {}
+      if (e.currentTarget.setPointerCapture && e.pointerId != null) {
+        try { e.currentTarget.setPointerCapture(e.pointerId); } catch (_) {}
       }
       e.preventDefault();
     };
 
+    // Handle + line: always
     slider.addEventListener("pointerdown", startDrag);
+    line.addEventListener("pointerdown", startDrag);
+
+    // Desktop mouse: click/drag anywhere on the image
     container.addEventListener("pointerdown", e => {
       if (e.target.closest(".compare-fullscreen-btn")) return;
+      if (e.pointerType !== "mouse") return;
       startDrag(e);
       setClip(instance, e.clientX);
-    });
-
-    container.addEventListener("click", e => {
-      if (e.target.closest(".compare-fullscreen-btn")) return;
-      if (!wasDragging) setClip(instance, e.clientX);
     });
 
     window.addEventListener("compare:resize", () => instance.updateVisuals());

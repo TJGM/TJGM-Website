@@ -1,35 +1,41 @@
-document.addEventListener("DOMContentLoaded", function () {
+// Parallax scrolling effect for hero section
+document.addEventListener("DOMContentLoaded", function() {
   const hero = document.querySelector(".hero-container");
-  const header = document.querySelector(".md-header");
+
   if (!hero) return;
 
-  let parallaxRaf = 0;
-  let headerRaf = 0;
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.pageYOffset;
+    // Move the background slightly slower than scroll
+    hero.style.backgroundPosition = `center ${scrollTop * 0.5}px`;
+  });
+});
 
-  function applyParallax() {
-    parallaxRaf = 0;
-    const y = window.pageYOffset;
-    const factor = window.innerWidth <= 768 ? 0.25 : 0.5;
-    hero.style.backgroundPosition = "center " + (y * factor) + "px";
-  }
+// Header transparency based on scroll position
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector(".md-header");
+    const hero = document.querySelector(".hero-container");
 
-  function updateHeader() {
-    headerRaf = 0;
-    if (!header) return;
-    const scrollY = window.scrollY;
-    if (window.innerWidth <= 768) {
-      header.classList.toggle("transparent-over-hero", scrollY < 8);
-    } else {
-      header.classList.toggle("transparent-over-hero", scrollY < hero.offsetHeight * 0.5);
+    if (!hero) return; // exit if no hero on this page
+
+    const mobileBreakpoint = 768; // px
+
+    function updateHeader() {
+        const scrollY = window.scrollY;
+        const isMobile = window.innerWidth <= mobileBreakpoint;
+        const heroHeight = hero.offsetHeight;
+        const fadePoint = heroHeight * 0.50; // 75% of hero height
+
+        if (isMobile) {
+            // mobile: transparent only at top
+            header.classList.toggle("transparent-over-hero", scrollY === 0);
+        } else {
+            // desktop: transparent until 75% of hero scrolled
+            header.classList.toggle("transparent-over-hero", scrollY < fadePoint);
+        }
     }
-  }
 
-  function onScroll() {
-    if (!parallaxRaf) parallaxRaf = requestAnimationFrame(applyParallax);
-    if (!headerRaf) headerRaf = requestAnimationFrame(updateHeader);
-  }
-
-  window.addEventListener("scroll", onScroll, { passive: true });
-  applyParallax();
-  updateHeader();
+    window.addEventListener("scroll", updateHeader);
+    window.addEventListener("resize", updateHeader);
+    updateHeader(); // initialize on load
 });
