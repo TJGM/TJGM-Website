@@ -66,6 +66,16 @@
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-KD191PFY0H"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-KD191PFY0H",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-KD191PFY0H",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
 
     
     
@@ -2744,7 +2754,8 @@
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h2>
 <p>I’ve seen a lot of people say that GTA IV is fine to play on Steam Deck out of the box because the performance is acceptable, but what I don’t think most people realize, is that there’s a lot more wrong with GTA IV’s PC version than just the performance.</p>
 <p>There’s a lot of missing graphical effects, broken effects, poor asset changes and worst of all, the game doesn’t have Steam Deck button icons by default, disgraceful! So let’s fix this!</p>
-<p>This guide is also available in video form if you'd prefer to follow that instead.</p>
+<p>If you'd prefer a simpler installation instead of installing each mod indivdually, check out my <a href="../../../resources/gtaiv/TJGM%27s-Drag-n%27-Drop-Archive/" target="_blank">Drag n' Drop pack</a> instead.</p>
+<p>This guide is also available in video form if you find that easier to follow.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/T_UIMKd9wqw?si=Mixro3yXgJ-qho9S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
@@ -2843,8 +2854,9 @@
 </div>
 
 <div class="compare-container">
-  <img src="../../../../assets/shared/fusionfix/options/ShadowFilterSharp.webp" alt="Sharp Shadows" caption="Fusion Fix's Sharp Shadows">
-  <img src="../../../../assets/shared/fusionfix/options/ShadowFilterCHSS.webp" alt="CHSS Shadows" caption="Fusion Fix's CHSS Shadows">
+  <img src="../../../../assets/shared/fusionfix/options/ShadowFilterSharp.webp" alt="Shadow Filter Sharp" caption="Shadow Filter Sharp" pill="Sharp">
+  <img src="../../../../assets/shared/fusionfix/options/ShadowFilterSoft.webp" alt="Shadow Filter Soft" caption="Shadow Filter Soft" pill="Soft">
+  <img src="../../../../assets/shared/fusionfix/options/ShadowFilterCHSS.webp" alt="Shadow Filter CHSS" caption="Shadow Filter CHSS" pill="CHSS">
 </div>
 
 <div class="compare-container">
@@ -2853,19 +2865,24 @@
 </div>
 
 <div class="compare-container">
+  <img src="../../../../assets/shared/fusionfix/config/ExtraDynamicShadows0-0.webp" alt="Missing Shadows Before" caption="Missing Shadows Before">
+  <img src="../../../../assets/shared/fusionfix/config/ExtraDynamicShadows2-0.webp" alt="Missing Shadows After" caption="Missing Shadows After">
+</div>
+
+<div class="compare-container">
   <img src="../../../../assets/shared/fusionfix/config/ExtraDynamicShadows0-1.webp" alt="Missing Shadows Before" caption="Missing Shadows Before">
   <img src="../../../../assets/shared/fusionfix/config/ExtraDynamicShadows2-1.webp" alt="Missing Shadows After" caption="Missing Shadows After">
 </div>
 
 <h4 id="z-fighting">Z-Fighting<a class="headerlink" href="#z-fighting" title="Permanent link">#</a></h4>
-<p>The PC port of Grand Theft Auto IV was plagued with z-fighting not seen on other platforms.</p>
-<p>Fusion Fix fixes this so z-fighting is basically nonexistent.</p>
+<p>Z-fighting was a major problem on the PC version of GTA IV, with constant flickering all around the map as soon as you gained any height.</p>
+<p>The PlayStation 3 version partially dealt with it by using a very high near clip value, while the Xbox 360 solved it by using a reversed floating point depth buffer. Fusion Fix provides a solution that yields results similar to the better approach from the Xbox 360, and effectively eliminates all z-fighting.</p>
 <video width="100%" autoplay loop>
   <source src="../../../../assets/shared/fusionfix/fixes/Z-Fighting.mp4" type="video/mp4">
 </video>
 
 <h4 id="depth-of-field">Depth-of-Field<a class="headerlink" href="#depth-of-field" title="Permanent link">#</a></h4>
-<p>GDepth-of-field in the vanilla game is tied to the Definition option. It also doesn't scale with resolution, this results in the effect becoming weaker at resolutions higher than 720p.</p>
+<p>Depth-of-field in the vanilla game is tied to the Definition option. It also doesn't scale with resolution, this results in the effect becoming weaker at resolutions higher than 720p.</p>
 <p>Fusion Fix seperates depth-of-field from Definition, giving it its own option and allowing users to select its strenght or disable it completely.</p>
 <p>The effect has also been rewritten so it looks better with bokeh blur and it now scales correctly up to 4K.</p>
 <div class="compare-container">
@@ -2877,13 +2894,9 @@
 <p>The Xbox 360 version of GTA IV ran at 1280x720 with 2x MSAA. Meanwhile the PC version lacked any anti-aliasing whatsoever.</p>
 <p>Fusion Fix adds an anti-aliasing option that allows users to select either FXAA or SMAA, two simple and performance friendly AA solutions which do an excellent job at smoothing out jagged edges, especially at high resolutions.</p>
 <div class="compare-container">
-  <img src="../../../../assets/shared/fusionfix/options/AAOff.webp" alt="AA Off" caption="AA Off">
-  <img src="../../../../assets/shared/fusionfix/options/AASMAA.webp" alt="SMAA On" caption="SMAA On">
-</div>
-
-<div class="compare-container">
-  <img src="../../../../assets/shared/fusionfix/options/AAOff.webp" alt="AA Off" caption="AA Off">
-  <img src="../../../../assets/shared/fusionfix/options/AAFXAA.webp" alt="FXAA On" caption="FXAA On">
+  <img src="../../../../assets/shared/fusionfix/options/AAOff.webp" alt="Anti-Aliasing Off" caption="Anti-Aliasing Off" pill="Off">
+  <img src="../../../../assets/shared/fusionfix/options/AAFXAA.webp" alt="Anti-Aliasing FXAA" caption="Anti-Aliasing FXAA" pill="FXAA">
+  <img src="../../../../assets/shared/fusionfix/options/AASMAA.webp" alt="Anti-Aliasing SMAA" caption="Anti-Aliasing SMAA" pill="SMAA">
 </div>
 
 <h4 id="volumetric-fog">Volumetric Fog<a class="headerlink" href="#volumetric-fog" title="Permanent link">#</a></h4>
@@ -2903,8 +2916,8 @@
 <p>The original game's sun is pretty effectless when compared to every other GTA title.</p>
 <p>Fusion Fix adds a new sun shafts option which adds god rays coming from the sun.</p>
 <div class="compare-container">
-  <img src="../../../../assets/shared/fusionfix/fixes/SunShaftsOff.webp" alt="Sun Shafts Off" caption="Sun Shafts Off">
-  <img src="../../../../assets/shared/fusionfix/fixes/SunShaftsOn.webp" alt="Sun Shafts On" caption="Sun Shafts On">
+  <img src="../../../../assets/shared/fusionfix/options/SunShaftsOff.webp" alt="Sun Shafts Off" caption="Sun Shafts Off">
+  <img src="../../../../assets/shared/fusionfix/options/SunShaftsOn.webp" alt="Sun Shafts On" caption="Sun Shafts On">
 </div>
 
 <h4 id="improved-loading-times">Improved Loading Times<a class="headerlink" href="#improved-loading-times" title="Permanent link">#</a></h4>
@@ -3053,6 +3066,8 @@
 
 
 
+  
+
 
 
 
@@ -3139,7 +3154,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright © 2026 TJGM. <a href="/privacy/"><u>Privacy Policy</u></a> · <a href="#__consent"><u>Cookie settings</u></a>
+      Copyright © 2026 TJGM. <a href="#__consent"><u>Cookie settings</u></a>
     </div>
   
   
@@ -3204,6 +3219,66 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies for Google Analytics, this allows us to track site usage and visits. You can disable cookies if you wish.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
     
     
       

@@ -66,6 +66,16 @@
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-KD191PFY0H"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-KD191PFY0H",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-KD191PFY0H",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
 
     
     
@@ -2096,10 +2106,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#drunkdrivinghandlingfixintensity-remove" class="md-nav__link">
+  <a href="#playerjumpragdollcontrol" class="md-nav__link">
     <span class="md-ellipsis">
       
-        DrunkDrivingHandlingFixIntensity (REMOVE)
+        PlayerJumpRagdollControl
       
     </span>
   </a>
@@ -2107,10 +2117,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#drunkdrivingcamfixintensity-remove" class="md-nav__link">
+  <a href="#playerclimbragdollcontrol" class="md-nav__link">
     <span class="md-ellipsis">
       
-        DrunkDrivingCamFixIntensity (REMOVE)
+        PlayerClimbRagdollControl
       
     </span>
   </a>
@@ -3616,10 +3626,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#drunkdrivinghandlingfixintensity-remove" class="md-nav__link">
+  <a href="#playerjumpragdollcontrol" class="md-nav__link">
     <span class="md-ellipsis">
       
-        DrunkDrivingHandlingFixIntensity (REMOVE)
+        PlayerJumpRagdollControl
       
     </span>
   </a>
@@ -3627,10 +3637,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#drunkdrivingcamfixintensity-remove" class="md-nav__link">
+  <a href="#playerclimbragdollcontrol" class="md-nav__link">
     <span class="md-ellipsis">
       
-        DrunkDrivingCamFixIntensity (REMOVE)
+        PlayerClimbRagdollControl
       
     </span>
   </a>
@@ -4560,12 +4570,12 @@
 <p><em>Description:</em></p>
 <p>Overrides the <a href="../options/#tree-alpha-new" target="_blank">tree alpha option</a> by setting a specific value.</p>
 <p><em>Comparisons:</em></p>
-<p>OverrideTreeAlpha = 0.625
-<img alt="OverrideTreeAlpha = 0.625" src="../../../../assets/shared/fusionfix/config/OverrideTreeAlpha0.625.webp" /></p>
-<p>OverrideTreeAlpha = 2.5
-<img alt="OverrideTreeAlpha = 2.5" src="../../../../assets/shared/fusionfix/config/OverrideTreeAlpha2.5.webp" /></p>
-<p>OverrideTreeAlpha = 4.0
-<img alt="OverrideTreeAlpha = 4.0" src="../../../../assets/shared/fusionfix/config/OverrideTreeAlpha4.0.webp" /></p>
+<div class="compare-container">
+  <img src="../../../../assets/shared/fusionfix/config/OverrideTreeAlpha0.625.webp" alt="OverrideTreeAlpha = 0.625" caption="OverrideTreeAlpha = 0.625" pill="0.625">
+  <img src="../../../../assets/shared/fusionfix/config/OverrideTreeAlpha2.5.webp" alt="OverrideTreeAlpha = 2.5" caption="OverrideTreeAlpha = 2.5" pill="2.5">
+  <img src="../../../../assets/shared/fusionfix/config/OverrideTreeAlpha4.0.webp" alt="OverrideTreeAlpha = 4.0" caption="OverrideTreeAlpha = 4.0" pill="4.0">
+</div>
+
 <p><em>Values:</em></p>
 <p>Any numerical value can be used for this setting. You can find the respective tree alpha value for each platform below.</p>
 <ul>
@@ -4716,12 +4726,22 @@
 <ul>
 <li><code>AutoClimbLaddersRange = 1.5</code> - (Fusion Fix Default)</li>
 </ul>
-<h3 id="drunkdrivinghandlingfixintensity-remove">DrunkDrivingHandlingFixIntensity (REMOVE)<a class="headerlink" href="#drunkdrivinghandlingfixintensity-remove" title="Permanent link">#</a></h3>
+<h3 id="playerjumpragdollcontrol">PlayerJumpRagdollControl<a class="headerlink" href="#playerjumpragdollcontrol" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
-<p>This setting is still a work-in-progress and might be changed/removed in the future, so it's not covered on this wiki for now.</p>
-<h3 id="drunkdrivingcamfixintensity-remove">DrunkDrivingCamFixIntensity (REMOVE)<a class="headerlink" href="#drunkdrivingcamfixintensity-remove" title="Permanent link">#</a></h3>
+<p>Allows you to trigger a ragdoll on the player by pressing the reload button while jumping.</p>
+<p><em>Values</em></p>
+<ul>
+<li><code>PlayerJumpRagdollControl = 1</code> - Enabled</li>
+<li><code>PlayerJumpRagdollControl = 0</code> - Disabled (Fusion fix default)</li>
+</ul>
+<h3 id="playerclimbragdollcontrol">PlayerClimbRagdollControl<a class="headerlink" href="#playerclimbragdollcontrol" title="Permanent link">#</a></h3>
 <p><em>Description:</em></p>
-<p>This setting is still a work-in-progress and might be changed/removed in the future, so it's not covered on this wiki for now.</p>
+<p>Allows you to trigger a ragdoll on the player by pressing the reload button when in the middle of climbing, e.g. holding onto a ledge.</p>
+<p><em>Values</em></p>
+<ul>
+<li><code>PlayerClimbRagdollControl = 1</code> - Enabled</li>
+<li><code>PlayerClimbRagdollControl = 0</code> - Disabled (Fusion fix default)</li>
+</ul>
 <h2 id="fog">[FOG]<a class="headerlink" href="#fog" title="Permanent link">#</a></h2>
 <p>This section contains settings related to the volumetric fog feature and the games timecycle.</p>
 <h3 id="volfogfarclip">VolFogFarClip<a class="headerlink" href="#volfogfarclip" title="Permanent link">#</a></h3>
@@ -5172,6 +5192,8 @@
 
 
 
+  
+
 
 
 
@@ -5258,7 +5280,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright © 2026 TJGM. <a href="/privacy/"><u>Privacy Policy</u></a> · <a href="#__consent"><u>Cookie settings</u></a>
+      Copyright © 2026 TJGM. <a href="#__consent"><u>Cookie settings</u></a>
     </div>
   
   
@@ -5323,6 +5345,66 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies for Google Analytics, this allows us to track site usage and visits. You can disable cookies if you wish.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
     
     
       

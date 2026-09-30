@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let fsPlaceholder = null;
   let fsContainer = null;
   let fsBtn = null;
+  let fsPairs = null;
 
   const preventScroll = e => e.preventDefault();
 
@@ -65,10 +66,15 @@ document.addEventListener("DOMContentLoaded", () => {
     document.removeEventListener("touchmove", preventScroll);
     document.removeEventListener("wheel", preventScroll);
 
+    if (fsPairs && fsContainer) {
+      fsContainer.insertAdjacentElement("afterend", fsPairs);
+    }
+
     fsOverlay = null;
     fsPlaceholder = null;
     fsContainer = null;
     fsBtn = null;
+    fsPairs = null;
     window.dispatchEvent(new Event("resize"));
   }
 
@@ -78,10 +84,20 @@ document.addEventListener("DOMContentLoaded", () => {
     fsOverlay = document.createElement("div");
     fsOverlay.className = "compare-overlay";
 
+    const pairs = container.nextElementSibling &&
+      container.nextElementSibling.classList.contains("compare-pairs")
+        ? container.nextElementSibling
+        : null;
+
     fsPlaceholder = document.createElement("div");
     container.parentNode.insertBefore(fsPlaceholder, container);
 
     fsOverlay.appendChild(container);
+    if (pairs) {
+      fsPairs = pairs;
+      fsOverlay.appendChild(pairs);
+    }
+
     document.body.appendChild(fsOverlay);
 
     container.classList.add("is-fullscreen");
@@ -194,6 +210,17 @@ document.addEventListener("DOMContentLoaded", () => {
       ...container.querySelectorAll(":scope > img, :scope > video")
     ];
 
+    if (medias.length >= 3) {
+      container.compareSources = medias.map(el => ({
+        tag: el.tagName,
+        src: el.getAttribute("src"),
+        alt: el.getAttribute("alt") || "",
+        caption: mediaCaption(el, el.tagName === "VIDEO" ? "Clip" : "Image"),
+        pill: (el.getAttribute("pill") || "").trim()
+      }));
+      medias.slice(2).forEach(el => el.remove());
+    }
+
     if (!topWrap && medias.length >= 2) {
       topWrap = document.createElement("div");
       topWrap.className = "compare-top";
@@ -226,6 +253,62 @@ document.addEventListener("DOMContentLoaded", () => {
     if (beforeEl && beforeEl.tagName === "VIDEO" && afterEl && afterEl.tagName === "VIDEO") {
       syncVideos(beforeEl, afterEl);
     }
+  }
+
+  function applySource(el, source) {
+    if (!el || !source) return;
+    el.setAttribute("src", source.src);
+    if (source.alt) el.setAttribute("alt", source.alt);
+    el.setAttribute("caption", source.caption);
+    if (el.tagName === "VIDEO") {
+      el.load();
+      el.play().catch(() => {});
+    }
+  }
+
+  function addPairPicker(container, beforeEl, afterEl, beforeCaption, afterCaption, instance) {
+    const sources = container.compareSources;
+    if (!sources || sources.length < 3) return;
+    if (container.nextElementSibling && container.nextElementSibling.classList.contains("compare-pairs")) return;
+
+    const bar = document.createElement("div");
+    bar.className = "compare-pairs";
+
+    const pairs = [];
+    for (let i = 0; i < sources.length; i++) {
+      for (let j = i + 1; j < sources.length; j++) {
+        pairs.push([i, j]);
+      }
+    }
+
+    pairs.forEach((pair, index) => {
+      const [a, b] = pair;
+      const btn = document.createElement("span");
+      btn.className = "compare-pair-btn" + (index === 0 ? " is-active" : "");
+      btn.setAttribute("role", "button");
+      btn.tabIndex = 0;
+      const labelA = sources[a].pill || sources[a].caption;
+      const labelB = sources[b].pill || sources[b].caption;
+      btn.textContent = labelA + " vs " + labelB;
+      const activate = e => {
+        e.preventDefault();
+        e.stopPropagation();
+        bar.querySelectorAll(".compare-pair-btn").forEach(x => x.classList.remove("is-active"));
+        btn.classList.add("is-active");
+        applySource(beforeEl, sources[a]);
+        applySource(afterEl, sources[b]);
+        if (beforeCaption) beforeCaption.textContent = sources[a].caption;
+        if (afterCaption) afterCaption.textContent = sources[b].caption;
+        if (instance) instance.updateVisuals();
+      };
+      btn.addEventListener("click", activate);
+      btn.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.key === " ") activate(e);
+      });
+      bar.appendChild(btn);
+    });
+
+    container.insertAdjacentElement("afterend", bar);
   }
 
   function addFullscreenButton(container) {
@@ -293,11 +376,9 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
     };
 
-    // Handle + line: always
     slider.addEventListener("pointerdown", startDrag);
     line.addEventListener("pointerdown", startDrag);
 
-    // Desktop mouse: click/drag anywhere on the image
     container.addEventListener("pointerdown", e => {
       if (e.target.closest(".compare-fullscreen-btn")) return;
       if (e.pointerType !== "mouse") return;
@@ -311,6 +392,7 @@ document.addEventListener("DOMContentLoaded", () => {
       instance.updateVisuals();
     });
 
+    addPairPicker(container, beforeEl, afterEl, beforeCaption, afterCaption, instance);
     addFullscreenButton(container);
   });
 
@@ -322,13 +404,13 @@ document.addEventListener("DOMContentLoaded", () => {
     !path.startsWith("/news/category/");
 
   if (shouldAddFullscreen) {
-    document.querySelectorAll(".md-content .md-typeset img").forEach(img => {
-      if (img.closest(".compare-container,.md-logo,.md-header,.md-nav,.md-footer")) return;
+    document.querySelectorAll(".md-content .md-typeset img, .md-content .md-typeset video").forEach(media => {
+      if (media.closest(".compare-container,.md-logo,.md-header,.md-nav,.md-footer")) return;
 
       const wrap = document.createElement("div");
       wrap.className = "compare-container fullscreen-only";
-      img.parentNode.insertBefore(wrap, img);
-      wrap.appendChild(img);
+      media.parentNode.insertBefore(wrap, media);
+      wrap.appendChild(media);
       wrap.style.cursor = "default";
       addFullscreenButton(wrap);
     });
