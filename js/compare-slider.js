@@ -202,6 +202,31 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("click", tryPlay, { once: true });
   }
 
+  function sourceFromEl(el) {
+    return {
+      tag: el.tagName,
+      src: el.getAttribute("src"),
+      alt: el.getAttribute("alt") || "",
+      caption: mediaCaption(el, ""),
+      pill: (el.getAttribute("pill") || "").trim()
+    };
+  }
+
+  function ensureCaption(container, text) {
+    let cap = container.querySelector(".compare-caption.single");
+    if (!text) {
+      if (cap) cap.remove();
+      return null;
+    }
+    if (!cap) {
+      cap = document.createElement("div");
+      cap.className = "compare-caption single";
+      container.appendChild(cap);
+    }
+    cap.textContent = text;
+    return cap;
+  }
+
   function hydrateCompare(container) {
     if (container.classList.contains("fullscreen-only")) return;
 
@@ -209,15 +234,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const medias = [
       ...container.querySelectorAll(":scope > img, :scope > video")
     ];
+    const swapOnly = container.classList.contains("swap");
+
+    if (swapOnly || medias.length === 1) {
+      container.compareSources = medias.map(sourceFromEl);
+      medias.slice(1).forEach(el => el.remove());
+      container.classList.add("no-slider");
+      return;
+    }
 
     if (medias.length >= 3) {
-      container.compareSources = medias.map(el => ({
-        tag: el.tagName,
-        src: el.getAttribute("src"),
-        alt: el.getAttribute("alt") || "",
-        caption: mediaCaption(el, el.tagName === "VIDEO" ? "Clip" : "Image"),
-        pill: (el.getAttribute("pill") || "").trim()
-      }));
+      container.compareSources = medias.map(sourceFromEl);
       medias.slice(2).forEach(el => el.remove());
     }
 
@@ -264,6 +291,40 @@ document.addEventListener("DOMContentLoaded", () => {
       el.load();
       el.play().catch(() => {});
     }
+  }
+
+  function addSwapPicker(container, mediaEl, captionEl) {
+    const sources = container.compareSources;
+    if (!sources || sources.length < 2) return;
+    if (container.nextElementSibling && container.nextElementSibling.classList.contains("compare-pairs")) return;
+
+    const bar = document.createElement("div");
+    bar.className = "compare-pairs";
+
+    sources.forEach((source, index) => {
+      const btn = document.createElement("span");
+      btn.className = "compare-pair-btn" + (index === 0 ? " is-active" : "");
+      btn.setAttribute("role", "button");
+      btn.tabIndex = 0;
+      btn.textContent = source.pill || source.caption || ("Image " + (index + 1));
+      const activate = e => {
+        e.preventDefault();
+        e.stopPropagation();
+        bar.querySelectorAll(".compare-pair-btn").forEach(x => x.classList.remove("is-active"));
+        btn.classList.add("is-active");
+        applySource(mediaEl, source);
+        if (captionEl) captionEl.textContent = source.caption;
+        else ensureCaption(container, source.caption);
+        window.dispatchEvent(new Event("resize"));
+      };
+      btn.addEventListener("click", activate);
+      btn.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.key === " ") activate(e);
+      });
+      bar.appendChild(btn);
+    });
+
+    container.insertAdjacentElement("afterend", bar);
   }
 
   function addPairPicker(container, beforeEl, afterEl, beforeCaption, afterCaption, instance) {
@@ -313,6 +374,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function addFullscreenButton(container) {
     if (container.querySelector(".compare-fullscreen-btn")) return;
+    if (container.querySelector("video[controls]")) return;
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "compare-fullscreen-btn";
@@ -326,6 +388,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".compare-container").forEach(container => {
     hydrateCompare(container);
+
+    if (container.classList.contains("no-slider") || container.classList.contains("swap")) {
+      const mediaEl = container.querySelector(":scope > img, :scope > video");
+      if (!mediaEl) return;
+      container.style.cursor = "default";
+      const captionEl = ensureCaption(container, mediaCaption(mediaEl, ""));
+      if (container.compareSources && container.compareSources.length >= 2) {
+        addSwapPicker(container, mediaEl, captionEl);
+      }
+      addFullscreenButton(container);
+      return;
+    }
 
     const topImage = container.querySelector(".compare-top");
     if (!topImage) return;
@@ -367,6 +441,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const startDrag = e => {
+      if (e.pointerType === "mouse" && e.button !== 0) return;
       dragging = true;
       wasDragging = false;
       active = instance;
@@ -382,6 +457,7 @@ document.addEventListener("DOMContentLoaded", () => {
     container.addEventListener("pointerdown", e => {
       if (e.target.closest(".compare-fullscreen-btn")) return;
       if (e.pointerType !== "mouse") return;
+      if (e.button !== 0) return;
       startDrag(e);
       setClip(instance, e.clientX);
     });
@@ -412,6 +488,7 @@ document.addEventListener("DOMContentLoaded", () => {
       media.parentNode.insertBefore(wrap, media);
       wrap.appendChild(media);
       wrap.style.cursor = "default";
+      ensureCaption(wrap, mediaCaption(media, ""));
       addFullscreenButton(wrap);
     });
   }

@@ -116,6 +116,20 @@
   right: 10px;
 }
 
+.compare-caption.single {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  max-width: 90%;
+  text-align: center;
+}
+
+.compare-container.no-slider,
+.compare-container.swap,
+.compare-container.fullscreen-only {
+  cursor: default;
+}
+
 @media (max-width: 600px) {
   .compare-caption {
     font-size: clamp(0.5rem, 0.35rem + 1.6vw, 0.85rem);
