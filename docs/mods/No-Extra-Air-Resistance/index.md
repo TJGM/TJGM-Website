@@ -4,6 +4,10 @@ description: Removes the extra air resistance flag which reduces vehicle speed i
 subtitle:
 status:
 icon:
+social:
+  cards_layout_options:
+    background_color: null
+    background_image: docs/assets/modcards/noextraairresistancecard.webp
 ---
 
 ## What is it?
@@ -49,14 +53,14 @@ I've also made a YouTube video covering this topic if you're interested in learn
 
 ## Download and Installation
 
-- Step 1: Download the latest version of the mod from your preferred source.
+1. Download the latest version of the mod from your preferred source.
 
-    - GTA SA: [GitHub](https://github.com/TJGM/SA.NoExtraAirResistance/releases){:target="_blank"} or [Mega](https://mega.nz/folder/smwnQLxD#JbdgMBfpHDGVReUfU2TZ3g){:target="_blank"}.
+    - GTA SA: [GitHub](https://github.com/TJGM/SA.NoExtraAirResistance/releases){target="_blank" rel="noopener"} or [Mega](https://mega.nz/folder/smwnQLxD#JbdgMBfpHDGVReUfU2TZ3g){target="_blank" rel="noopener"}.
 
-- Step 2: Open the mod archive you downloaded and move the **"No Extra Air Resistance vX.Y.Z"** folder from the archive into your **"modloader"** folder.
+2. Open the mod archive you downloaded and move the `No Extra Air Resistance vX.Y.Z` folder from the archive into your `modloader` folder.
 
 <span style="font-size: 0.85em;">
-[Click here for older mod versions (if available)](https://github.com/TJGM/SA.NoExtraAirResistance/releases){:target="_blank"}
+[Click here for older mod versions (if available)](https://github.com/TJGM/SA.NoExtraAirResistance/releases){target="_blank" rel="noopener"}
 </span>
 
 ## Credits
@@ -65,19 +69,3 @@ I've also made a YouTube video covering this topic if you're interested in learn
 - TJGM
 
 All of my mods are free to use, share and reuse in other mods. All I ask is that you give credit, thanks!
-
----
-
-<div class="md-typeset" style="text-align:center; padding:1.5rem; border:1px solid var(--md-default-fg-color--lightest); border-radius:6px;">
-  <h3>Enjoy my work?</h3>
-  <p>Gain benefits such as shout-outs at the end of videos, early access to TJGM videos, early access to TJGM mods, VIP Discord access and much more by supporting me and my work on Patreon, it's very much appreciated! ❤️</p>
-  <a
-    class="md-button"
-    href="https://patreon.com/tjgm"
-    target="_blank"
-    rel="noopener"
-    style="background:#F96854; color:white; border:none; border-radius:8px; padding:.6em 1.2em; margin-top:0.5rem;"
-  >
-    ⭐ Support on Patreon
-  </a>
-</div>

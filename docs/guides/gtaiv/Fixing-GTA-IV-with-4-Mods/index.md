@@ -4,6 +4,10 @@ description: A quick guide to fix GTA IV's PC port with just 4 Mods
 subtitle:
 status:
 icon:
+social:
+  cards_layout_options:
+    background_color: null
+    background_image: docs/guides/gtaiv/Fixing-GTA-IV-with-4-Mods/assets/socialcard.webp
 ---
 
 !!! warning
@@ -19,7 +23,9 @@ Missing and broken graphical effects, poor performance and a confusing number of
 
 Thankfully, that is no longer the case. In the last few years, significant progress has been made by the modding community to fix GTA IV on PC. Modding has been made easier than ever, downgrading isn’t really necessary anymore and you can have the best version of GTA IV on any platform, by simply installing 4 excellent mods, and all it takes is a few minutes, so let’s get to it!
 
-This guide is also available in video form if you'd prefer to follow that instead.
+If you'd prefer a simpler installation instead of installing each mod indivdually, check out my [Drag n' Drop pack](../../../resources/gtaiv/TJGM's-Drag-n'-Drop-Archive/index.md){:target="_blank"} instead.
+
+This guide is also available in video form if you find that easier to follow.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UuXVYUGJ45Y?si=rjXTL8JH_IJwEvGh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -29,13 +35,15 @@ So the first mod we'll install is Fusion Fix.
 
 If you don't know, Fusion Fix is basically *the* mod which fixes most of GTA IV's issues. The game is broken in so many ways on PC compared to the console versions that it's actually hard to believe.
 
-But Fusion Fix does more than just fixing problems, it also adds a few beautiful faithful graphical effects as well as a TON of quality-of-life features which brings the game up to a more modern standard and improves the overall experience.
+Fusion Fix adds many new faithful graphical effects, a TON of quality-of-life features which brings the game up to a more modern standard, fixes hundreds of bugs including high-FPS bugs, adds many new options and overall just massively improves the experience.
 
 ### Highlights
 
 I won't cover all of things Fusion Fix does in this guide, but I will go over some of the highlights of the mod so you'll know what you're in for.
 
-If you just want to skip to installing the mod, you can [click here](#download-installation), otherwise keep scrolling.
+If you want to view everything Fusion Fix does, check out my [Fusion Fix Wiki](../../../resources/gtaiv/Fusion-Fix-Wiki/index.md){target="_blank"} which covers all of the mods features and changes.
+
+If you just want to skip the highlights and go straight to installing the mod, you can [click here](#download-installation), otherwise keep scrolling.
 
 #### Rain
 
@@ -44,63 +52,18 @@ Rain on PC was made almost invisible, rain streaks became shorter at higher fram
 Fusion Fix makes rain much more visible, fixes rain streaks so they stay the same size regardless of frame rate and it makes rain droplets coloured again, as well as restoring the refraction effect.
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/fusionfix/rainbefore1.webp" alt="Before">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/fusionfix/rainafter1.webp" alt="After">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Before</div>
-  <div class="compare-caption after">After</div>
+  <img src="../../../../assets/shared/fusionfix/fixes/RainBefore1.webp" alt="Vanilla" caption="Vanilla">
+  <img src="../../../../assets/shared/fusionfix/fixes/RainAfter1.webp" alt="Fusion Fix" caption="Fusion Fix">
 </div>
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/fusionfix/rainbefore2.webp" alt="Before">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/fusionfix/rainafter2.webp" alt="After">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Before</div>
-  <div class="compare-caption after">After</div>
+  <img src="../../../../assets/shared/fusionfix/fixes/RainBefore2.webp" alt="Vanilla" caption="Vanilla">
+  <img src="../../../../assets/shared/fusionfix/fixes/RainAfter2.webp" alt="Fusion Fix" caption="Fusion Fix">
 </div>
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/fusionfix/rainbefore3.webp" alt="Before">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/fusionfix/rainafter3.webp" alt="After">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Before</div>
-  <div class="compare-caption after">After</div>
+  <img src="../../../../assets/shared/fusionfix/fixes/RainBefore3.webp" alt="Vanilla" caption="Vanilla">
+  <img src="../../../../assets/shared/fusionfix/fixes/RainAfter3.webp" alt="Fusion Fix" caption="Fusion Fix">
 </div>
 
 #### Reflections
@@ -110,412 +73,151 @@ Reflections were toned down significantly on PC, vehicle reflections became jagg
 Fusion Fix restores the stronger console reflections, fixes the bug which made vehicle reflections jagged, and it fixes mirrors so they no longer become distorted at certain camera angles.
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/fusionfix/reflectionsbefore2.webp" alt="Before">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/fusionfix/reflectionsafter2.webp" alt="After">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Before</div>
-  <div class="compare-caption after">After</div>
+  <img src="../../../../assets/shared/fusionfix/fixes/ReflectionsCarBefore.webp" alt="Vanilla" caption="Vanilla">
+  <img src="../../../../assets/shared/fusionfix/fixes/ReflectionsCarAfter.webp" alt="Fusion Fix" caption="Fusion Fix">
 </div>
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/fusionfix/reflectionsbefore3.webp" alt="Before">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/fusionfix/reflectionsafter3.webp" alt="After">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Before</div>
-  <div class="compare-caption after">After</div>
+  <img src="../../../../assets/shared/fusionfix/fixes/ReflectionsMirrorBefore.webp" alt="Vanilla" caption="Vanilla">
+  <img src="../../../../assets/shared/fusionfix/fixes/ReflectionsMirrorAfter.webp" alt="Fusion Fix" caption="Fusion Fix">
 </div>
 
 #### Shadows
 
-Shadows were by far the most broken aspect of the game
+Shadows were by far one of the most broken aspects of the game.
 
 After patch 1.0.6.0, they had horrible filtering, suffered from peter panning, had their draw distance reduced, performed significantly worse than the original shadows implementation and had many other issues.
 
-Fusion Fix completely replaces the filtering and bias code, adds support for animated tree shadows, adds contact hardening shadows and it also fixes dozens of other bugs related to shadows in general.
+Fusion Fix completely replaces the filtering and bias code, adds support for animated tree shadows, adds contact hardening shadows, fixes dozens bugs related to shadows in general and it also enables shadows on many objects that were missing them before.
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/fusionfix/shadowsbefore1.webp" alt="Before">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/fusionfix/shadowsafter1.webp" alt="After">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Before</div>
-  <div class="compare-caption after">After</div>
+  <img src="../../../../assets/shared/fusionfix/fixes/ShadowsBefore1.webp" alt="Vanilla" caption="Before">
+  <img src="../../../../assets/shared/fusionfix/fixes/ShadowsAfter1.webp" alt="Fusion Fix" caption="After">
 </div>
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/fusionfix/shadowsbefore2.webp" alt="Before">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/fusionfix/shadowsafter2.webp" alt="After">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Before</div>
-  <div class="compare-caption after">After</div>
+  <img src="../../../../assets/shared/fusionfix/fixes/ShadowsBefore2.webp" alt="Vanilla" caption="Before">
+  <img src="../../../../assets/shared/fusionfix/fixes/ShadowsAfter2.webp" alt="Fusion Fix" caption="After">
 </div>
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/fusionfix/shadowssharp.webp" alt="Sharp Shadows">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/fusionfix/shadowschss.webp" alt="CHSS Shadows">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
+  <img src="../../../../assets/shared/fusionfix/options/ShadowFilterSharp.webp" alt="Shadow Filter Sharp" caption="Shadow Filter Sharp" pill="Sharp">
+  <img src="../../../../assets/shared/fusionfix/options/ShadowFilterSoft.webp" alt="Shadow Filter Soft" caption="Shadow Filter Soft" pill="Soft">
+  <img src="../../../../assets/shared/fusionfix/options/ShadowFilterCHSS.webp" alt="Shadow Filter CHSS" caption="Shadow Filter CHSS" pill="CHSS">
+</div>
 
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
+<div class="compare-container">
+  <img src="../../../../assets/shared/fusionfix/config/ExtraDynamicShadows0.webp" alt="Missing Shadows Before" caption="Missing Shadows Before">
+  <img src="../../../../assets/shared/fusionfix/config/ExtraDynamicShadows1.webp" alt="Missing Shadows After" caption="Missing Shadows After">
+</div>
 
-  <!-- Captions -->
-  <div class="compare-caption before">Fusion Fix's Sharp Shadows</div>
-  <div class="compare-caption after">Fusion Fix's CHSS Shadows</div>
+<div class="compare-container">
+  <img src="../../../../assets/shared/fusionfix/config/ExtraDynamicShadows0-0.webp" alt="Missing Shadows Before" caption="Missing Shadows Before">
+  <img src="../../../../assets/shared/fusionfix/config/ExtraDynamicShadows2-0.webp" alt="Missing Shadows After" caption="Missing Shadows After">
+</div>
+
+<div class="compare-container">
+  <img src="../../../../assets/shared/fusionfix/config/ExtraDynamicShadows0-1.webp" alt="Missing Shadows Before" caption="Missing Shadows Before">
+  <img src="../../../../assets/shared/fusionfix/config/ExtraDynamicShadows2-1.webp" alt="Missing Shadows After" caption="Missing Shadows After">
 </div>
 
 #### Z-Fighting
 
-The PC port of Grand Theft Auto IV was plagued with z-fighting not seen on other platforms.
+Z-fighting was a major problem on the PC version of GTA IV, with constant flickering all around the map as soon as you gained any height.
 
-Fusion Fix fixes this so z-fighting is basically nonexistent.
+The PlayStation 3 version partially dealt with it by using a very high near clip value, while the Xbox 360 solved it by using a reversed floating point depth buffer. Fusion Fix provides a solution that yields results similar to the better approach from the Xbox 360, and effectively eliminates all z-fighting.
 
-<video width="2560" autoplay muted loop>
-  <source src="assets/fusionfix/zfight.mp4" type="video/mp4">
+<video width="100%" autoplay loop>
+  <source src="../../../../assets/shared/fusionfix/fixes/Z-Fighting.mp4" type="video/mp4">
 </video>
-
-#### Object Fading
-
-The 1.0.6.0 update for PC broke several graphical effects, one of them being screen door transparency in many materials, which led to the loss of LOD fade/blending. Terrain fading was also missing on ALL PC versions.
-
-Fusion Fix restores this functionality from previous versions so fading now works again, and it also restores terrain fading from the console versions of the game.
-
-<video width="2560" autoplay muted loop>
-  <source src="assets/fusionfix/screendoorfade.mp4" type="video/mp4">
-</video>
-
-<video width="2560" autoplay muted loop>
-  <source src="assets/fusionfix/terrainfade.mp4" type="video/mp4">
-</video>
-
-#### Definition
-
-GTA IV's PC port has an odd "Definition" option which **ENABLES** graphical effects when OFF, and **DISABLES** them when ON. One effect is a blur filter which hides this pixel pattern effect as objects fade, but the blur is WAY stronger on PC due to leftover anti-aliasing code. This basically blurs the entire image.
-
-<div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/fusionfix/definition/1vanilladefoff.webp" alt="Vanilla Definition Off">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/fusionfix/definition/1vanilladefon.webp" alt="Vanilla Definition On">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Vanilla Definition Off</div>
-  <div class="compare-caption after">Vanilla Definition On</div>
-</div>
-
-<div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/fusionfix/definition/2vanilladefoff.webp" alt="Vanilla Definition Off">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/fusionfix/definition/2vanilladefon.webp" alt="Vanilla Definition On">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Vanilla Definition Off</div>
-  <div class="compare-caption after">Vanilla Definition On</div>
-</div>
-
-Fusion Fix removes this broken anti-aliasing code and makes it so the blur filter only applies to objects as the pixel pattern effect occurs when "Definition" is on, rather than applying to the entire screen when it's off, this means Fusion Fix provides a sharper and cleaner image than seen on any other platform.
-
-<div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/fusionfix/definition/3vanilladefon.webp" alt="Vanilla Definition On">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/fusionfix/definition/3ffdefon.webp" alt="Fusion Fix Definition On">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Vanilla Definition On</div>
-  <div class="compare-caption after">Fusion Fix Definition On</div>
-</div>
-
-<div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/fusionfix/definition/4vanilladefoff.webp" alt="Vanilla Definition Off">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/fusionfix/definition/4ffdefon.webp" alt="Fusion Fix Definition On">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Vanilla Definition Off</div>
-  <div class="compare-caption after">Fusion Fix Definition On</div>
-</div>
 
 #### Depth-of-Field
 
-GTA IV's depth of field effect doesn't scale correctly with resolution and it only looks correct at 720p like on consoles. Depth of field is also tied to the games "Definition" option.
+Depth-of-field in the vanilla game is tied to the Definition option. It also doesn't scale with resolution, this results in the effect becoming weaker at resolutions higher than 720p.
 
-Fusion Fix fixes the scaling by implementing an efficient bokeh blur rated up to 4K, and added an individual depth of field option separate from the "Definition" option. This allows you to not only toggle depth of field, but also control how strong it is during gameplay.
+Fusion Fix seperates depth-of-field from Definition, giving it its own option and allowing users to select its strenght or disable it completely.
 
-<div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/fusionfix/vanilladof1.webp" alt="Before">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/fusionfix/ffdof1.webp" alt="After">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Before</div>
-  <div class="compare-caption after">After</div>
-</div>
+The effect has also been rewritten so it looks better with bokeh blur and it now scales correctly up to 4K.
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/fusionfix/vanilladof2.webp" alt="Before">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/fusionfix/ffdof2.webp" alt="After">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Before</div>
-  <div class="compare-caption after">After</div>
+  <img src="../../../../assets/shared/fusionfix/options/DepthofFieldOff.webp" alt="Depth of Field Off" caption="Depth of Field Off">
+  <img src="../../../../assets/shared/fusionfix/options/DepthofFieldVeryHigh.webp" alt="Depth of Field Very High" caption="Depth of Field Very High">
 </div>
 
 #### Anti-Aliasing
 
 The Xbox 360 version of GTA IV ran at 1280x720 with 2x MSAA. Meanwhile the PC version lacked any anti-aliasing whatsoever.
 
-Fusion Fix implements FXAA and SMAA, which are simple and performance friendly, and do an excellent job at smoothing out jagged edges, especially at high resolutions.
+Fusion Fix adds an anti-aliasing option that allows users to select either FXAA or SMAA, two simple and performance friendly AA solutions which do an excellent job at smoothing out jagged edges, especially at high resolutions.
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/fusionfix/smaaoff.webp" alt="SMAA Off">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/fusionfix/smaaon.webp" alt="SMAA On">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">SMAA Off</div>
-  <div class="compare-caption after">SMAA On</div>
+  <img src="../../../../assets/shared/fusionfix/options/AAOff.webp" alt="Anti-Aliasing Off" caption="Anti-Aliasing Off" pill="Off">
+  <img src="../../../../assets/shared/fusionfix/options/AAFXAA.webp" alt="Anti-Aliasing FXAA" caption="Anti-Aliasing FXAA" pill="FXAA">
+  <img src="../../../../assets/shared/fusionfix/options/AASMAA.webp" alt="Anti-Aliasing SMAA" caption="Anti-Aliasing SMAA" pill="SMAA">
 </div>
 
 #### Volumetric Fog
 
-Fusion Fix adds a very nice volumetric fog shader to replace the games aging fog shader. This allows the draw distance to be massively increased, it hides the edge of the game world and fog no longer moves with the camera like it did in the vanilla game.
+The original game fog moves with the camera position and when the player is up high, you can see the water cut off at the horizon.
+
+Fusion Fix adds a new volumetric fog option which enables volumetric fog. This fog no longer moves with the camera position, it increases the farclip (draw distance) to 4500 meters, the fog itself blends in with the bottom sky colour seamlessly and the horizon cutting off is no longer visible.
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/fusionfix/volfogbefore1.webp" alt="Volumetric Fog Disabled">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/fusionfix/volfogafter1.webp" alt="Volumetric Fog Enabled">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Volumetric Fog Disabled</div>
-  <div class="compare-caption after">Volumetric Fog Enabled</div>
+  <img src="../../../../assets/shared/fusionfix/options/VolFogOff1.webp" alt="Volumetric Fog Disabled" caption="Volumetric Fog Off">
+  <img src="../../../../assets/shared/fusionfix/options/VolFogOn1.webp" alt="Volumetric Fog Enabled" caption="Volumetric Fog On">
 </div>
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/fusionfix/volfogbefore2.webp" alt="Volumetric Fog Disabled">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/fusionfix/volfogafter2.webp" alt="Volumetric Fog Enabled">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Volumetric Fog Disabled</div>
-  <div class="compare-caption after">Volumetric Fog Enabled</div>
+  <img src="../../../../assets/shared/fusionfix/options/VolFogOff2.webp" alt="Volumetric Fog Off" caption="Volumetric Fog Off">
+  <img src="../../../../assets/shared/fusionfix/options/VolFogOn2.webp" alt="Volumetric Fog On" caption="Volumetric Fog On">
 </div>
 
 #### Sun Shafts
 
-The sun in GTA IV is pretty effectless in comparison to every other 3D GTA game. So Fusion Fix adds an option for sun shafts/godrays, a nice effect that simulates light rays coming from the sun.
+The original game's sun is pretty effectless when compared to every other GTA title.
+
+Fusion Fix adds a new sun shafts option which adds god rays coming from the sun.
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/fusionfix/sunshaftsoff1.webp" alt="Sun Shafts Disabled">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/fusionfix/sunshaftson1.webp" alt="Sun Shafts Enabled">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Sun Shafts Disabled</div>
-  <div class="compare-caption after">Sun Shafts Enabled</div>
-</div>
-
-<div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/fusionfix/sunshaftsoff2.webp" alt="Sun Shafts Disabled">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/fusionfix/sunshaftson2.webp" alt="Sun Shafts Enabled">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Sun Shafts Disabled</div>
-  <div class="compare-caption after">Sun Shafts Enabled</div>
+  <img src="../../../../assets/shared/fusionfix/options/SunShaftsOff.webp" alt="Sun Shafts Off" caption="Sun Shafts Off">
+  <img src="../../../../assets/shared/fusionfix/options/SunShaftsOn.webp" alt="Sun Shafts On" caption="Sun Shafts On">
 </div>
 
 #### Improved Loading Times
 
-GTA IV on PC has an unskippable intro and it takes you to a main menu first instead of just loading your last save immediately like console.
+GTA IV on PC has an unskippable intro and it takes you to a main menu first instead of just loading your last save immediately like console. Loading times are also longer than necessary even with extremely fast SSDs.
 
 Fusion Fix adds a skip intro and skip menu option in the GAME menu, as well as improving overall load times. This significantly reduces how long it takes to get in-game.
 
-<video width="2560" autoplay muted loop>
-  <source src="assets/fusionfix/improvedloadtimes.mp4" type="video/mp4">
+<video width="100%" controls muted>
+  <source src="../../../../assets/shared/fusionfix/fixes/LoadTimes.mp4" type="video/mp4">
 </video>
 
 #### Seasonal Events
 
-Fusion Fix adds seasonal events to the game which includes snow at winter and a scarier atmosphere at Halloween. The snow effect is done almost entirely using shaders instead of replacing map textures, similar to GTA Online's yearly snow event. You can toggle this feature in the GAME menu.
+Fusion Fix adds seasonal events to the game which includes snow at winter and a scarier atmosphere at Halloween. The snow effect is done almost entirely using shaders instead of replacing map textures, similar to GTA Online's yearly snow event.
 
-![Fusion Fix Chirtmas Event 1](assets/fusionfix/christmas1.webp)
+The winter event starts on the 30th of December and ends on the 3rd of January.
 
-![Fusion Fix Chirtmas Event 2](assets/fusionfix/christmas2.webp)
+The Halloweeen event starts on the 31st of October and ends on the 1st of November.
 
-![Fusion Fix Halloween Event](assets/fusionfix/halloween1.webp)
+There's a seasonal event option to enable and disable these events. You can also manually activate them at any time with cheats.
+
+![Fusion Fix Chirtmas Event 1](../../../assets/shared/fusionfix/fixes/Christmas1.webp)
+
+![Fusion Fix Chirtmas Event 2](../../../assets/shared/fusionfix/fixes/Christmas2.webp)
+
+![Fusion Fix Halloween Event](../../../assets/shared/fusionfix/fixes/Halloween1.webp)
 
 #### Fusion Overloader
 
-Fusion Fix adds a type of Modloader called Fusion OverLoader, you don’t really need to know too much about it for this guide. But if you do plan on installing more mods in the future, I’d recommend checking out my Fusion Overloader tutorial once you're done with this guide.
+Fusion Fix adds a type of Modloader called Fusion OverLoader, you don’t really need to know too much about it for this guide. But if you do plan on installing more mods in the future, I’d recommend checking out my [Fusion Overloader tutorial](../Fusion-Overloader-Tutorial/index.md){target="_blank"} once you're done with this guide.
 
 We'll be installing all our mods through Fusion Overloader in this guide, so you'll see how easy it is soon.
 
 #### Even more...
 
-If you want to know what else Fusion Fix fixes or adds to the game, you can either check out the full changelog on the [Fusion Fix GitHub](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix) or you can watch my video covering nearly the entirety of the mod.
+If you want to know what else Fusion Fix fixes or adds to the game, you can either check out my [Fusion Fix Wiki](../../../resources/gtaiv/Fusion-Fix-Wiki/index.md){target="_blank"} or you can watch my video covering nearly the entirety of the mod.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XTuOortPoY4?si=_mi7HnZJ6rsnRFnS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -525,20 +227,19 @@ Fusion Fix has two very simple and easy installation methods. You can install th
 
 #### Manual Installation
 
-1. Download the latest Fusion Fix .zip from the [official GitHub release page](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix/releases) (found under **"Assets"**).
-2. Open the archive you just downloaded and then copy and paste everything from the archive into your game folder where **"GTAIV.exe"** is located.
+1. Download the latest Fusion Fix .zip from the [official GitHub release page](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix/releases){target="_blank" rel="noopener"} (found under `Assets`).
+2. Open the archive you just downloaded and then copy and paste everything from the archive into your game folder where `GTAIV.exe` is located.
 
-!!! tip
-    If you're not sure how to find your game folder...
+    !!! tip
+        If you're not sure how to find your game folder...
 
-      - **Steam**: You can find it by right clicking on **"Grand Theft Auto IV: The Complete Edition"** in your Steam library, going to **"Manage"** and then clicking **"Browse Local Files"**. The **"GTAIV"** folder is where **"GTAIV.exe"** is located.
+          - **Steam**: You can find it by right clicking on `Grand Theft Auto IV: The Complete Edition` in your Steam library, going to `Manage` and then clicking `Browse Local Files`. The `GTAIV` folder is where `GTAIV.exe` is located.
 
-      - **Rockstar Games Launcher**: You can find it by clicking on **"Settings"** in the Rockstar Games Launcher, click **"Grand Theft Auto IV: The Complete Edition"** in your installed games list, find **"View installation folder"** and then click **"Open"** next to it. The **"GTAIV"** folder is where **"GTAIV.exe"** is located.
- 
+          - **Rockstar Games Launcher**: You can find it by clicking on `Settings` in the Rockstar Games Launcher, click `Grand Theft Auto IV: The Complete Edition` in your installed games list, find `View installation folder` and then click `Open` next to it. The `GTAIV` folder is where `GTAIV.exe` is located.
 
 #### Installer Installation
 
-1. Download the latest Fusion Fix installer from the [official GitHub release page](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix/releases) (found under **"Assets"**. Web installer will download the mod files when using the installer, offline installer downloads the mod files alongside the installer).
+1. Download the latest Fusion Fix installer from the [official GitHub release page](https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix/releases){target="_blank" rel="noopener"} (found under `Assets`. Web installer will download the mod files when using the installer, offline installer downloads the mod files alongside the installer).
 2. Launch the installer, it should automatically detect the location of your Grand Theft Auto: IV folder and then click install.
 
 ## Console Visuals
@@ -552,45 +253,15 @@ The mod Console Visuals aims to restore all of that content from console. Most o
 The way Niko might hold a specific weapon...
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/consolevisuals/pcuzi.webp" alt="A screenshot of Niko holding the Uzi SMG in GTA IV. On PC he holds it closer to his body.">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/consolevisuals/consoleuzi.webp" alt="A screenshot of Niko holding the Uzi SMG in GTA IV. On console he holds it further to his body with his arms fully stretched out in front of him.">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">PC Uzi Animation</div>
-  <div class="compare-caption after">Console Uzi Animation</div>
+  <img src="../../../assets/shared/consolevisuals/animationsslidecomparisons/Uzi (PC).webp" alt="PC Uzi Animation" caption="PC Uzi Animation">
+  <img src="../../../assets/shared/consolevisuals/animationsslidecomparisons/Uzi (Console).webp" alt="Console Uzi Animation" caption="Console Uzi Animation">
 </div>
 
 Or the size of the games help boxes...
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/consolevisuals/pchelpbox.webp" alt="A screenshot of help box that appears in the top left corner of the screen in the PC version of GTA IV. It's smaller than the console help box.">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/consolevisuals/consolehelpbox.webp" alt="A screenshot of help box that appears in the top left corner of the screen in the PC version of GTA IV. It's bigger than the PC help box.">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">PC Help Box</div>
-  <div class="compare-caption after">Console Help Box</div>
+  <img src="../../../assets/shared/consolevisuals/consolehudslidecomparisons/ivPC.webp" alt="PC Help Box" caption="PC Help Box">
+  <img src="../../../assets/shared/consolevisuals/consolehudslidecomparisons/ivConsole.webp" alt="Console Help Box" caption="Console Help Box">
 </div>
 
 But Console Visuals does come with one change which is definitely an improvement over the PC version, and that’s the vegetation.
@@ -600,23 +271,8 @@ On PC, a lot of the vegetation was changed, this includes a new grass model, whi
 Just look at this comparison here, the grass on PC is mostly under the ground compared to the console grass.
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/consolevisuals/grass/pcgrassvanilla.webp" alt="PC Grass">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/consolevisuals/grass/consolegrass.webp" alt="Console Grass">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">PC Grass</div>
-  <div class="compare-caption after">Console Grass</div>
+  <img src="../../../assets/shared/consolevisuals/grassslidecomparisons/1 (PC).webp" alt="PC Grass" caption="PC Grass">
+  <img src="../../../assets/shared/consolevisuals/grassslidecomparisons/1 (Console).webp" alt="Console Grass" caption="Console Grass">
 </div>
 
 As well as restoring the console grass, it also restores the console trees. However, the trees in Console Visuals have higher resolution textures compared to console, because as it turns out, Rockstar reused these tree textures in Max Payne 3 at a higher resolution.
@@ -624,162 +280,74 @@ As well as restoring the console grass, it also restores the console trees. Howe
 The team behind Console Visuals managed to extract those textures and got them into GTA IV with some corrections made to them.
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/consolevisuals/pctrees1.webp" alt="PC Trees">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/consolevisuals/consoletrees1.webp" alt="Console Trees">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">PC Trees</div>
-  <div class="compare-caption after">Console Trees</div>
+  <img src="../../../assets/shared/consolevisuals/vegetationpc+slidecomparisons/1 (PC).webp" alt="PC Trees" caption="PC Trees">
+  <img src="../../../assets/shared/consolevisuals/vegetationpc+slidecomparisons/1 (Console).webp" alt="Console Trees" caption="Console Trees">
 </div>
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/consolevisuals/pctrees2.webp" alt="PC Trees">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/consolevisuals/consoletrees2.webp" alt="Console Trees">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">PC Trees</div>
-  <div class="compare-caption after">Console Trees</div>
+  <img src="../../../assets/shared/consolevisuals/vegetationpc+slidecomparisons/5 (PC).webp" alt="PC Trees" caption="PC Trees">
+  <img src="../../../assets/shared/consolevisuals/vegetationpc+slidecomparisons/5 (Console).webp" alt="Console Trees" caption="Console Trees">
 </div>
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/consolevisuals/pctrees3.webp" alt="PC Trees">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/consolevisuals/consoletrees3.webp" alt="Console Trees">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">PC Trees</div>
-  <div class="compare-caption after">Console Trees</div>
+  <img src="../../../assets/shared/consolevisuals/vegetationpc+slidecomparisons/3 (PC).webp" alt="PC Trees" caption="PC Trees">
+  <img src="../../../assets/shared/consolevisuals/vegetationpc+slidecomparisons/3 (Console).webp" alt="Console Trees" caption="Console Trees">
 </div>
 
 ### Download & Installation
 
 For this guide we'll just install the vegetation improvements from Console Visuals, as it's the one thing that I'd argue isn't really subjective compared to the other changes between console and PC.
 
-If you want to install the other console assets from Console Visuals, have a look at my [Console Visuals Guide](#console-visuals) so you can pick and choose what you prefer. But like I said, console vegetation is arguably better in every aspect, so we'll just install that for this guide. 
+If you want to install the other console assets from Console Visuals, have a look at my [Console Visuals Wiki](../../../resources/gtaiv/Console-Visuals-Wiki/index.md){target="_blank"}, this will show you all of the different Console Visual assets and how to install them.
 
-1. Download the latest **"Console.Vegetation.zip"** from the [official Console Visuals GitHub release page](https://github.com/Tomasak/Console-Visuals/releases) (found under **"Assets"**).
-2. Open the vegetation archive you just downloaded and then copy and paste the **"update"** folder from the archive, into your **"GTAIV"** folder, where **"GTAIV.exe"** is located.
+But like I said, console vegetation is arguably better in every aspect, so we'll just install that for this guide.
+
+1. Download the latest `Console.Vegetation.zip` from the [official Console Visuals GitHub release page](https://github.com/Tomasak/Console-Visuals/releases){target="_blank" rel="noopener"} (found under `Assets`).
+2. Open the vegetation archive you just downloaded and then copy and paste the `update` folder from the archive, into your `GTAIV` folder, where `GTAIV.exe` is located.
 
 !!! tip
     If you're not sure how to find your game folder...
 
-      - **Steam**: You can find it by right clicking on **"Grand Theft Auto IV: The Complete Edition"** in your Steam library, going to **"Manage"** and then clicking **"Browse Local Files"**. The **"GTAIV"** folder is where **"GTAIV.exe"** is located.
+      - **Steam**: You can find it by right clicking on `Grand Theft Auto IV: The Complete Edition` in your Steam library, going to `Manage` and then clicking `Browse Local Files`. The `GTAIV` folder is where `GTAIV.exe` is located.
 
-      - **Rockstar Games Launcher**: You can find it by clicking on **"Settings"** in the Rockstar Games Launcher, click **"Grand Theft Auto IV: The Complete Edition"** in your installed games list, find **"View installation folder"** and then click **"Open"** next to it. The **"GTAIV"** folder is where **"GTAIV.exe"** is located.
+      - **Rockstar Games Launcher**: You can find it by clicking on `Settings` in the Rockstar Games Launcher, click `Grand Theft Auto IV: The Complete Edition` in your installed games list, find `View installation folder` and then click `Open` next to it. The `GTAIV` folder is where `GTAIV.exe` is located.
 
-And that’s it, the vegetation from Console Visuals is installed! If you do want to install other parts of Console Visuals, the installation will be the exact same as the vegetation installation, so just download the parts you want and then follow step 2.
+And that’s it, the vegetation from Console Visuals is installed!
 
 ## Various Fixes
 
 The penultimate mod we’re going to install is Various Fixes. This mod fixes a huge number of texture issues, prop placement issues and other problems and inconsistencies throughout GTA IV's assets.
 
-It’s hard to even cover everything this mod fixes as the [list of fixes](https://gtaforums.com/topic/975211-various-fixes/) is VERY big. However, I'll give you three quick examples so you can get an idea of what this mod is about.
+It’s hard to even cover everything this mod fixes as the [list of fixes](https://gtaforums.com/topic/975211-various-fixes/){target="_blank" rel="noopener"} is VERY big. However, I'll give you three quick examples so you can get an idea of what this mod is about.
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/variousfixes/vanilla1.webp" alt="A screenshot of a fence in GTA IV which has broken transparency and you can't see through it.">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/variousfixes/vf1.webp" alt="A screenshot of the same fence in GTA IV but the transparency is fixed and you can now see through the gaps in the fence.">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Vanilla</div>
-  <div class="compare-caption after">Various Fixes</div>
+  <img src="../../../assets/shared/variousfixes/vanilla1.webp" alt="Vanilla." caption="Vanilla">
+  <img src="../../../assets/shared/variousfixes/vf1.webp" alt="Various Fixes" caption="Various Fixes">
 </div>
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/variousfixes/vanilla2.webp" alt="A screenshot of apartment blocks in GTA IV which have windows that are too bright in comparison to all of the other buildings in the game.">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/variousfixes/vf2.webp" alt="A screenshot of the same apartments in GTA IV but the brightness of the windows has been reduced.">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Vanilla</div>
-  <div class="compare-caption after">Various Fixes</div>
+  <img src="../../../assets/shared/variousfixes/vanilla2.webp" alt="Vanilla." caption="Vanilla">
+  <img src="../../../assets/shared/variousfixes/vf2.webp" alt="Various Fixes" caption="Various Fixes">
 </div>
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="assets/variousfixes/vanilla3.webp" alt="A screenshot of the outside of a bar in GTA IV with a sign which says "Crazy Ivan's Wine and Liquor", however the "Crazy Ivan" is placed above the same text which is in Russian.">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="assets/variousfixes/vf3.webp" alt="A screenshot of the same bar sign in GTA IV but the "Crzy Ivan" part is removed and now the Russian text underneath is all that remains, as it was intended.>
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Vanilla</div>
-  <div class="compare-caption after">Various Fixes</div>
+  <img src="../../../assets/shared/variousfixes/vanilla3.webp" alt="Vanilla." caption="Vanilla">
+  <img src="../../../assets/shared/variousfixes/vf3.webp" alt="Various Fixes" caption="Various Fixes">
 </div>
 
 ### Download and Installation
 
 Okay let's download and install Various Fixes.
 
-1. Download the latest **"Installation.through.Fusion.Overloader.zip"** from the [official Various Fixes GitHub release page](https://github.com/valentyn-l/GTAIV.EFLC.Various.Fixes/releases) (found under **"Assets"**).
-2. Open the archive you just downloaded, open the **"Installation through Fusion Overloader"** folder in the archive and then copy and paste the **"update"** folder from that folder, into your **"GTAIV"** folder, where **"GTAIV.exe"** is located.
+1. Download the latest `Installation.through.Fusion.Overloader.zip` from the [official Various Fixes GitHub release page](https://github.com/valentyn-l/GTAIV.EFLC.Various.Fixes/releases){target="_blank" rel="noopener"} (found under `Assets`).
+2. Open the archive you just downloaded, open the `Installation through Fusion Overloader` folder in the archive and then copy and paste the `update` folder from that folder, into your `GTAIV` folder, where `GTAIV.exe` is located.
 
 !!! tip
     If you're not sure how to find your game folder...
 
-      - **Steam**: You can find it by right clicking on **"Grand Theft Auto IV: The Complete Edition"** in your Steam library, going to **"Manage"** and then clicking **"Browse Local Files"**. The **"GTAIV"** folder is where **"GTAIV.exe"** is located.
+      - **Steam**: You can find it by right clicking on `Grand Theft Auto IV: The Complete Edition` in your Steam library, going to `Manage` and then clicking `Browse Local Files`. The `GTAIV` folder is where `GTAIV.exe` is located.
 
-      - **Rockstar Games Launcher**: You can find it by clicking on **"Settings"** in the Rockstar Games Launcher, click **"Grand Theft Auto IV: The Complete Edition"** in your installed games list, find **"View installation folder"** and then click **"Open"** next to it. The **"GTAIV"** folder is where **"GTAIV.exe"** is located.
+      - **Rockstar Games Launcher**: You can find it by clicking on `Settings` in the Rockstar Games Launcher, click `Grand Theft Auto IV: The Complete Edition` in your installed games list, find `View installation folder` and then click `Open` next to it. The `GTAIV` folder is where `GTAIV.exe` is located.
 
 
 ## Radio Restoration
@@ -792,30 +360,12 @@ The best mod to restore cut music from the Complete Edition of GTA IV, is the Ra
 
 ### Download and Installation
 
-1. Download the latest **"Radio.Restoration.Mod.zip"** from the [official Radio Restoration GitHub release page](https://github.com/Tomasak/GTA-Downgraders/releases) (found under **"Assets"**).
-2. Open the archive you just downloaded and then copy "IVCERadioRestoration.exe" anywhere you'd like.
+1. Download the latest `Radio.Restoration.Mod.zip` from the [official Radio Restoration GitHub release page](https://github.com/Tomasak/GTA-Downgraders/releases){target="_blank" rel="noopener"} (found under `Assets`).
+2. Open the archive you just downloaded and then copy `IVCERadioRestoration.exe` anywhere you'd like.
 3. Run the tool and follow the steps given. There's some additional customisation that is explained in the installer.
 
 You've now restored the music cut from GTA IV!
 
 ## Outro and Additional Links
 
-And that's it! You now have the BEST version of GTA IV on ANY platform.
-
-If you'd like to learn more about Fusion Overloader, the modloader that comes with Fusion Fix, check out my Fusion Overloader guide.
-
----
-
-<div class="md-typeset" style="text-align:center; padding:1.5rem; border:1px solid var(--md-default-fg-color--lightest); border-radius:6px;">
-  <h3>Found this guide useful?</h3>
-  <p>Gain benefits such as shout-outs at the end of videos, early access to TJGM videos, early access to TJGM mods, VIP Discord access and much more by supporting me and my work on Patreon, it's very much appreciated! ❤️</p>
-  <a
-    class="md-button"
-    href="https://patreon.com/tjgm"
-    target="_blank"
-    rel="noopener"
-    style="background:#F96854; color:white; border:none; border-radius:8px; padding:.6em 1.2em; margin-top:0.5rem;"
-  >
-    ⭐ Support on Patreon
-  </a>
-</div>
+If you'd like to learn more about Fusion Overloader, the modloader that comes with Fusion Fix, make sure to check out my [Fusion Overloader Tutorial](../Fusion-Overloader-Tutorial/index.md){target="_blank"}.

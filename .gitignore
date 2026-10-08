@@ -129,6 +129,9 @@ dmypy.json
 .pyre/
 
 # Local drafts and tools
+draft.txt
 todo.txt
 tools.txt
 baks/
+backups/
+video_backup/

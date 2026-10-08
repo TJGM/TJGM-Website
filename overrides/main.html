@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+
+  {% if page.url != "privacy/" %}
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3449832020644111"
+    crossorigin="anonymous"></script>
+  {% endif %}
+{% endblock %}

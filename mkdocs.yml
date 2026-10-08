@@ -11,6 +11,8 @@ nav:
 
   - Mods:
     - Improved 2DFX: mods/Improved-2DFX/index.md
+    - Improved Hyman Memorial Stadium 2DFX: mods/Improved-Hyman-Memorial-Stadium-2DFX/index.md
+    - Pyramid 2DFX Fix: mods/Pyramid-2DFX-Fix/index.md
     - No Extra Air Resistance: mods/No-Extra-Air-Resistance/index.md
     - Weapon Coronas: mods/Weapon-Coronas/index.md
     - Orange Bulb Lampposts: mods/Orange-Bulb-Lampposts/index.md
@@ -20,24 +22,38 @@ nav:
 
     - Grand Theft Auto IV:
       - Fixing GTA IV with 4 Mods: guides/gtaiv/Fixing-GTA-IV-with-4-Mods/index.md
+      - Fixing GTA IV with 4 Mods on Steam Deck: guides/gtaiv/Fixing-GTA-IV-with-4-Mods-on-Steam-Deck/index.md
       - Fusion Overloader Tutorial: guides/gtaiv/Fusion-Overloader-Tutorial/index.md
+      - Removing Rockstar Games Launcher from GTA IV: guides/gtaiv/Removing-Rockstar-Games-Launcher-from-GTA-IV/index.md
 
     - Grand Theft Auto San Andreas:
       - How to Downgrade EVERY Version of GTA San Andreas: guides/gtasa/How-to-Downgrade-EVERY-Version-of-GTA-San-Andreas/index.md
-      - Ultimate Modding Guide for GTA San Andreas: 
-        - Chapter 1 - Getting Started: guides/gtasa/Ultimate-Modding-Guide-for-GTA-San-Andreas/chapter1.md
-        - Chapter 2 - Installing Essentials: guides/gtasa/Ultimate-Modding-Guide-for-GTA-San-Andreas/chapter2.md
-        - Chapter 3 - Modloader Tutorial & Learning file Types: guides/gtasa/Ultimate-Modding-Guide-for-GTA-San-Andreas/chapter3.md
-        - Chapter 4 - Installing More Mods: guides/gtasa/Ultimate-Modding-Guide-for-GTA-San-Andreas/chapter4.md
-        - Chapter 5 - Diagnosing and Solving Crashes: guides/gtasa/Ultimate-Modding-Guide-for-GTA-San-Andreas/chapter5.md
-        - Chapter 6 - Where to Find Mods and Pro Tips: guides/gtasa/Ultimate-Modding-Guide-for-GTA-San-Andreas/chapter6.md
 
     - Grand Theft Auto Vice City:
       - How to Downgrade EVERY Version of GTA Vice City: guides/gtavc/How-to-Downgrade-EVERY-Version-of-GTA-Vice-City/index.md
-      - Restoring Music Cut from GTA Vice City WITHOUT Downgrading: guides/gtavc/Restoring-Music-Cut-from-GTA-Vice-City-WITHOUT-Downgrading/index.md
 
     - Grand Theft Auto III:
         - How to Downgrade EVERY Version of GTA III: guides/gtaiii/How-to-Downgrade-EVERY-Version-of-GTA-III/index.md
+
+  - Resources:
+
+    - Grand Theft Auto IV:
+      - Console Visuals Wiki: resources/gtaiv/Console-Visuals-Wiki/index.md
+      - Fusion Fix Wiki:
+        - Index: resources/gtaiv/Fusion-Fix-Wiki/index.md
+        - Configuration File: resources/gtaiv/Fusion-Fix-Wiki/config.md
+        - Download & Installation: resources/gtaiv/Fusion-Fix-Wiki/download.md
+        - Fixes & Improvements: resources/gtaiv/Fusion-Fix-Wiki/fixes.md
+        - In-Game Options: resources/gtaiv/Fusion-Fix-Wiki/options.md
+        - New Cheats: resources/gtaiv/Fusion-Fix-Wiki/cheats.md
+      - TJGM's Drag n' Drop Archive for GTA IV: resources/gtaiv/TJGM's-Drag-n'-Drop-Archive/index.md
+      - ⭐ TJGM's GTA IV Mod List: https://www.patreon.com/TJGM/posts/tjgms-gta-iv-mod-164039827
+
+    - Grand Theft Auto San Andreas:
+      - ⭐ TJGM's San Andreas Mod List: https://www.patreon.com/TJGM/posts/tjgms-san-mod-162918692
+
+    - Grand Theft Auto Vice City:
+      - ⭐ TJGM's Vice City Mod List: https://www.patreon.com/TJGM/posts/tjgms-vice-city-162921129
 
 theme:
   name: material
@@ -77,9 +93,10 @@ plugins:
   - search
   - meta
   - social:
-      cards_layout: default
+      cards_layout: default/only/image
       cards_layout_options:
-        background_color: "#2c2c2c"
+        background_color: "#00000000"
+        background_image: docs/assets/hero.webp
   - blog:
       blog_dir: news
       archive_date_format: yyyy
@@ -94,6 +111,7 @@ plugins:
 
   - tags:
       tags_allowed:
+        - GTA VI
         - GTA V
         - GTA IV
         - GTA Vice City Stories
@@ -121,18 +139,29 @@ markdown_extensions:
 
 
 extra:
+  analytics:
+    provider: google
+    property: G-KD191PFY0H
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies for Google Analytics, this allows us to track site usage and visits. You can disable cookies if you wish.
   social:
-    - icon: fontawesome/brands/bluesky
-      link: https://bsky.app/profile/tjgm.bsky.social
-      name: Bluesky
-
     - icon: fontawesome/brands/patreon
       link: https://www.patreon.com/TJGM
       name: Patreon
 
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/_tjgm_
+      name: Instagram
+
     - icon: fontawesome/brands/twitch
       link: https://twitch.tv/tjgm
       name: Twitch
+
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/TJGM_
+      name: X
 
     - icon: fontawesome/brands/youtube
       link: https://youtube.com/@TJGM
@@ -151,4 +180,9 @@ extra_javascript:
   - js/parallax.js
   - js/share.js
 
-copyright: "Copyright © 2026 TJGM."
+validation:
+  nav:
+    omitted_files: ignore
+
+copyright: >
+  Copyright © 2026 TJGM. <a href="#__consent"><u>Cookie settings</u></a>

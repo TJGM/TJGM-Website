@@ -1,16 +1,26 @@
 ---
-title: A new modding site for GTA games is now live!
+title: A New Modding Site For GTA Games Is Now Live!
 description: News, guides, mods and more. What else can a GTA fan ask for?
-date: 2026-01-21
-tags:
-authors:
-    - james
+date: 2026-10-08
 categories:
     - Announcements
     - News
+tags:
+authors:
+    - james
+links:
+  - Pateron: https://www.patreon.com/TJGM
+  - Instagram: https://www.instagram.com/_tjgm_/
+  - Twitch: https://www.twitch.tv/tjgm
+  - X: https://x.com/TJGM_
+  - YouTube: https://www.youtube.com/@TJGM
+social:
+  cards_layout_options:
+    background_color: null
+    background_image: docs/news/posts/1-TJGM-Website-is-Now-Live/thumbnail.webp
 ---
 
-![GTA San Andreas with SilentPatch](thumbnail.webp)
+![Thumbnail](thumbnail.webp)
 
 <span style="font-size:1.00em; color:gray;">*News, guides, mods and more. What else can a GTA fan ask for?*</span>
 
@@ -38,12 +48,6 @@ Discord servers also can't be archived easily. Discord servers can be deleted, c
 
 So my plan with this website is to share modding news that would usually be tucked away in Discord or other private places and get them into a public place. Where things can be easily searched and archived for users now and in the future.
 
-I can't do this on my own however. I'm in multiple GTA Modding Discord servers and while I check them often enough, I can't keep track of everything.
-
-So on my Discord server (ironic, I know), there's now a #tips channel where users can send me anything new that they've found that might be newsworthy for the GTA community. While I'd prfer not to use Discord for this, it's probably the easiest place for such a task and the place where most users will share what they've found.
-
-BUTTON LINK HERE
-
 ## The Guides
 
 ![TJGM Guides](theguides.webp)
@@ -54,7 +58,7 @@ The main reason I wanted to do this to begin with was that I felt like I had kno
 
 I frequently saw poor modding guides on YouTube and forums. They'd often recommend outdated broken tools, shared outdated information, missed key points or context for certain tasks and in general just weren't easy to follow or understand for the average person.
 
-I thought I could change this and I feel like I have. One of the most common comments I get on YouTube other than people making jokes about my accent (I find these funny too), is that my guides are some of the best, everything a user needs to know is covered and everything was easy to understand.
+I thought I could change this and I feel like I have. One of the most common comments I get on YouTube other than people making jokes about my accent (I find these funny too), is that my guides are some of the best, as they contain everything a user needs to know and the steps involved are easy to understand.
 
 Yes it can be a bit slower and videos can be a bit longer, but by the end, users come out with knowledge that is genunienly useful.
 
@@ -76,76 +80,22 @@ I don't exclusively make guides, even though it's probably my most popular conte
 
 Pretty soon I want to try streaming as well, which is why my Twitch channel is featured on the home page of this website.
 
-As well as video content, I've also worked on my own GTA mods, with my latest creation being [Improved 2DFX](../../../mods/Improved-2DFX/index.md). A mod which adds new lights and updates existing ones across GTA III, Vice City and San Andreas. Here's a few examples.
+As well as video content, I've also worked on my own GTA mods, with my latest creation being [Improved 2DFX](../../../mods/Improved-2DFX/index.md). A mod which adds new lights and updates existing ones across GTA III, Vice City and San Andreas. Here's a couple of examples.
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="../../../mods/Improved-2DFX/assets/before5.webp" alt="Before">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="../../../mods/Improved-2DFX/assets/after5.webp" alt="After">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Before</div>
-  <div class="compare-caption after">After</div>
+  <img src="../../../mods/Improved-2DFX/assets/before5.webp" alt="Before" caption="Before">
+  <img src="../../../mods/Improved-2DFX/assets/after5.webp" alt="After" caption="After">
 </div>
 
 <div class="compare-container">
-  <!-- Bottom image -->
-  <img src="../../../mods/Improved-2DFX/assets/before7.webp" alt="Before">
-  
-  <!-- Top image -->
-  <div class="compare-top">
-    <img src="../../../mods/Improved-2DFX/assets/after7.webp" alt="After">
-  </div>
-  
-  <!-- Vertical line -->
-  <div class="compare-line"></div>
-
-  <!-- Circular handle -->
-  <div class="compare-slider"></div>
-
-  <!-- Captions -->
-  <div class="compare-caption before">Before</div>
-  <div class="compare-caption after">After</div>
+  <img src="../../../mods/Improved-2DFX/assets/before7.webp" alt="Before" caption="Before">
+  <img src="../../../mods/Improved-2DFX/assets/after7.webp" alt="After" caption="After">
 </div>
 
 This website allows me to archive mods such as this and present them in a way that I like.
 
 ## Outro
 
-And that's about it. The goal of this website is to increase accessibility to GTA guides, modding news and to also act as a hub for all of my content.
+And that's about it. The goal of this website is to increase accessibility to GTA guides, modding news and to also act as a hub for all TJGM content.
 
-Thank you all for the support so far, there's still much more to come..
-
-Catch you later.
-
-<div class="share-container">
-  <button class="share-button" id="share-btn">
-    <span class="share-icon">🔗</span> Share
-  </button>
-</div>
-
----
-
-<div class="md-typeset" style="text-align:center; padding:1.5rem; border:1px solid var(--md-default-fg-color--lightest); border-radius:6px;">
-  <h3>Enjoy my work?</h3>
-  <p>Gain benefits such as shout-outs at the end of videos, early access to TJGM videos, early access to TJGM mods, VIP Discord access and much more by supporting me and my work on Patreon, it's very much appreciated! ❤️</p>
-  <a
-    class="md-button"
-    href="https://patreon.com/tjgm"
-    target="_blank"
-    rel="noopener"
-    style="background:#F96854; color:white; border:none; border-radius:8px; padding:.6em 1.2em; margin-top:0.5rem;"
-  >
-    ⭐ Support on Patreon
-  </a>
-</div>
+Thank you all for the support so far and there's still much more to come, especially with GTA VI on the horizon.

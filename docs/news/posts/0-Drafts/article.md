@@ -9,6 +9,7 @@ categories:
         - Roundups
         - News
 tags:
+        - GTA VI
         - GTA V
         - GTA IV
         - GTA Vice City Stories
@@ -21,10 +22,15 @@ tags:
 authors:
     - james
 links:
-  - Bluesky: https://bsky.app/profile/tjgm.bsky.social
   - Pateron: https://www.patreon.com/TJGM
+  - Instagram: https://www.instagram.com/_tjgm_/
   - Twitch: https://www.twitch.tv/tjgm
+  - X: https://x.com/TJGM_
   - YouTube: https://www.youtube.com/@TJGM
+social:
+  cards_layout_options:
+    background_color: null
+    background_image: docs/news/posts/1-TJGM-Website-is-Now-Live/thumbnail.webp
 ---
 
 ![IMAGE CAPTION HERE, ADD THUMBNAIL TO POST FOLDER](thumbnail.webp)
@@ -36,25 +42,3 @@ links:
 ## FIRST HEADER HERE
 
 ARTICLE HERE
-
-<div class="share-container">
-  <button class="share-button" id="share-btn">
-    <span class="share-icon">🔗</span> Share this post
-  </button>
-</div>
-
----
-
-<div class="md-typeset" style="text-align:center; padding:1.5rem; border:1px solid var(--md-default-fg-color--lightest); border-radius:6px;">
-  <h3>Enjoy my work?</h3>
-  <p>Gain benefits such as shout-outs at the end of videos, early access to TJGM videos, early access to TJGM mods, VIP Discord access and much more by supporting me and my work on Patreon, it's very much appreciated! ❤️</p>
-  <a
-    class="md-button"
-    href="https://patreon.com/tjgm"
-    target="_blank"
-    rel="noopener"
-    style="background:#F96854; color:white; border:none; border-radius:8px; padding:.6em 1.2em; margin-top:0.5rem;"
-  >
-    ⭐ Support on Patreon
-  </a>
-</div>
