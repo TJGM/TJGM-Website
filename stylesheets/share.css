@@ -1,0 +1,28 @@
+.share-container {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.share-button:hover {
+  background: var(--md-primary-fg-color);
+  color: white;
+  border-color: var(--md-primary-fg-color);
+}
+
+.share-icon {
+  font-size: 0.9rem;
+}

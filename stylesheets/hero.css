@@ -1,0 +1,362 @@
+/* =========================
+   Full-Page Hero Behind Sidebar
+   ========================= */
+.hero-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  max-width: 100%;
+
+  /* Stable viewport height (svh does not jump with the URL bar) */
+  min-height: 100vh;
+  min-height: 100svh;
+
+  z-index: 0;
+  background-image: url('../assets/hero.webp');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+/* Light mode hero image */
+[data-md-color-scheme="default"] .hero-container {
+  background-image: url('../assets/herolight.webp');
+}
+
+/* =========================
+   Hero Fade Overlay
+   ========================= */
+.hero-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20vh;
+  z-index: 1;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(44, 44, 44, 0) 0%,
+    #2c2c2c 100%
+  );
+}
+
+[data-md-color-scheme="default"] .hero-fade {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 100%
+  );
+}
+
+/* =========================
+   Hero Content
+   ========================= */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: clamp(1rem, 2vw, 1.5rem);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+.hero-content h1 {
+  color: white;
+  margin-bottom: clamp(0.5rem, 1vw, 0.4rem);
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  opacity: 0;
+  transform: scale(1.2) translateY(10px);
+  animation: heroFadeIn 1.2s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.hero-subtitle {
+  color: white;
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+  margin-top: clamp(0.25rem, 1vw, 0.4rem);
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: heroFadeIn 1.2s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* Light mode text shadow */
+[data-md-color-scheme="default"] .hero-content h1 {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+[data-md-color-scheme="default"] .hero-subtitle {
+  text-shadow: 1.5px 1.5px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================
+   Twitch Stream + Buttons Wrapper
+   ========================= */
+.stream-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  max-width: clamp(600px, 80vw, 1200px);
+  width: 100%;
+}
+
+/* Twitch Stream Video */
+.stream-video {
+  flex: 2.4;
+  aspect-ratio: 16 / 9;
+  max-width: clamp(300px, 45vw, 1000px);
+  display: flex;
+}
+
+.stream-video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* =========================
+   Vertical Button Column
+   ========================= */
+.hero-buttons-vertical {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.6rem, 1vw, 0.9rem);
+  max-width: clamp(130px, 16vw, 190px);
+  width: 100%;
+}
+
+/* Shared button styles */
+.hero-container .hero-btn,
+.md-typeset .hero-container .hero-btn {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: clamp(0.5rem, 0.9vw, 0.75rem)
+           clamp(0.75rem, 1.2vw, 1.05rem);
+
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+
+  border-radius: 7px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  outline: none;
+  border: none;
+  box-shadow: none;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Dark button */
+.hero-container .hero-btn-dark,
+.md-typeset .hero-container .hero-btn-dark {
+  background-color: #2c2c2c;
+  color: white;
+}
+
+.hero-container .hero-btn-dark:hover,
+.hero-container .hero-btn-dark:focus,
+.hero-container .hero-btn-dark:focus-visible,
+.hero-container .hero-btn-dark:active,
+.md-typeset .hero-container .hero-btn-dark:hover,
+.md-typeset .hero-container .hero-btn-dark:focus {
+  background-color: #2c2c2c;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Accent button */
+.hero-container .hero-btn-accent,
+.md-typeset .hero-container .hero-btn-accent {
+  background-color: #f96854;
+  color: white;
+  font-weight: 600;
+}
+
+.hero-container .hero-btn-accent:hover,
+.hero-container .hero-btn-accent:focus,
+.hero-container .hero-btn-accent:focus-visible,
+.hero-container .hero-btn-accent:active,
+.md-typeset .hero-container .hero-btn-accent:hover,
+.md-typeset .hero-container .hero-btn-accent:focus {
+  background-color: #f96854;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 104, 84, 0.5);
+}
+
+/* =========================
+   Mobile Layout
+   Stream on top, buttons in a wrapping row underneath
+   ========================= */
+@media (max-width: 900px) {
+
+  .hero-container {
+    box-sizing: border-box;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding-top: var(--md-header-height, 2.4rem);
+  }
+
+  .stream-wrapper {
+    flex-direction: column;
+    gap: 0.9rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-container .stream-video {
+    display: flex;
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+
+  .hero-container .stream-video iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .hero-content {
+    justify-content: center;
+    padding: 0.75rem 0.75rem 1rem;
+    min-height: 100%;
+  }
+
+  .hero-content h1 {
+    margin-bottom: 0.35rem;
+    font-size: clamp(1.05rem, 4.6vw, 1.4rem);
+  }
+
+  .hero-subtitle {
+    display: block;
+    font-size: clamp(0.62rem, 2.6vw, 0.75rem);
+    line-height: 1.35;
+    max-width: 24em;
+    margin-top: 0.15rem;
+    margin-bottom: 0.85rem;
+    /* keep the same fade-in as desktop */
+    opacity: 0;
+    transform: translateY(10px);
+    animation: heroFadeIn 1.2s ease forwards;
+    animation-delay: 0.5s;
+  }
+
+  /* Buttons become a row under the stream */
+  .hero-container .hero-buttons-vertical {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0.45rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-container .hero-buttons-vertical .hero-btn,
+  .md-typeset .hero-container .hero-buttons-vertical .hero-btn {
+    flex: 0 1 calc(50% - 0.45rem);
+    width: calc(50% - 0.45rem);
+    min-width: 0;
+    max-width: calc(50% - 0.45rem);
+    height: auto;
+    min-height: 2.5rem;
+    padding: 0.4rem 0.35rem;
+    font-size: clamp(0.85rem, 4.2vw, 1.05rem);
+    line-height: 1.15;
+    white-space: nowrap;
+  }
+}
+
+/* Short screens (landscape phones): drop subtitle to protect the stream */
+@media (max-width: 900px) and (max-height: 620px) {
+  .hero-subtitle {
+    display: none;
+  }
+}
+
+/* =========================
+   Spacer
+   ========================= */
+.hero-spacer {
+  height: 100vh;
+  height: 100svh;
+}
+
+/* =========================
+   Smooth scrolling
+   ========================= */
+html {
+  scroll-behavior: smooth;
+}
+
+#news {
+  scroll-margin-top: 4.8rem;
+}
+
+/* =========================
+   Header Fade
+   ========================= */
+.md-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--md-default-bg);
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.md-header {
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.md-header.transparent-over-hero {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* =========================
+   Fade-In Animation
+   ========================= */
+@keyframes heroFadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}

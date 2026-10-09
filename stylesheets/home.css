@@ -1,0 +1,232 @@
+/* =========================
+   CARD GALLERIES
+   ========================= */
+.card-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  text-align: center;
+}
+
+/* =========================
+   INDIVIDUAL CARDS
+   ========================= */
+.card-gallery > .card {
+  flex: 0 1 calc(25% - 0.75rem);
+  max-width: calc(25% - 0.75rem);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* =========================
+   CLICKABLE CARD (IMAGE + TITLE)
+   ========================= */
+.card a {
+  display: block;
+  border-radius: 8px; /* clickable area */
+}
+
+/* IMAGE WRAPPER TO PRESERVE ROUNDED CORNERS & APPLY EFFECTS */
+.image-wrapper {
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hover/scale/shadow only on the image */
+.card a:hover .image-wrapper {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+}
+
+@media (hover: hover) {
+  [data-md-color-scheme="slate"] .card a:hover .image-wrapper,
+  [data-md-color-scheme="dark"] .card a:hover .image-wrapper {
+    box-shadow: 0 16px 40px rgba(255,255,255,0.15);
+  }
+}
+
+/* Title inside clickable area, reduced bottom padding */
+.card .title {
+  margin: 0;
+  padding: 0.5rem 0.5rem 0.15rem 0.5rem; /* top/right/bottom/left */
+  font-weight: 500;
+}
+
+/* =========================
+   GAME BADGES
+   ========================= */
+.card .game-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  margin: 0; /* badges sit immediately below title */
+}
+
+.card .game {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 1px 5px;
+  border-radius: 8px;
+}
+
+/* Colors */
+.card .game-patreon { background-color: #ff416c; }
+.card .game-modpack { background-color: #008cff; }
+.card .game-iii { background-color: #81b33a; }
+.card .game-vc { background-color: #e283a8; }
+.card .game-sa { background-color: #d78e10; }
+.card .game-vcs { background-color: #cf688c; }
+.card .game-lcs { background-color: #da2326; }
+.card .game-ctw { background-color: #ccb929; }
+.card .game-iv { background-color: #8d8b8d; }
+.card .game-v { background-color: #467b01; }
+.card .game-vi { background-color: #4a5dd5; }
+
+/* =========================
+   RESPONSIVE
+   4-across, then 2+2 — never 3+1
+   ========================= */
+@media (max-width: 900px) {
+  .card-gallery > .card {
+    flex: 0 1 calc(50% - 0.5rem);
+    max-width: calc(50% - 0.5rem);
+  }
+}
+
+/* Disable hover on touch */
+@media (hover: none) {
+  .card a:hover .image-wrapper {
+    transform: none;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  }
+}
+
+/* =========================
+   SECTION HEADERS
+   ========================= */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.section-header h2 {
+  margin: 0;
+}
+
+/* =========================
+   Guides zoom - updated
+   ========================= */
+div#guides ~ p {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+div#guides ~ p img {
+  display: block;
+  width: 100%;
+  transition: transform 0.6s ease;
+}
+
+@media (hover: hover) {
+  div#guides ~ p:hover img {
+    transform: scale(1.08);
+  }
+}
+
+/* =========================
+   About Section
+   ========================= */
+
+.about-container {
+  display: flex;
+  align-items: flex-start; /* text top-aligned to image */
+  gap: 4rem;
+  margin: 2.5rem 0 6rem 0; /* no auto centering */
+  padding: 0;
+  width: 100%;
+  text-align: left;
+}
+
+/* Photo */
+.about-photo img {
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.3);
+  flex-shrink: 0;
+}
+
+/* Text */
+.about-text {
+  flex: 1;
+  max-width: 750px;
+}
+
+.about-text h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+/* Email link */
+.email-link {
+  font-size: 1rem;
+  text-decoration: none;
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+.email-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.about-text p {
+  line-height: 1.7;
+  opacity: 0.92;
+}
+
+/* Mobile: stack + image centered */
+@media (max-width: 800px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center; /* photo centered */
+    gap: 1.5rem;
+  }
+
+  .about-photo img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .about-text {
+    max-width: 100%;
+    text-align: left; /* keep text left-aligned under image */
+  }
+}
+
+/* NEWS / VIDEO: force equal image height */
+.card-gallery.news-gallery .image-wrapper,
+.card-gallery.video-gallery .image-wrapper {
+  aspect-ratio: 16 / 9;
+}
